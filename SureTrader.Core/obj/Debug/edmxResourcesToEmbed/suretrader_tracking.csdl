@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="suretrader_trackingModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="suretrader_trackingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="cta_form" EntityType="suretrader_trackingModel.cta_form" />
+    <EntitySet Name="cta_form_fields" EntityType="suretrader_trackingModel.cta_form_fields" />
+    <EntitySet Name="cta_master" EntityType="suretrader_trackingModel.cta_master" />
+    <EntitySet Name="trackings" EntityType="suretrader_trackingModel.tracking" />
+    <EntitySet Name="visitors" EntityType="suretrader_trackingModel.visitor" />
+    <EntitySet Name="visitor_sessions" EntityType="suretrader_trackingModel.visitor_sessions" />
+  </EntityContainer>
+  <EntityType Name="cta_form">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="visitor_id" Type="Int32" Nullable="false" />
+    <Property Name="cta_master_id" Type="Int32" Nullable="false" />
+    <Property Name="page_url" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" Precision="0" />
+  </EntityType>
+  <EntityType Name="cta_form_fields">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="visitor_id" Type="Int32" Nullable="false" />
+    <Property Name="cta_master_id" Type="Int32" Nullable="false" />
+    <Property Name="cta_form_id" Type="Int32" Nullable="false" />
+    <Property Name="form_field" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="field_value" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="cta_master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="65535" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tracking">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="visitor_id" Type="Int32" Nullable="false" />
+    <Property Name="visitor_session_id" Type="Int32" Nullable="false" />
+    <Property Name="page_url" Type="String" Nullable="false" MaxLength="145" Unicode="false" FixedLength="false" />
+    <Property Name="start_time" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" Precision="0" />
+    <Property Name="end_time" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="host" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="referring_domain" Type="String" Nullable="false" MaxLength="145" Unicode="false" FixedLength="false" />
+    <Property Name="last_event_type" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="last_event_id" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="last_event_class" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="redirected_on" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="referring_url" Type="String" Nullable="false" MaxLength="145" Unicode="false" FixedLength="false" />
+    <Property Name="ip_address" Type="String" Nullable="false" MaxLength="145" Unicode="false" FixedLength="false" />
+    <Property Name="page_name" Type="String" Nullable="false" MaxLength="145" Unicode="false" FixedLength="false" />
+    <Property Name="keyword" Type="String" Nullable="false" MaxLength="145" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="visitor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="token" Type="String" Nullable="false" MaxLength="145" Unicode="false" FixedLength="false" />
+    <Property Name="ip_address" Type="String" Nullable="false" MaxLength="145" Unicode="false" FixedLength="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="145" Unicode="false" FixedLength="false" />
+    <Property Name="first_name" Type="String" Nullable="false" MaxLength="145" Unicode="false" FixedLength="false" />
+    <Property Name="last_name" Type="String" Nullable="false" MaxLength="145" Unicode="false" FixedLength="false" />
+    <Property Name="phone" Type="String" Nullable="false" MaxLength="145" Unicode="false" FixedLength="false" />
+    <Property Name="application_started" Type="Boolean" Nullable="false" />
+    <Property Name="application_completed" Type="Boolean" Nullable="false" />
+    <Property Name="customer_number" Type="String" Nullable="false" MaxLength="145" Unicode="false" FixedLength="false" />
+    <Property Name="affiliate_referral" Type="String" Nullable="false" MaxLength="145" Unicode="false" FixedLength="false" />
+    <Property Name="is_opportunity" Type="Boolean" Nullable="false" />
+    <Property Name="exepcted_revenue" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_modified" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="visitor_sessions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="visitor_id" Type="Int32" Nullable="false" />
+    <Property Name="session_id" Type="String" Nullable="false" MaxLength="145" Unicode="false" FixedLength="false" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="expired" Type="Boolean" Nullable="false" />
+  </EntityType>
+</Schema>

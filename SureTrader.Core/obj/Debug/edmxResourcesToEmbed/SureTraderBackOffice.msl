@@ -1,0 +1,1490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="SureTraderBackOffice" />
+  <Alias Key="Target" Value="SureTraderBackOffice.Store" />
+  <EntityContainerMapping CdmEntityContainer="SureTraderBackOfficeContainer" StorageEntityContainer="SureTraderBackOfficeStoreContainer">
+    <EntitySetMapping Name="WithdrawalCheckbookTrackingDetails">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.WithdrawalCheckbookTrackingDetail">
+        <MappingFragment StoreEntitySet="WithdrawalCheckbookTrackingDetail">
+          <ScalarProperty Name="Existingamount" ColumnName="Existingamount" />
+          <ScalarProperty Name="Newamount" ColumnName="Newamount" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="UpdatedAccountStatus" ColumnName="UpdatedAccountStatus" />
+          <ScalarProperty Name="ExistingAccountStatus" ColumnName="ExistingAccountStatus" />
+          <ScalarProperty Name="WithdrawalCheckbookId" ColumnName="WithdrawalCheckbookId" />
+          <ScalarProperty Name="TrackingId" ColumnName="TrackingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetDailySummary_sp" FunctionName="SureTraderBackOffice.Store.GetDailySummary_sp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SureTraderBackOffice.GetDailySummary_sp_Result">
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="Referral" ColumnName="Referral" />
+          <ScalarProperty Name="DASUserName" ColumnName="DASUserName" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="LongMarketValue" ColumnName="LongMarketValue" />
+          <ScalarProperty Name="ShortMarketValue" ColumnName="ShortMarketValue" />
+          <ScalarProperty Name="TotalEquity" ColumnName="TotalEquity" />
+          <ScalarProperty Name="PercentEquity" ColumnName="PercentEquity" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SureTraderBackOffice.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SureTraderBackOffice.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SureTraderBackOffice.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="SureTraderBackOffice.Store.sp_helpdiagramdefinition" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="SureTraderBackOffice.Store.sp_helpdiagrams" />
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SureTraderBackOffice.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="SureTraderBackOffice.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="SubAccount_GetData_sp" FunctionName="SureTraderBackOffice.Store.SubAccount_GetData_sp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SureTraderBackOffice.SubAccount_GetData_sp_Result">
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="Referral" ColumnName="Referral" />
+          <ScalarProperty Name="DASUserName" ColumnName="DASUserName" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="LongMarketValue" ColumnName="LongMarketValue" />
+          <ScalarProperty Name="ShortMarketValue" ColumnName="ShortMarketValue" />
+          <ScalarProperty Name="TotalEquity" ColumnName="TotalEquity" />
+          <ScalarProperty Name="PercentEquity" ColumnName="PercentEquity" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Withdrawals_AddCoinxRequest_sp" FunctionName="SureTraderBackOffice.Store.Withdrawals_AddCoinxRequest_sp" />
+    <FunctionImportMapping FunctionImportName="Withdrawals_GetCoinxRequestList_sp" FunctionName="SureTraderBackOffice.Store.Withdrawals_GetCoinxRequestList_sp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SureTraderBackOffice.Withdrawals_GetCoinxRequestList_sp_Result">
+          <ScalarProperty Name="Hold" ColumnName="Hold" />
+          <ScalarProperty Name="Batch" ColumnName="Batch" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Identification" ColumnName="Identification" />
+          <ScalarProperty Name="Discretionary" ColumnName="Discretionary" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Routing_Transit" ColumnName="Routing/Transit" />
+          <ScalarProperty Name="Effective_Date" ColumnName="Effective Date" />
+          <ScalarProperty Name="Transaction_Code" ColumnName="Transaction Code" />
+          <ScalarProperty Name="Free_Form_Addenda" ColumnName="Free Form Addenda" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Account_temp">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.Account_temp">
+        <MappingFragment StoreEntitySet="Account_temp">
+          <ScalarProperty Name="Account" ColumnName="Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountCommissions">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.AccountCommission">
+        <MappingFragment StoreEntitySet="AccountCommission">
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="MinCommShare" ColumnName="MinCommShare" />
+          <ScalarProperty Name="MaxCommission" ColumnName="MaxCommission" />
+          <ScalarProperty Name="MinCommission" ColumnName="MinCommission" />
+          <ScalarProperty Name="PerOptionMin" ColumnName="PerOptionMin" />
+          <ScalarProperty Name="PerContract" ColumnName="PerContract" />
+          <ScalarProperty Name="PerOption" ColumnName="PerOption" />
+          <ScalarProperty Name="PerPrincipal" ColumnName="PerPrincipal" />
+          <ScalarProperty Name="PerShare" ColumnName="PerShare" />
+          <ScalarProperty Name="PerTicket" ColumnName="PerTicket" />
+          <ScalarProperty Name="MainAccount" ColumnName="MainAccount" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Affiliates">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.Affiliate">
+        <MappingFragment StoreEntitySet="Affiliate">
+          <ScalarProperty Name="BlockAcctInfo" ColumnName="BlockAcctInfo" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Passwd" ColumnName="Passwd" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MainAccount" ColumnName="MainAccount" />
+          <ScalarProperty Name="AffiliateID" ColumnName="AffiliateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AffiliateSubs">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.AffiliateSub">
+        <MappingFragment StoreEntitySet="AffiliateSub">
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="AffiliateID" ColumnName="AffiliateID" />
+          <ScalarProperty Name="AffiliateSubID" ColumnName="AffiliateSubID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AliasLogins">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.AliasLogin">
+        <MappingFragment StoreEntitySet="AliasLogin">
+          <ScalarProperty Name="AcctType" ColumnName="AcctType" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="APassword" ColumnName="APassword" />
+          <ScalarProperty Name="ALoginID" ColumnName="ALoginID" />
+          <ScalarProperty Name="AliasID" ColumnName="AliasID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackOffices">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.BackOffice">
+        <MappingFragment StoreEntitySet="BackOffice">
+          <ScalarProperty Name="FtpPassword" ColumnName="FtpPassword" />
+          <ScalarProperty Name="FtpUser" ColumnName="FtpUser" />
+          <ScalarProperty Name="UploadFtp" ColumnName="UploadFtp" />
+          <ScalarProperty Name="BackOffice1" ColumnName="BackOffice" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BankRejectDocuments">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.BankRejectDocument">
+        <MappingFragment StoreEntitySet="BankRejectDocument">
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="operatorrejectdocumentid" ColumnName="operatorrejectdocumentid" />
+          <ScalarProperty Name="bankdepositid" ColumnName="bankdepositid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BankWireDeposits">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.BankWireDeposit">
+        <MappingFragment StoreEntitySet="BankWireDeposit">
+          <ScalarProperty Name="createaccount" ColumnName="createaccount" />
+          <ScalarProperty Name="csvamount" ColumnName="csvamount" />
+          <ScalarProperty Name="ipaddress" ColumnName="ipaddress" />
+          <ScalarProperty Name="totalammount" ColumnName="totalammount" />
+          <ScalarProperty Name="Cid" ColumnName="Cid" />
+          <ScalarProperty Name="TransactionFee" ColumnName="TransactionFee" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="pincode" ColumnName="pincode" />
+          <ScalarProperty Name="TrasanctionSource" ColumnName="TrasanctionSource" />
+          <ScalarProperty Name="PFS" ColumnName="PFS" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsLocked" ColumnName="IsLocked" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ResponseStatusMessage" ColumnName="ResponseStatusMessage" />
+          <ScalarProperty Name="ResponseStatus" ColumnName="ResponseStatus" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="TransferType" ColumnName="TransferType" />
+          <ScalarProperty Name="Narrative" ColumnName="Narrative" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="BeneficiaryBankRoutingNumber" ColumnName="BeneficiaryBankRoutingNumber" />
+          <ScalarProperty Name="BeneficiaryBankSwiftBIC" ColumnName="BeneficiaryBankSwiftBIC" />
+          <ScalarProperty Name="BeneficiaryBankCountryCode" ColumnName="BeneficiaryBankCountryCode" />
+          <ScalarProperty Name="BeneficiaryBankStateCode" ColumnName="BeneficiaryBankStateCode" />
+          <ScalarProperty Name="BeneficiaryBankAddress" ColumnName="BeneficiaryBankAddress" />
+          <ScalarProperty Name="BeneficiaryBankName" ColumnName="BeneficiaryBankName" />
+          <ScalarProperty Name="BeneficiaryAccountNumber" ColumnName="BeneficiaryAccountNumber" />
+          <ScalarProperty Name="BeneficiaryCountry" ColumnName="BeneficiaryCountry" />
+          <ScalarProperty Name="BeneficiaryAddress" ColumnName="BeneficiaryAddress" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="IdentityType" ColumnName="IdentityType" />
+          <ScalarProperty Name="SourceAccountNumber" ColumnName="SourceAccountNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BankWireDepositTrackingDetails">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.BankWireDepositTrackingDetail">
+        <MappingFragment StoreEntitySet="BankWireDepositTrackingDetail">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="Newamount" ColumnName="Newamount" />
+          <ScalarProperty Name="Existingamount" ColumnName="Existingamount" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="UpdatedAccountStatus" ColumnName="UpdatedAccountStatus" />
+          <ScalarProperty Name="ExistingAccountStatus" ColumnName="ExistingAccountStatus" />
+          <ScalarProperty Name="BankWireDepositId" ColumnName="BankWireDepositId" />
+          <ScalarProperty Name="TrackingId" ColumnName="TrackingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BankWireRejectDocuments">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.BankWireRejectDocument">
+        <MappingFragment StoreEntitySet="BankWireRejectDocument">
+          <ScalarProperty Name="updateby" ColumnName="updateby" />
+          <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="operatorrejectdocumentid" ColumnName="operatorrejectdocumentid" />
+          <ScalarProperty Name="bankWiredepositid" ColumnName="bankWiredepositid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashMoves">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.CashMove">
+        <MappingFragment StoreEntitySet="CashMove">
+          <ScalarProperty Name="CashCode" ColumnName="CashCode" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="EnterBy" ColumnName="EnterBy" />
+          <ScalarProperty Name="Withdraw" ColumnName="Withdraw" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="CashID" ColumnName="CashID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashRequestLogs">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.CashRequestLog">
+        <MappingFragment StoreEntitySet="CashRequestLog">
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="RequestType" ColumnName="RequestType" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="CashRequestLogID" ColumnName="CashRequestLogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommissionSchedules">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.CommissionSchedule">
+        <MappingFragment StoreEntitySet="CommissionSchedule">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="SymbolFee" ColumnName="SymbolFee" />
+          <ScalarProperty Name="PerFutureContract" ColumnName="PerFutureContract" />
+          <ScalarProperty Name="PerFuture" ColumnName="PerFuture" />
+          <ScalarProperty Name="PerContract" ColumnName="PerContract" />
+          <ScalarProperty Name="PerOption" ColumnName="PerOption" />
+          <ScalarProperty Name="TradeShareBound" ColumnName="TradeShareBound" />
+          <ScalarProperty Name="MaxCommission" ColumnName="MaxCommission" />
+          <ScalarProperty Name="MinCommission" ColumnName="MinCommission" />
+          <ScalarProperty Name="PerPrinc" ColumnName="PerPrinc" />
+          <ScalarProperty Name="PerShare" ColumnName="PerShare" />
+          <ScalarProperty Name="PerTicket" ColumnName="PerTicket" />
+          <ScalarProperty Name="SubAccount" ColumnName="SubAccount" />
+          <ScalarProperty Name="MasterAccount" ColumnName="MasterAccount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DepositCheckbooks">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.DepositCheckbook">
+        <MappingFragment StoreEntitySet="DepositCheckbook">
+          <ScalarProperty Name="createaccount" ColumnName="createaccount" />
+          <ScalarProperty Name="csvamount" ColumnName="csvamount" />
+          <ScalarProperty Name="duplicaterequest" ColumnName="duplicaterequest" />
+          <ScalarProperty Name="openpositionuraccount" ColumnName="openpositionuraccount" />
+          <ScalarProperty Name="ipaddress" ColumnName="ipaddress" />
+          <ScalarProperty Name="totalamount" ColumnName="totalamount" />
+          <ScalarProperty Name="Cid" ColumnName="Cid" />
+          <ScalarProperty Name="RoutingNumber" ColumnName="RoutingNumber" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="TransactionFee" ColumnName="TransactionFee" />
+          <ScalarProperty Name="pincoad" ColumnName="pincoad" />
+          <ScalarProperty Name="Others" ColumnName="Others" />
+          <ScalarProperty Name="Insufficientfunds" ColumnName="Insufficientfunds" />
+          <ScalarProperty Name="InvalidPin" ColumnName="InvalidPin" />
+          <ScalarProperty Name="SignatureDoesNotMatched" ColumnName="SignatureDoesNotMatched" />
+          <ScalarProperty Name="TrasanctionSource" ColumnName="TrasanctionSource" />
+          <ScalarProperty Name="PFS" ColumnName="PFS" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsLocked" ColumnName="IsLocked" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ResponseStatusMessage" ColumnName="ResponseStatusMessage" />
+          <ScalarProperty Name="ResponseStatus" ColumnName="ResponseStatus" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CheckNum" ColumnName="CheckNum" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="BusinessName" ColumnName="BusinessName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DepositCheckbookTrackingDetails">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.DepositCheckbookTrackingDetail">
+        <MappingFragment StoreEntitySet="DepositCheckbookTrackingDetail">
+          <ScalarProperty Name="Existingamount" ColumnName="Existingamount" />
+          <ScalarProperty Name="Newamount" ColumnName="Newamount" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="NewTrasanctionSource" ColumnName="NewTrasanctionSource" />
+          <ScalarProperty Name="ExistingTrasacntionSource" ColumnName="ExistingTrasacntionSource" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="UpdatedAccountStatus" ColumnName="UpdatedAccountStatus" />
+          <ScalarProperty Name="ExistingAccountStatus" ColumnName="ExistingAccountStatus" />
+          <ScalarProperty Name="DepositCheckbookId" ColumnName="DepositCheckbookId" />
+          <ScalarProperty Name="TrackingId" ColumnName="TrackingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DepositDetails">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.DepositDetail">
+        <MappingFragment StoreEntitySet="DepositDetail">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="BankAccountNumber" ColumnName="BankAccountNumber" />
+          <ScalarProperty Name="RoutingNumber" ColumnName="RoutingNumber" />
+          <ScalarProperty Name="ItemDescription" ColumnName="ItemDescription" />
+          <ScalarProperty Name="ItemNumber" ColumnName="ItemNumber" />
+          <ScalarProperty Name="ReceiverEmail" ColumnName="ReceiverEmail" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="AmountShipping" ColumnName="AmountShipping" />
+          <ScalarProperty Name="AmountPurchase" ColumnName="AmountPurchase" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="PostbackUrl" ColumnName="PostbackUrl" />
+          <ScalarProperty Name="FailureUrl" ColumnName="FailureUrl" />
+          <ScalarProperty Name="SuccessUrl" ColumnName="SuccessUrl" />
+          <ScalarProperty Name="BrowserAgent" ColumnName="BrowserAgent" />
+          <ScalarProperty Name="UserAgent" ColumnName="UserAgent" />
+          <ScalarProperty Name="CardExpYear" ColumnName="CardExpYear" />
+          <ScalarProperty Name="CardExpMonth" ColumnName="CardExpMonth" />
+          <ScalarProperty Name="CardCcv" ColumnName="CardCcv" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="CardName" ColumnName="CardName" />
+          <ScalarProperty Name="CardType" ColumnName="CardType" />
+          <ScalarProperty Name="DepositMasterId" ColumnName="DepositMasterId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DepositMasters">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.DepositMaster">
+        <MappingFragment StoreEntitySet="DepositMaster">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ResponseStatusMessage" ColumnName="ResponseStatusMessage" />
+          <ScalarProperty Name="ResponseStatus" ColumnName="ResponseStatus" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="ActionMethod" ColumnName="ActionMethod" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="IP_Address" ColumnName="IP_Address" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="RCode" ColumnName="RCode" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FeeRates">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.FeeRate">
+        <MappingFragment StoreEntitySet="FeeRate">
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CalculationType" ColumnName="CalculationType" />
+          <ScalarProperty Name="FeeMax" ColumnName="FeeMax" />
+          <ScalarProperty Name="FeeMin" ColumnName="FeeMin" />
+          <ScalarProperty Name="FeeRate1" ColumnName="FeeRate" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="FeeType" ColumnName="FeeType" />
+          <ScalarProperty Name="FeeRateID" ColumnName="FeeRateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InterCashCreaditCards">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.InterCashCreaditCard">
+        <MappingFragment StoreEntitySet="InterCashCreaditCard">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="AmountLimit" ColumnName="AmountLimit" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Cid" ColumnName="Cid" />
+          <ScalarProperty Name="InterCashID" ColumnName="InterCashID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginLogs">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.LoginLog">
+        <MappingFragment StoreEntitySet="LoginLog">
+          <ScalarProperty Name="LoginTime" ColumnName="LoginTime" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="IPAddr" ColumnName="IPAddr" />
+          <ScalarProperty Name="MainAccount" ColumnName="MainAccount" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LoginLogID" ColumnName="LoginLogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MainAccounts">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.MainAccount">
+        <MappingFragment StoreEntitySet="MainAccount">
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="iBossCommAccount" ColumnName="iBossCommAccount" />
+          <ScalarProperty Name="PensonCommAccount" ColumnName="PensonCommAccount" />
+          <ScalarProperty Name="MarginCredit" ColumnName="MarginCredit" />
+          <ScalarProperty Name="MarginInterest" ColumnName="MarginInterest" />
+          <ScalarProperty Name="FeeAccount" ColumnName="FeeAccount" />
+          <ScalarProperty Name="DASQuoteAccount" ColumnName="DASQuoteAccount" />
+          <ScalarProperty Name="AccessLevel" ColumnName="AccessLevel" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="MTSCall" ColumnName="MTSCall" />
+          <ScalarProperty Name="AcctActive" ColumnName="AcctActive" />
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Addr3" ColumnName="Addr3" />
+          <ScalarProperty Name="Addr2" ColumnName="Addr2" />
+          <ScalarProperty Name="Addr1" ColumnName="Addr1" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="AcctType" ColumnName="AcctType" />
+          <ScalarProperty Name="RepCode" ColumnName="RepCode" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+          <ScalarProperty Name="UploadAccount" ColumnName="UploadAccount" />
+          <ScalarProperty Name="MainAccount1" ColumnName="MainAccount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MainBalances">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.MainBalance">
+        <MappingFragment StoreEntitySet="MainBalance">
+          <ScalarProperty Name="MaintCall" ColumnName="MaintCall" />
+          <ScalarProperty Name="FedCall" ColumnName="FedCall" />
+          <ScalarProperty Name="OBP" ColumnName="OBP" />
+          <ScalarProperty Name="DBP" ColumnName="DBP" />
+          <ScalarProperty Name="TotalEquity" ColumnName="TotalEquity" />
+          <ScalarProperty Name="SDShortMarketValue" ColumnName="SDShortMarketValue" />
+          <ScalarProperty Name="SDLongMarketValue" ColumnName="SDLongMarketValue" />
+          <ScalarProperty Name="SDBalance" ColumnName="SDBalance" />
+          <ScalarProperty Name="TDShortMarketValue" ColumnName="TDShortMarketValue" />
+          <ScalarProperty Name="TDLongMarketValue" ColumnName="TDLongMarketValue" />
+          <ScalarProperty Name="TDBalance" ColumnName="TDBalance" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="DateAsof" ColumnName="DateAsof" />
+          <ScalarProperty Name="MainAccount" ColumnName="MainAccount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MPContacts">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.MPContact">
+        <MappingFragment StoreEntitySet="MPContact">
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="SubFolder" ColumnName="SubFolder" />
+          <ScalarProperty Name="Passwd" ColumnName="Passwd" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="MPType" ColumnName="MPType" />
+          <ScalarProperty Name="MPContact1" ColumnName="MPContact" />
+          <ScalarProperty Name="MPContactID" ColumnName="MPContactID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperatorRejectDouments">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.OperatorRejectDoument">
+        <MappingFragment StoreEntitySet="OperatorRejectDoument">
+          <ScalarProperty Name="doumentname" ColumnName="doumentname" />
+          <ScalarProperty Name="operatorrejectId" ColumnName="operatorrejectId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SoftwareFees">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.SoftwareFee">
+        <MappingFragment StoreEntitySet="SoftwareFee">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="OverCountFee" ColumnName="OverCountFee" />
+          <ScalarProperty Name="UnderCountFee" ColumnName="UnderCountFee" />
+          <ScalarProperty Name="TradeCount" ColumnName="TradeCount" />
+          <ScalarProperty Name="SoftwareLevel" ColumnName="SoftwareLevel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SpecialFees">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.SpecialFee">
+        <MappingFragment StoreEntitySet="SpecialFee">
+          <ScalarProperty Name="ChargePeriod6" ColumnName="ChargePeriod6" />
+          <ScalarProperty Name="Active6" ColumnName="Active6" />
+          <ScalarProperty Name="Note6" ColumnName="Note6" />
+          <ScalarProperty Name="FeeAmount6" ColumnName="FeeAmount6" />
+          <ScalarProperty Name="ChargePeriod5" ColumnName="ChargePeriod5" />
+          <ScalarProperty Name="Active5" ColumnName="Active5" />
+          <ScalarProperty Name="Note5" ColumnName="Note5" />
+          <ScalarProperty Name="FeeAmount5" ColumnName="FeeAmount5" />
+          <ScalarProperty Name="ChargePeriod4" ColumnName="ChargePeriod4" />
+          <ScalarProperty Name="Active4" ColumnName="Active4" />
+          <ScalarProperty Name="Note4" ColumnName="Note4" />
+          <ScalarProperty Name="FeeAmount4" ColumnName="FeeAmount4" />
+          <ScalarProperty Name="ChargePeriod3" ColumnName="ChargePeriod3" />
+          <ScalarProperty Name="Active3" ColumnName="Active3" />
+          <ScalarProperty Name="Note3" ColumnName="Note3" />
+          <ScalarProperty Name="FeeAmount3" ColumnName="FeeAmount3" />
+          <ScalarProperty Name="ChargePeriod2" ColumnName="ChargePeriod2" />
+          <ScalarProperty Name="Active2" ColumnName="Active2" />
+          <ScalarProperty Name="Note2" ColumnName="Note2" />
+          <ScalarProperty Name="FeeAmount2" ColumnName="FeeAmount2" />
+          <ScalarProperty Name="ChargePeriod1" ColumnName="ChargePeriod1" />
+          <ScalarProperty Name="Active1" ColumnName="Active1" />
+          <ScalarProperty Name="Note1" ColumnName="Note1" />
+          <ScalarProperty Name="FeeAmount1" ColumnName="FeeAmount1" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sqlmapoutputs">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.sqlmapoutput">
+        <MappingFragment StoreEntitySet="sqlmapoutput">
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubAccounts">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.SubAccount">
+        <MappingFragment StoreEntitySet="SubAccount">
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="W9" ColumnName="W9" />
+          <ScalarProperty Name="W8" ColumnName="W8" />
+          <ScalarProperty Name="UAA" ColumnName="UAA" />
+          <ScalarProperty Name="ValidPhotoID" ColumnName="ValidPhotoID" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="OFAC" ColumnName="OFAC" />
+          <ScalarProperty Name="FATCArule" ColumnName="FATCArule" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="MarginCredit" ColumnName="MarginCredit" />
+          <ScalarProperty Name="MarginInterest" ColumnName="MarginInterest" />
+          <ScalarProperty Name="Donation" ColumnName="Donation" />
+          <ScalarProperty Name="HTBFee" ColumnName="HTBFee" />
+          <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+          <ScalarProperty Name="AccessFee" ColumnName="AccessFee" />
+          <ScalarProperty Name="SoftwareLevel" ColumnName="SoftwareLevel" />
+          <ScalarProperty Name="DASUserName" ColumnName="DASUserName" />
+          <ScalarProperty Name="ChargeNSCC" ColumnName="ChargeNSCC" />
+          <ScalarProperty Name="HideEquity" ColumnName="HideEquity" />
+          <ScalarProperty Name="FixedOBP" ColumnName="FixedOBP" />
+          <ScalarProperty Name="FixedDBP" ColumnName="FixedDBP" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Disclosure" ColumnName="Disclosure" />
+          <ScalarProperty Name="Referral" ColumnName="Referral" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="AccountEnable" ColumnName="AccountEnable" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Addr3" ColumnName="Addr3" />
+          <ScalarProperty Name="Addr2" ColumnName="Addr2" />
+          <ScalarProperty Name="Addr1" ColumnName="Addr1" />
+          <ScalarProperty Name="MainAccount" ColumnName="MainAccount" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubBalances">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.SubBalance">
+        <MappingFragment StoreEntitySet="SubBalance">
+          <ScalarProperty Name="MaxExposure" ColumnName="MaxExposure" />
+          <ScalarProperty Name="PercentEquity" ColumnName="PercentEquity" />
+          <ScalarProperty Name="TotalEquity" ColumnName="TotalEquity" />
+          <ScalarProperty Name="ShortMarketValue" ColumnName="ShortMarketValue" />
+          <ScalarProperty Name="LongMarketValue" ColumnName="LongMarketValue" />
+          <ScalarProperty Name="OBP" ColumnName="OBP" />
+          <ScalarProperty Name="DBP" ColumnName="DBP" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="DateAsof" ColumnName="DateAsof" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubPositions">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.SubPosition">
+        <MappingFragment StoreEntitySet="SubPosition">
+          <ScalarProperty Name="DateAsof" ColumnName="DateAsof" />
+          <ScalarProperty Name="ClosePrice" ColumnName="ClosePrice" />
+          <ScalarProperty Name="MarketValue" ColumnName="MarketValue" />
+          <ScalarProperty Name="TDPosition" ColumnName="TDPosition" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="AmountFactor" ColumnName="AmountFactor" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="CUSIP" ColumnName="CUSIP" />
+          <ScalarProperty Name="SECType" ColumnName="SECType" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubPositionNews">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.SubPositionNew">
+        <MappingFragment StoreEntitySet="SubPositionNew">
+          <ScalarProperty Name="DateAsof" ColumnName="DateAsof" />
+          <ScalarProperty Name="ClosePrice" ColumnName="ClosePrice" />
+          <ScalarProperty Name="AvgCost" ColumnName="AvgCost" />
+          <ScalarProperty Name="MarketValue" ColumnName="MarketValue" />
+          <ScalarProperty Name="TDPosition" ColumnName="TDPosition" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="AmountFactor" ColumnName="AmountFactor" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="CUSIP" ColumnName="CUSIP" />
+          <ScalarProperty Name="SECType" ColumnName="SECType" />
+          <ScalarProperty Name="TradeType" ColumnName="TradeType" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TradeRealizeds">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.TradeRealized">
+        <MappingFragment StoreEntitySet="TradeRealized">
+          <ScalarProperty Name="ClosePrice" ColumnName="ClosePrice" />
+          <ScalarProperty Name="OpenPrice" ColumnName="OpenPrice" />
+          <ScalarProperty Name="AmountFactor" ColumnName="AmountFactor" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Side" ColumnName="Side" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="CloseTradesID" ColumnName="CloseTradesID" />
+          <ScalarProperty Name="OpenTradesID" ColumnName="OpenTradesID" />
+          <ScalarProperty Name="CloseDateTime" ColumnName="CloseDateTime" />
+          <ScalarProperty Name="OpenDateTime" ColumnName="OpenDateTime" />
+          <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="RealizedID" ColumnName="RealizedID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trades">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.Trade">
+        <MappingFragment StoreEntitySet="Trades">
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Platform" ColumnName="Platform" />
+          <ScalarProperty Name="ClearingBroker" ColumnName="ClearingBroker" />
+          <ScalarProperty Name="ClearingType" ColumnName="ClearingType" />
+          <ScalarProperty Name="Fee5" ColumnName="Fee5" />
+          <ScalarProperty Name="Fee4" ColumnName="Fee4" />
+          <ScalarProperty Name="Fee3" ColumnName="Fee3" />
+          <ScalarProperty Name="Fee2" ColumnName="Fee2" />
+          <ScalarProperty Name="Fee1" ColumnName="Fee1" />
+          <ScalarProperty Name="SECFee" ColumnName="SECFee" />
+          <ScalarProperty Name="Commission" ColumnName="Commission" />
+          <ScalarProperty Name="ExecTime" ColumnName="ExecTime" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="Side" ColumnName="Side" />
+          <ScalarProperty Name="AmountFactor" ColumnName="AmountFactor" />
+          <ScalarProperty Name="TradeType" ColumnName="TradeType" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="TradesID" ColumnName="TradesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trades_Hold">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.Trades_Hold">
+        <MappingFragment StoreEntitySet="Trades_Hold">
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Platform" ColumnName="Platform" />
+          <ScalarProperty Name="ClearingBroker" ColumnName="ClearingBroker" />
+          <ScalarProperty Name="ClearingType" ColumnName="ClearingType" />
+          <ScalarProperty Name="Fee5" ColumnName="Fee5" />
+          <ScalarProperty Name="Fee4" ColumnName="Fee4" />
+          <ScalarProperty Name="Fee3" ColumnName="Fee3" />
+          <ScalarProperty Name="Fee2" ColumnName="Fee2" />
+          <ScalarProperty Name="Fee1" ColumnName="Fee1" />
+          <ScalarProperty Name="SECFee" ColumnName="SECFee" />
+          <ScalarProperty Name="Commission" ColumnName="Commission" />
+          <ScalarProperty Name="ExecTime" ColumnName="ExecTime" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="Side" ColumnName="Side" />
+          <ScalarProperty Name="AmountFactor" ColumnName="AmountFactor" />
+          <ScalarProperty Name="TradeType" ColumnName="TradeType" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="TradesID" ColumnName="TradesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TradeUnRealizeds">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.TradeUnRealized">
+        <MappingFragment StoreEntitySet="TradeUnRealized">
+          <ScalarProperty Name="ClosingPrice" ColumnName="ClosingPrice" />
+          <ScalarProperty Name="OpenPrice" ColumnName="OpenPrice" />
+          <ScalarProperty Name="AmountFactor" ColumnName="AmountFactor" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Side" ColumnName="Side" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="OpenTradesID" ColumnName="OpenTradesID" />
+          <ScalarProperty Name="OpenDateTime" ColumnName="OpenDateTime" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="UnRealizedID" ColumnName="UnRealizedID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WithdrawalBankWires">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.WithdrawalBankWire">
+        <MappingFragment StoreEntitySet="WithdrawalBankWire">
+          <ScalarProperty Name="createaccount" ColumnName="createaccount" />
+          <ScalarProperty Name="csvamount" ColumnName="csvamount" />
+          <ScalarProperty Name="duplicaterequest" ColumnName="duplicaterequest" />
+          <ScalarProperty Name="openpositionuraccount" ColumnName="openpositionuraccount" />
+          <ScalarProperty Name="ipaddress" ColumnName="ipaddress" />
+          <ScalarProperty Name="totalammount" ColumnName="totalammount" />
+          <ScalarProperty Name="Cid" ColumnName="Cid" />
+          <ScalarProperty Name="TransactionFee" ColumnName="TransactionFee" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="pincode" ColumnName="pincode" />
+          <ScalarProperty Name="Others" ColumnName="Others" />
+          <ScalarProperty Name="Insufficientfunds" ColumnName="Insufficientfunds" />
+          <ScalarProperty Name="InvalidPin" ColumnName="InvalidPin" />
+          <ScalarProperty Name="SignatureDoesNotMatched" ColumnName="SignatureDoesNotMatched" />
+          <ScalarProperty Name="TrasanctionSource" ColumnName="TrasanctionSource" />
+          <ScalarProperty Name="PFS" ColumnName="PFS" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsLocked" ColumnName="IsLocked" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ResponseStatusMessage" ColumnName="ResponseStatusMessage" />
+          <ScalarProperty Name="ResponseStatus" ColumnName="ResponseStatus" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="TransferType" ColumnName="TransferType" />
+          <ScalarProperty Name="Narrative" ColumnName="Narrative" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="BeneficiaryBankRoutingNumber" ColumnName="BeneficiaryBankRoutingNumber" />
+          <ScalarProperty Name="BeneficiaryBankSwiftBIC" ColumnName="BeneficiaryBankSwiftBIC" />
+          <ScalarProperty Name="BeneficiaryBankCountryCode" ColumnName="BeneficiaryBankCountryCode" />
+          <ScalarProperty Name="BeneficiaryBankStateCode" ColumnName="BeneficiaryBankStateCode" />
+          <ScalarProperty Name="BeneficiaryBankAddress" ColumnName="BeneficiaryBankAddress" />
+          <ScalarProperty Name="BeneficiaryBankName" ColumnName="BeneficiaryBankName" />
+          <ScalarProperty Name="BeneficiaryAccountNumber" ColumnName="BeneficiaryAccountNumber" />
+          <ScalarProperty Name="BeneficiaryCountry" ColumnName="BeneficiaryCountry" />
+          <ScalarProperty Name="BeneficiaryAddress" ColumnName="BeneficiaryAddress" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="IdentityType" ColumnName="IdentityType" />
+          <ScalarProperty Name="SourceAccountNumber" ColumnName="SourceAccountNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WithdrawalBankWireTrackingDetails">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.WithdrawalBankWireTrackingDetail">
+        <MappingFragment StoreEntitySet="WithdrawalBankWireTrackingDetail">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="Newamount" ColumnName="Newamount" />
+          <ScalarProperty Name="Existingamount" ColumnName="Existingamount" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="UpdatedAccountStatus" ColumnName="UpdatedAccountStatus" />
+          <ScalarProperty Name="ExistingAccountStatus" ColumnName="ExistingAccountStatus" />
+          <ScalarProperty Name="WithdrawalBankWireId" ColumnName="WithdrawalBankWireId" />
+          <ScalarProperty Name="TrackingId" ColumnName="TrackingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WithdrawalCheckbooks">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.WithdrawalCheckbook">
+        <MappingFragment StoreEntitySet="WithdrawalCheckbook">
+          <ScalarProperty Name="UsClientsOnly" ColumnName="UsClientsOnly" />
+          <ScalarProperty Name="disregardRejection2" ColumnName="disregardRejection2" />
+          <ScalarProperty Name="disregardRejection1" ColumnName="disregardRejection1" />
+          <ScalarProperty Name="withdrawalIboss" ColumnName="withdrawalIboss" />
+          <ScalarProperty Name="IdentityType" ColumnName="IdentityType" />
+          <ScalarProperty Name="duplicaterequest" ColumnName="duplicaterequest" />
+          <ScalarProperty Name="openpositionuraccount" ColumnName="openpositionuraccount" />
+          <ScalarProperty Name="Cid" ColumnName="Cid" />
+          <ScalarProperty Name="ipaddress" ColumnName="ipaddress" />
+          <ScalarProperty Name="totalamount" ColumnName="totalamount" />
+          <ScalarProperty Name="RoutingNumber" ColumnName="RoutingNumber" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="TransactionFee" ColumnName="TransactionFee" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="pincoad" ColumnName="pincoad" />
+          <ScalarProperty Name="Others" ColumnName="Others" />
+          <ScalarProperty Name="Insufficientfunds" ColumnName="Insufficientfunds" />
+          <ScalarProperty Name="InvalidPin" ColumnName="InvalidPin" />
+          <ScalarProperty Name="SignatureDoesNotMatched" ColumnName="SignatureDoesNotMatched" />
+          <ScalarProperty Name="TrasanctionSource" ColumnName="TrasanctionSource" />
+          <ScalarProperty Name="PFS" ColumnName="PFS" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsLocked" ColumnName="IsLocked" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ResponseStatusMessage" ColumnName="ResponseStatusMessage" />
+          <ScalarProperty Name="ResponseStatus" ColumnName="ResponseStatus" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CheckNum" ColumnName="CheckNum" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="BusinessName" ColumnName="BusinessName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WithdrawalCoinges">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.WithdrawalCoinx">
+        <MappingFragment StoreEntitySet="WithdrawalCoinx">
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="FreeFormAddenda" ColumnName="FreeFormAddenda" />
+          <ScalarProperty Name="Hold" ColumnName="Hold" />
+          <ScalarProperty Name="BatchNum" ColumnName="BatchNum" />
+          <ScalarProperty Name="Discretionary" ColumnName="Discretionary" />
+          <ScalarProperty Name="Identification" ColumnName="Identification" />
+          <ScalarProperty Name="TransactionCode" ColumnName="TransactionCode" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="RoutingNum" ColumnName="RoutingNum" />
+          <ScalarProperty Name="AccountNum" ColumnName="AccountNum" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WithdrawalInterCashes">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.WithdrawalInterCash">
+        <MappingFragment StoreEntitySet="WithdrawalInterCash">
+          <ScalarProperty Name="ResponseStatusMessage" ColumnName="ResponseStatusMessage" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="totalammount" ColumnName="totalammount" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="duplicaterequest" ColumnName="duplicaterequest" />
+          <ScalarProperty Name="openpositionuraccount" ColumnName="openpositionuraccount" />
+          <ScalarProperty Name="TransactionFee" ColumnName="TransactionFee" />
+          <ScalarProperty Name="Others" ColumnName="Others" />
+          <ScalarProperty Name="Insufficientfunds" ColumnName="Insufficientfunds" />
+          <ScalarProperty Name="InvalidPin" ColumnName="InvalidPin" />
+          <ScalarProperty Name="SignatureDoesNotMatched" ColumnName="SignatureDoesNotMatched" />
+          <ScalarProperty Name="ResponseStatus" ColumnName="ResponseStatus" />
+          <ScalarProperty Name="cid" ColumnName="cid" />
+          <ScalarProperty Name="ipaddress" ColumnName="ipaddress" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="RemoteID" ColumnName="RemoteID" />
+          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+          <ScalarProperty Name="PFS" ColumnName="PFS" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="AccessCode" ColumnName="AccessCode" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WithdrawalInterCashTrackingDetails">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.WithdrawalInterCashTrackingDetail">
+        <MappingFragment StoreEntitySet="WithdrawalInterCashTrackingDetail">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="Newamount" ColumnName="Newamount" />
+          <ScalarProperty Name="Existingamount" ColumnName="Existingamount" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="UpdatedAccountStatus" ColumnName="UpdatedAccountStatus" />
+          <ScalarProperty Name="ExistingAccountStatus" ColumnName="ExistingAccountStatus" />
+          <ScalarProperty Name="WithdrawalInterCashId" ColumnName="WithdrawalInterCashId" />
+          <ScalarProperty Name="TrackingId" ColumnName="TrackingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Account_fee">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.Account_fee">
+        <MappingFragment StoreEntitySet="Account_fee">
+          <ScalarProperty Name="Account" ColumnName="Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountXRefs">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.AccountXRef">
+        <MappingFragment StoreEntitySet="AccountXRef">
+          <ScalarProperty Name="AliasAccount" ColumnName="AliasAccount" />
+          <ScalarProperty Name="MTSAccount" ColumnName="MTSAccount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Acct_rerun">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.Acct_rerun">
+        <MappingFragment StoreEntitySet="Acct_rerun">
+          <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Acct_Rerun_bak">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.Acct_Rerun_bak">
+        <MappingFragment StoreEntitySet="Acct_Rerun_bak">
+          <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AffiliateCommissions">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.AffiliateCommission">
+        <MappingFragment StoreEntitySet="AffiliateCommission">
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="MaxCommission" ColumnName="MaxCommission" />
+          <ScalarProperty Name="MinCommission" ColumnName="MinCommission" />
+          <ScalarProperty Name="PerContract" ColumnName="PerContract" />
+          <ScalarProperty Name="PerOption" ColumnName="PerOption" />
+          <ScalarProperty Name="PerPrincipal" ColumnName="PerPrincipal" />
+          <ScalarProperty Name="PerShare" ColumnName="PerShare" />
+          <ScalarProperty Name="PerTicket" ColumnName="PerTicket" />
+          <ScalarProperty Name="MainAccount" ColumnName="MainAccount" />
+          <ScalarProperty Name="AffiliateName" ColumnName="AffiliateName" />
+          <ScalarProperty Name="AffiliateID" ColumnName="AffiliateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AltSymbols">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.AltSymbol">
+        <MappingFragment StoreEntitySet="AltSymbol">
+          <ScalarProperty Name="AltSymbol1" ColumnName="AltSymbol" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditTrails">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.AuditTrail">
+        <MappingFragment StoreEntitySet="AuditTrail">
+          <ScalarProperty Name="TransactionDateTime" ColumnName="TransactionDateTime" />
+          <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+          <ScalarProperty Name="TransactionSource" ColumnName="TransactionSource" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="Initial" ColumnName="Initial" />
+          <ScalarProperty Name="MainAccount" ColumnName="MainAccount" />
+          <ScalarProperty Name="AuditTrailID" ColumnName="AuditTrailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Calendars">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.Calendar">
+        <MappingFragment StoreEntitySet="Calendar">
+          <ScalarProperty Name="OptionSettleDate" ColumnName="OptionSettleDate" />
+          <ScalarProperty Name="SettleDate" ColumnName="SettleDate" />
+          <ScalarProperty Name="PrevDate" ColumnName="PrevDate" />
+          <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+          <ScalarProperty Name="BDayID" ColumnName="BDayID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cash_32810">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.Cash_32810">
+        <MappingFragment StoreEntitySet="Cash_32810">
+          <ScalarProperty Name="CashCode" ColumnName="CashCode" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="EnterBy" ColumnName="EnterBy" />
+          <ScalarProperty Name="Withdraw" ColumnName="Withdraw" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="CashID" ColumnName="CashID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashCodes">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.CashCode">
+        <MappingFragment StoreEntitySet="CashCode">
+          <ScalarProperty Name="CashCodeDetail" ColumnName="CashCodeDetail" />
+          <ScalarProperty Name="CashCode1" ColumnName="CashCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashMove_Hold">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.CashMove_Hold">
+        <MappingFragment StoreEntitySet="CashMove_Hold">
+          <ScalarProperty Name="CashCode" ColumnName="CashCode" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="EnterBy" ColumnName="EnterBy" />
+          <ScalarProperty Name="Withdraw" ColumnName="Withdraw" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="CashID" ColumnName="CashID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashMoveRemoveds">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.CashMoveRemoved">
+        <MappingFragment StoreEntitySet="CashMoveRemoved">
+          <ScalarProperty Name="CashCode" ColumnName="CashCode" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="EnterBy" ColumnName="EnterBy" />
+          <ScalarProperty Name="Withdraw" ColumnName="Withdraw" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="CashID" ColumnName="CashID" />
+          <ScalarProperty Name="CashRemovedID" ColumnName="CashRemovedID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Err_Symbol">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.Err_Symbol">
+        <MappingFragment StoreEntitySet="Err_Symbol">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Log4Net_Error">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.Log4Net_Error">
+        <MappingFragment StoreEntitySet="Log4Net_Error">
+          <ScalarProperty Name="Exception" ColumnName="Exception" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Logger" ColumnName="Logger" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Thread" ColumnName="Thread" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MainLogins">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.MainLogin">
+        <MappingFragment StoreEntitySet="MainLogin">
+          <ScalarProperty Name="UserLevel" ColumnName="UserLevel" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="Passwd" ColumnName="Passwd" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="MainLoginID" ColumnName="MainLoginID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MainPositions">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.MainPosition">
+        <MappingFragment StoreEntitySet="MainPosition">
+          <ScalarProperty Name="DateAsof" ColumnName="DateAsof" />
+          <ScalarProperty Name="ClosePrice" ColumnName="ClosePrice" />
+          <ScalarProperty Name="SDPosition" ColumnName="SDPosition" />
+          <ScalarProperty Name="MarketValue" ColumnName="MarketValue" />
+          <ScalarProperty Name="TDPosition" ColumnName="TDPosition" />
+          <ScalarProperty Name="SecurityDescription" ColumnName="SecurityDescription" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="CUSIP" ColumnName="CUSIP" />
+          <ScalarProperty Name="SecType" ColumnName="SecType" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="MainAccount" ColumnName="MainAccount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewOptionSymbols">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.NewOptionSymbol">
+        <MappingFragment StoreEntitySet="NewOptionSymbol">
+          <ScalarProperty Name="NewSymbol" ColumnName="NewSymbol" />
+          <ScalarProperty Name="TDPosition" ColumnName="TDPosition" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="SECType" ColumnName="SECType" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PFTrades">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.PFTrade">
+        <MappingFragment StoreEntitySet="PFTrade">
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="PlatformDir" ColumnName="PlatformDir" />
+          <ScalarProperty Name="CombineID" ColumnName="CombineID" />
+          <ScalarProperty Name="PFCID" ColumnName="PFCID" />
+          <ScalarProperty Name="FixNote" ColumnName="FixNote" />
+          <ScalarProperty Name="RawCount" ColumnName="RawCount" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="MPID" ColumnName="MPID" />
+          <ScalarProperty Name="ClearingBroker" ColumnName="ClearingBroker" />
+          <ScalarProperty Name="ClearingType" ColumnName="ClearingType" />
+          <ScalarProperty Name="CrossCap" ColumnName="CrossCap" />
+          <ScalarProperty Name="Inv" ColumnName="Inv" />
+          <ScalarProperty Name="Legend" ColumnName="Legend" />
+          <ScalarProperty Name="Trailer" ColumnName="Trailer" />
+          <ScalarProperty Name="TrailerCode" ColumnName="TrailerCode" />
+          <ScalarProperty Name="NASDAQFee" ColumnName="NASDAQFee" />
+          <ScalarProperty Name="NSCCFee" ColumnName="NSCCFee" />
+          <ScalarProperty Name="NASDFee" ColumnName="NASDFee" />
+          <ScalarProperty Name="Fee5" ColumnName="Fee5" />
+          <ScalarProperty Name="Fee4" ColumnName="Fee4" />
+          <ScalarProperty Name="Fee3" ColumnName="Fee3" />
+          <ScalarProperty Name="Fee2" ColumnName="Fee2" />
+          <ScalarProperty Name="Fee1" ColumnName="Fee1" />
+          <ScalarProperty Name="MiscFee" ColumnName="MiscFee" />
+          <ScalarProperty Name="SECFee" ColumnName="SECFee" />
+          <ScalarProperty Name="Commission" ColumnName="Commission" />
+          <ScalarProperty Name="ExecTime" ColumnName="ExecTime" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="Side" ColumnName="Side" />
+          <ScalarProperty Name="TradeType" ColumnName="TradeType" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="SettleDate" ColumnName="SettleDate" />
+          <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="PFTradeID" ColumnName="PFTradeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PFTradeFixBoxes">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.PFTradeFixBox">
+        <MappingFragment StoreEntitySet="PFTradeFixBox">
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="PlatformDir" ColumnName="PlatformDir" />
+          <ScalarProperty Name="CombineID" ColumnName="CombineID" />
+          <ScalarProperty Name="PFCID" ColumnName="PFCID" />
+          <ScalarProperty Name="FixNote" ColumnName="FixNote" />
+          <ScalarProperty Name="RawCount" ColumnName="RawCount" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="MPID" ColumnName="MPID" />
+          <ScalarProperty Name="ClearingBroker" ColumnName="ClearingBroker" />
+          <ScalarProperty Name="ClearingType" ColumnName="ClearingType" />
+          <ScalarProperty Name="CrossCap" ColumnName="CrossCap" />
+          <ScalarProperty Name="Inv" ColumnName="Inv" />
+          <ScalarProperty Name="Legend" ColumnName="Legend" />
+          <ScalarProperty Name="Trailer" ColumnName="Trailer" />
+          <ScalarProperty Name="TrailerCode" ColumnName="TrailerCode" />
+          <ScalarProperty Name="NASDAQFee" ColumnName="NASDAQFee" />
+          <ScalarProperty Name="NSCCFee" ColumnName="NSCCFee" />
+          <ScalarProperty Name="NASDFee" ColumnName="NASDFee" />
+          <ScalarProperty Name="Fee5" ColumnName="Fee5" />
+          <ScalarProperty Name="Fee4" ColumnName="Fee4" />
+          <ScalarProperty Name="Fee3" ColumnName="Fee3" />
+          <ScalarProperty Name="Fee2" ColumnName="Fee2" />
+          <ScalarProperty Name="Fee1" ColumnName="Fee1" />
+          <ScalarProperty Name="MiscFee" ColumnName="MiscFee" />
+          <ScalarProperty Name="SECFee" ColumnName="SECFee" />
+          <ScalarProperty Name="Commission" ColumnName="Commission" />
+          <ScalarProperty Name="ExecTime" ColumnName="ExecTime" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="Side" ColumnName="Side" />
+          <ScalarProperty Name="TradeType" ColumnName="TradeType" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="SettleDate" ColumnName="SettleDate" />
+          <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="PFTradeID" ColumnName="PFTradeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RawUploadTrades">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.RawUploadTrade">
+        <MappingFragment StoreEntitySet="RawUploadTrades">
+          <ScalarProperty Name="SourceFileName" ColumnName="SourceFileName" />
+          <ScalarProperty Name="SourceControlID" ColumnName="SourceControlID" />
+          <ScalarProperty Name="SourceEntryDateTime" ColumnName="SourceEntryDateTime" />
+          <ScalarProperty Name="ProcessCode" ColumnName="ProcessCode" />
+          <ScalarProperty Name="OriginalAccountNumber" ColumnName="OriginalAccountNumber" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="Trailer" ColumnName="Trailer" />
+          <ScalarProperty Name="TrailerCode" ColumnName="TrailerCode" />
+          <ScalarProperty Name="Liquidity" ColumnName="Liquidity" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="RRGross" ColumnName="RRGross" />
+          <ScalarProperty Name="TradePrice" ColumnName="TradePrice" />
+          <ScalarProperty Name="ExecBroker" ColumnName="ExecBroker" />
+          <ScalarProperty Name="ClearingBroker" ColumnName="ClearingBroker" />
+          <ScalarProperty Name="FrontBroker" ColumnName="FrontBroker" />
+          <ScalarProperty Name="ExecMethod" ColumnName="ExecMethod" />
+          <ScalarProperty Name="MPID" ColumnName="MPID" />
+          <ScalarProperty Name="PrincipalAmount" ColumnName="PrincipalAmount" />
+          <ScalarProperty Name="BondInterest" ColumnName="BondInterest" />
+          <ScalarProperty Name="Factor" ColumnName="Factor" />
+          <ScalarProperty Name="Tax" ColumnName="Tax" />
+          <ScalarProperty Name="OriginalCommission" ColumnName="OriginalCommission" />
+          <ScalarProperty Name="NASDAQFee" ColumnName="NASDAQFee" />
+          <ScalarProperty Name="NSCCFee" ColumnName="NSCCFee" />
+          <ScalarProperty Name="NASDTAFee" ColumnName="NASDTAFee" />
+          <ScalarProperty Name="Fee5" ColumnName="Fee5" />
+          <ScalarProperty Name="Fee4" ColumnName="Fee4" />
+          <ScalarProperty Name="Fee3" ColumnName="Fee3" />
+          <ScalarProperty Name="Fee2" ColumnName="Fee2" />
+          <ScalarProperty Name="Fee1" ColumnName="Fee1" />
+          <ScalarProperty Name="MiscFee" ColumnName="MiscFee" />
+          <ScalarProperty Name="SECFee" ColumnName="SECFee" />
+          <ScalarProperty Name="Commission" ColumnName="Commission" />
+          <ScalarProperty Name="CrossCap" ColumnName="CrossCap" />
+          <ScalarProperty Name="InventoryAccount" ColumnName="InventoryAccount" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="SPCCode" ColumnName="SPCCode" />
+          <ScalarProperty Name="LegendCode" ColumnName="LegendCode" />
+          <ScalarProperty Name="CapacityCode" ColumnName="CapacityCode" />
+          <ScalarProperty Name="MarketCode" ColumnName="MarketCode" />
+          <ScalarProperty Name="ExecTime" ColumnName="ExecTime" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="Side" ColumnName="Side" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="SettleDate" ColumnName="SettleDate" />
+          <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="RepCode" ColumnName="RepCode" />
+          <ScalarProperty Name="OfficeCode" ColumnName="OfficeCode" />
+          <ScalarProperty Name="CorrespondentCode" ColumnName="CorrespondentCode" />
+          <ScalarProperty Name="Firm" ColumnName="Firm" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="RawUploadTradeID" ColumnName="RawUploadTradeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReorgNotices">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.ReorgNotice">
+        <MappingFragment StoreEntitySet="ReorgNotice">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="ShareRatio" ColumnName="ShareRatio" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="CUSIP" ColumnName="CUSIP" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SecTemp1">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.SecTemp1">
+        <MappingFragment StoreEntitySet="SecTemp1">
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SecurityHistories">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.SecurityHistory">
+        <MappingFragment StoreEntitySet="SecurityHistory">
+          <ScalarProperty Name="DateAsof" ColumnName="DateAsof" />
+          <ScalarProperty Name="ClosePrice" ColumnName="ClosePrice" />
+          <ScalarProperty Name="AmountFactor" ColumnName="AmountFactor" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SecType" ColumnName="SecType" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="CUSIP" ColumnName="CUSIP" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TradeAccounts">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.TradeAccount">
+        <MappingFragment StoreEntitySet="TradeAccount">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="AutoAllocate" ColumnName="AutoAllocate" />
+          <ScalarProperty Name="MainAccount" ColumnName="MainAccount" />
+          <ScalarProperty Name="TradeAccount1" ColumnName="TradeAccount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TradesOptionExpires">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.TradesOptionExpire">
+        <MappingFragment StoreEntitySet="TradesOptionExpire">
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="MPID" ColumnName="MPID" />
+          <ScalarProperty Name="TradeNum" ColumnName="TradeNum" />
+          <ScalarProperty Name="Platform" ColumnName="Platform" />
+          <ScalarProperty Name="ClearingBroker" ColumnName="ClearingBroker" />
+          <ScalarProperty Name="ClearingType" ColumnName="ClearingType" />
+          <ScalarProperty Name="Fee5" ColumnName="Fee5" />
+          <ScalarProperty Name="Fee4" ColumnName="Fee4" />
+          <ScalarProperty Name="Fee3" ColumnName="Fee3" />
+          <ScalarProperty Name="Fee2" ColumnName="Fee2" />
+          <ScalarProperty Name="Fee1" ColumnName="Fee1" />
+          <ScalarProperty Name="SECFee" ColumnName="SECFee" />
+          <ScalarProperty Name="Commission" ColumnName="Commission" />
+          <ScalarProperty Name="ExecTime" ColumnName="ExecTime" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="Side" ColumnName="Side" />
+          <ScalarProperty Name="AmountFactor" ColumnName="AmountFactor" />
+          <ScalarProperty Name="TradeType" ColumnName="TradeType" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="TradesID" ColumnName="TradesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TradesRemoveds">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.TradesRemoved">
+        <MappingFragment StoreEntitySet="TradesRemoved">
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Platform" ColumnName="Platform" />
+          <ScalarProperty Name="ClearingBroker" ColumnName="ClearingBroker" />
+          <ScalarProperty Name="ClearingType" ColumnName="ClearingType" />
+          <ScalarProperty Name="Fee5" ColumnName="Fee5" />
+          <ScalarProperty Name="Fee4" ColumnName="Fee4" />
+          <ScalarProperty Name="Fee3" ColumnName="Fee3" />
+          <ScalarProperty Name="Fee2" ColumnName="Fee2" />
+          <ScalarProperty Name="Fee1" ColumnName="Fee1" />
+          <ScalarProperty Name="SECFee" ColumnName="SECFee" />
+          <ScalarProperty Name="Commission" ColumnName="Commission" />
+          <ScalarProperty Name="ExecTime" ColumnName="ExecTime" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="Side" ColumnName="Side" />
+          <ScalarProperty Name="AmountFactor" ColumnName="AmountFactor" />
+          <ScalarProperty Name="TradeType" ColumnName="TradeType" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="TradesID" ColumnName="TradesID" />
+          <ScalarProperty Name="TradesRemovedID" ColumnName="TradesRemovedID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TradeSubs">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.TradeSub">
+        <MappingFragment StoreEntitySet="TradeSub">
+          <ScalarProperty Name="SharePercent" ColumnName="SharePercent" />
+          <ScalarProperty Name="ResAccount" ColumnName="ResAccount" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="TradeAccount" ColumnName="TradeAccount" />
+          <ScalarProperty Name="TradeSubID" ColumnName="TradeSubID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_Deposit">
+      <EntityTypeMapping TypeName="SureTraderBackOffice.vw_Deposit">
+        <MappingFragment StoreEntitySet="vw_Deposit">
+          <ScalarProperty Name="BankAccountNumber" ColumnName="BankAccountNumber" />
+          <ScalarProperty Name="RoutingNumber" ColumnName="RoutingNumber" />
+          <ScalarProperty Name="ItemDescription" ColumnName="ItemDescription" />
+          <ScalarProperty Name="ItemNumber" ColumnName="ItemNumber" />
+          <ScalarProperty Name="ReceiverEmail" ColumnName="ReceiverEmail" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="AmountShipping" ColumnName="AmountShipping" />
+          <ScalarProperty Name="AmountPurchase" ColumnName="AmountPurchase" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="PostbackUrl" ColumnName="PostbackUrl" />
+          <ScalarProperty Name="FailureUrl" ColumnName="FailureUrl" />
+          <ScalarProperty Name="SuccessUrl" ColumnName="SuccessUrl" />
+          <ScalarProperty Name="BrowserAgent" ColumnName="BrowserAgent" />
+          <ScalarProperty Name="UserAgent" ColumnName="UserAgent" />
+          <ScalarProperty Name="CardExpYear" ColumnName="CardExpYear" />
+          <ScalarProperty Name="CardExpMonth" ColumnName="CardExpMonth" />
+          <ScalarProperty Name="CardCcv" ColumnName="CardCcv" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="CardName" ColumnName="CardName" />
+          <ScalarProperty Name="CardType" ColumnName="CardType" />
+          <ScalarProperty Name="DepositDetailId" ColumnName="DepositDetailId" />
+          <ScalarProperty Name="ResponseStatusMessage" ColumnName="ResponseStatusMessage" />
+          <ScalarProperty Name="ResponseStatus" ColumnName="ResponseStatus" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="ActionMethod" ColumnName="ActionMethod" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="IP_Address" ColumnName="IP_Address" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="RCode" ColumnName="RCode" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="DepositMasterId" ColumnName="DepositMasterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

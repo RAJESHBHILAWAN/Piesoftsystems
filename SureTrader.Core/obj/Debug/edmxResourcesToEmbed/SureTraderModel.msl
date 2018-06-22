@@ -1,0 +1,1736 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="suretraderModelStoreContainer" CdmEntityContainer="suretraderEntities1">
+    <EntitySetMapping Name="account_block">
+      <EntityTypeMapping TypeName="suretraderModel.account_block">
+        <MappingFragment StoreEntitySet="account_block">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="date_time" ColumnName="date_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="account_holder_affiliations">
+      <EntityTypeMapping TypeName="suretraderModel.account_holder_affiliations">
+        <MappingFragment StoreEntitySet="account_holder_affiliations">
+          <ScalarProperty Name="idACCOUNT_HOLDER" ColumnName="idACCOUNT_HOLDER" />
+          <ScalarProperty Name="idAFFILIATION" ColumnName="idAFFILIATION" />
+          <ScalarProperty Name="ANSWER" ColumnName="ANSWER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="account_type">
+      <EntityTypeMapping TypeName="suretraderModel.account_type">
+        <MappingFragment StoreEntitySet="account_type">
+          <ScalarProperty Name="idaccount_type" ColumnName="idaccount_type" />
+          <ScalarProperty Name="account_type1" ColumnName="account_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="accountholders">
+      <EntityTypeMapping TypeName="suretraderModel.accountholder">
+        <MappingFragment StoreEntitySet="accountholders">
+          <ScalarProperty Name="idACCOUNT_HOLDER" ColumnName="idACCOUNT_HOLDER" />
+          <ScalarProperty Name="idCUSTOMER" ColumnName="idCUSTOMER" />
+          <ScalarProperty Name="MEMBER_TYPE" ColumnName="MEMBER_TYPE" />
+          <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+          <ScalarProperty Name="MIDDLE_NAME" ColumnName="MIDDLE_NAME" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+          <ScalarProperty Name="COUNTRY_CITIZENSHIP_ID" ColumnName="COUNTRY_CITIZENSHIP_ID" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="SECURITY_QUESTION" ColumnName="SECURITY_QUESTION" />
+          <ScalarProperty Name="SECURITY_ANSWER" ColumnName="SECURITY_ANSWER" />
+          <ScalarProperty Name="RESIDENTIAL_COUNTRY" ColumnName="RESIDENTIAL_COUNTRY" />
+          <ScalarProperty Name="RESIDENTIAL_CITY" ColumnName="RESIDENTIAL_CITY" />
+          <ScalarProperty Name="RESIDENTIAL_STREET1" ColumnName="RESIDENTIAL_STREET1" />
+          <ScalarProperty Name="RESIDENTIAL_STREET2" ColumnName="RESIDENTIAL_STREET2" />
+          <ScalarProperty Name="RESIDENTIAL_STATE" ColumnName="RESIDENTIAL_STATE" />
+          <ScalarProperty Name="RESIDENTIAL_POSTALCODE" ColumnName="RESIDENTIAL_POSTALCODE" />
+          <ScalarProperty Name="MAILING_COUNTRY" ColumnName="MAILING_COUNTRY" />
+          <ScalarProperty Name="MAILING_CITY" ColumnName="MAILING_CITY" />
+          <ScalarProperty Name="MAILING_STREET1" ColumnName="MAILING_STREET1" />
+          <ScalarProperty Name="MAILING_STREET2" ColumnName="MAILING_STREET2" />
+          <ScalarProperty Name="MAILING_STATE" ColumnName="MAILING_STATE" />
+          <ScalarProperty Name="MAILING_POSTALCODE" ColumnName="MAILING_POSTALCODE" />
+          <ScalarProperty Name="PHONE_HOME" ColumnName="PHONE_HOME" />
+          <ScalarProperty Name="PHONE_WORK" ColumnName="PHONE_WORK" />
+          <ScalarProperty Name="PHONE_MOBILE" ColumnName="PHONE_MOBILE" />
+          <ScalarProperty Name="MARITAL_STATUS" ColumnName="MARITAL_STATUS" />
+          <ScalarProperty Name="DEPENDANTS" ColumnName="DEPENDANTS" />
+          <ScalarProperty Name="HIGHEST_DEGREE" ColumnName="HIGHEST_DEGREE" />
+          <ScalarProperty Name="HIGHEST_DEGREE_SCHOOL_NAME" ColumnName="HIGHEST_DEGREE_SCHOOL_NAME" />
+          <ScalarProperty Name="EMPLOYMENT_STATUS" ColumnName="EMPLOYMENT_STATUS" />
+          <ScalarProperty Name="EMPLOYER_NAME" ColumnName="EMPLOYER_NAME" />
+          <ScalarProperty Name="BUSINESS_TYPE" ColumnName="BUSINESS_TYPE" />
+          <ScalarProperty Name="OCCUPATION" ColumnName="OCCUPATION" />
+          <ScalarProperty Name="NUMBER_YEARS_EMPLOYED" ColumnName="NUMBER_YEARS_EMPLOYED" />
+          <ScalarProperty Name="EMPLOYER_STREET1" ColumnName="EMPLOYER_STREET1" />
+          <ScalarProperty Name="EMPLOYER_STREET2" ColumnName="EMPLOYER_STREET2" />
+          <ScalarProperty Name="EMPLOYER_CITY" ColumnName="EMPLOYER_CITY" />
+          <ScalarProperty Name="EMPLOYER_STATE" ColumnName="EMPLOYER_STATE" />
+          <ScalarProperty Name="EMPLOYER_POSTAL_CODE" ColumnName="EMPLOYER_POSTAL_CODE" />
+          <ScalarProperty Name="EMPLOYER_COUNTRY" ColumnName="EMPLOYER_COUNTRY" />
+          <ScalarProperty Name="ANNUAL_INCOME" ColumnName="ANNUAL_INCOME" />
+          <ScalarProperty Name="TAXRATE" ColumnName="TAXRATE" />
+          <ScalarProperty Name="NETWORTH" ColumnName="NETWORTH" />
+          <ScalarProperty Name="LIQUID_NET_WORTH" ColumnName="LIQUID_NET_WORTH" />
+          <ScalarProperty Name="BANK_NAME" ColumnName="BANK_NAME" />
+          <ScalarProperty Name="BANK_STATE" ColumnName="BANK_STATE" />
+          <ScalarProperty Name="BANK_COUNTRY" ColumnName="BANK_COUNTRY" />
+          <ScalarProperty Name="RISK_TOLERANCE" ColumnName="RISK_TOLERANCE" />
+          <ScalarProperty Name="KNOWLEDGE_LEVEL" ColumnName="KNOWLEDGE_LEVEL" />
+          <ScalarProperty Name="YEARS_EXPERIENCE" ColumnName="YEARS_EXPERIENCE" />
+          <ScalarProperty Name="TRANSACTIONS_PER_YEAR" ColumnName="TRANSACTIONS_PER_YEAR" />
+          <ScalarProperty Name="AVERAGE_SIZE_PER_TRADE" ColumnName="AVERAGE_SIZE_PER_TRADE" />
+          <ScalarProperty Name="ID_FIRST_TYPE" ColumnName="ID_FIRST_TYPE" />
+          <ScalarProperty Name="ID_FIRST_PLACE_ISSUANCE" ColumnName="ID_FIRST_PLACE_ISSUANCE" />
+          <ScalarProperty Name="ID_FIRST_NUMBER" ColumnName="ID_FIRST_NUMBER" />
+          <ScalarProperty Name="ID_FIRST_EXPIRATION" ColumnName="ID_FIRST_EXPIRATION" />
+          <ScalarProperty Name="ID_SECOND_TYPE" ColumnName="ID_SECOND_TYPE" />
+          <ScalarProperty Name="ID_SECOND_PLACE_ISSUANCE" ColumnName="ID_SECOND_PLACE_ISSUANCE" />
+          <ScalarProperty Name="ID_SECOND_NUMBER" ColumnName="ID_SECOND_NUMBER" />
+          <ScalarProperty Name="ID_SECOND_EXPIRATION" ColumnName="ID_SECOND_EXPIRATION" />
+          <ScalarProperty Name="FIRST_REFERENCE_COMPANY_NAME" ColumnName="FIRST_REFERENCE_COMPANY_NAME" />
+          <ScalarProperty Name="FIRST_REFERENCE_NAME" ColumnName="FIRST_REFERENCE_NAME" />
+          <ScalarProperty Name="FIRST_REFERENCE_PHONE" ColumnName="FIRST_REFERENCE_PHONE" />
+          <ScalarProperty Name="FIRST_REFERENCE_EMAIL" ColumnName="FIRST_REFERENCE_EMAIL" />
+          <ScalarProperty Name="SECOND_REFERENCE_NAME" ColumnName="SECOND_REFERENCE_NAME" />
+          <ScalarProperty Name="SECOND_REFERENCE_PHONE" ColumnName="SECOND_REFERENCE_PHONE" />
+          <ScalarProperty Name="SECOND_REFERENCE_EMAIL" ColumnName="SECOND_REFERENCE_EMAIL" />
+          <ScalarProperty Name="THIRD_REFERENCE_NAME" ColumnName="THIRD_REFERENCE_NAME" />
+          <ScalarProperty Name="THIRD_REFERENCE_PHONE" ColumnName="THIRD_REFERENCE_PHONE" />
+          <ScalarProperty Name="THIRD_REFERENCE_EMAIL" ColumnName="THIRD_REFERENCE_EMAIL" />
+          <ScalarProperty Name="SUBMISSION_DATE" ColumnName="SUBMISSION_DATE" />
+          <ScalarProperty Name="SIGNATURE" ColumnName="SIGNATURE" />
+          <ScalarProperty Name="SIG_HASH" ColumnName="SIG_HASH" />
+          <ScalarProperty Name="Account_Status" ColumnName="Account_Status" />
+          <ScalarProperty Name="joint_application_residence" ColumnName="joint_application_residence" />
+          <ScalarProperty Name="joint_application_investment_objecives" ColumnName="joint_application_investment_objecives" />
+          <ScalarProperty Name="joint_application_affiliations" ColumnName="joint_application_affiliations" />
+          <ScalarProperty Name="joint_application_fullname_brokerageEmployeee" ColumnName="joint_application_fullname_brokerageEmployeee" />
+          <ScalarProperty Name="joint_application_fullname_director" ColumnName="joint_application_fullname_director" />
+          <ScalarProperty Name="joint_application_is_brokerageEmployeee" ColumnName="joint_application_is_brokerageEmployeee" />
+          <ScalarProperty Name="joint_application_is_director" ColumnName="joint_application_is_director" />
+          <ScalarProperty Name="joint_application_is_employed_security_industry" ColumnName="joint_application_is_employed_security_industry" />
+          <ScalarProperty Name="joint_application_relationship_brokerageEmployeee" ColumnName="joint_application_relationship_brokerageEmployeee" />
+          <ScalarProperty Name="joint_application_relationship_director" ColumnName="joint_application_relationship_director" />
+          <ScalarProperty Name="income_source" ColumnName="income_source" />
+          <ScalarProperty Name="account_disclaimers" ColumnName="account_disclaimers" />
+          <ScalarProperty Name="client_agreement" ColumnName="client_agreement" />
+          <ScalarProperty Name="fatca_agreement" ColumnName="fatca_agreement" />
+          <ScalarProperty Name="unsolicited_acknowledgement_agreement" ColumnName="unsolicited_acknowledgement_agreement" />
+          <ScalarProperty Name="client_acknowledgement" ColumnName="client_acknowledgement" />
+          <ScalarProperty Name="letter_of_authorization" ColumnName="letter_of_authorization" />
+          <ScalarProperty Name="risk_disclosure" ColumnName="risk_disclosure" />
+          <ScalarProperty Name="LAST_UPDATE_TIMESTAMP" ColumnName="LAST_UPDATE_TIMESTAMP" />
+          <ScalarProperty Name="INVESTMENT_YEARS_EXPERIENCE" ColumnName="INVESTMENT_YEARS_EXPERIENCE" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="PuporseOfAccount" ColumnName="PuporseOfAccount" />
+          <ScalarProperty Name="PuporseOfAccountOther" ColumnName="PuporseOfAccountOther" />
+          <ScalarProperty Name="CountryOfResidancy" ColumnName="CountryOfResidancy" />
+          <ScalarProperty Name="NomineeDocument" ColumnName="NomineeDocument" />
+          <ScalarProperty Name="NomineeName" ColumnName="NomineeName" />
+          <ScalarProperty Name="NomineePhoneNo" ColumnName="NomineePhoneNo" />
+          <ScalarProperty Name="NomineeRelation" ColumnName="NomineeRelation" />
+          <ScalarProperty Name="bankstreet" ColumnName="bankstreet" />
+          <ScalarProperty Name="First_References_streetaddrs" ColumnName="First_References_streetaddrs" />
+          <ScalarProperty Name="Second_References_streetaddrs" ColumnName="Second_References_streetaddrs" />
+          <ScalarProperty Name="Third_References_streetaddrs" ColumnName="Third_References_streetaddrs" />
+          <ScalarProperty Name="SpouseFirstName" ColumnName="SpouseFirstName" />
+          <ScalarProperty Name="SpouseLastName" ColumnName="SpouseLastName" />
+          <ScalarProperty Name="SpouseDOB" ColumnName="SpouseDOB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="accountholders_lv">
+      <EntityTypeMapping TypeName="suretraderModel.accountholders_lv">
+        <MappingFragment StoreEntitySet="accountholders_lv">
+          <ScalarProperty Name="idACCOUNT_HOLDER" ColumnName="idACCOUNT_HOLDER" />
+          <ScalarProperty Name="idCUSTOMER" ColumnName="idCUSTOMER" />
+          <ScalarProperty Name="MEMBER_TYPE" ColumnName="MEMBER_TYPE" />
+          <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+          <ScalarProperty Name="MIDDLE_NAME" ColumnName="MIDDLE_NAME" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+          <ScalarProperty Name="COUNTRY_CITIZENSHIP_ID" ColumnName="COUNTRY_CITIZENSHIP_ID" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="SECURITY_QUESTION" ColumnName="SECURITY_QUESTION" />
+          <ScalarProperty Name="SECURITY_ANSWER" ColumnName="SECURITY_ANSWER" />
+          <ScalarProperty Name="RESIDENTIAL_COUNTRY" ColumnName="RESIDENTIAL_COUNTRY" />
+          <ScalarProperty Name="RESIDENTIAL_CITY" ColumnName="RESIDENTIAL_CITY" />
+          <ScalarProperty Name="RESIDENTIAL_STREET1" ColumnName="RESIDENTIAL_STREET1" />
+          <ScalarProperty Name="RESIDENTIAL_STREET2" ColumnName="RESIDENTIAL_STREET2" />
+          <ScalarProperty Name="RESIDENTIAL_STATE" ColumnName="RESIDENTIAL_STATE" />
+          <ScalarProperty Name="RESIDENTIAL_POSTALCODE" ColumnName="RESIDENTIAL_POSTALCODE" />
+          <ScalarProperty Name="MAILING_COUNTRY" ColumnName="MAILING_COUNTRY" />
+          <ScalarProperty Name="MAILING_CITY" ColumnName="MAILING_CITY" />
+          <ScalarProperty Name="MAILING_STREET1" ColumnName="MAILING_STREET1" />
+          <ScalarProperty Name="MAILING_STREET2" ColumnName="MAILING_STREET2" />
+          <ScalarProperty Name="MAILING_STATE" ColumnName="MAILING_STATE" />
+          <ScalarProperty Name="MAILING_POSTALCODE" ColumnName="MAILING_POSTALCODE" />
+          <ScalarProperty Name="PHONE_HOME" ColumnName="PHONE_HOME" />
+          <ScalarProperty Name="PHONE_WORK" ColumnName="PHONE_WORK" />
+          <ScalarProperty Name="PHONE_MOBILE" ColumnName="PHONE_MOBILE" />
+          <ScalarProperty Name="MARITAL_STATUS" ColumnName="MARITAL_STATUS" />
+          <ScalarProperty Name="DEPENDANTS" ColumnName="DEPENDANTS" />
+          <ScalarProperty Name="HIGHEST_DEGREE" ColumnName="HIGHEST_DEGREE" />
+          <ScalarProperty Name="HIGHEST_DEGREE_SCHOOL_NAME" ColumnName="HIGHEST_DEGREE_SCHOOL_NAME" />
+          <ScalarProperty Name="EMPLOYMENT_STATUS" ColumnName="EMPLOYMENT_STATUS" />
+          <ScalarProperty Name="EMPLOYER_NAME" ColumnName="EMPLOYER_NAME" />
+          <ScalarProperty Name="BUSINESS_TYPE" ColumnName="BUSINESS_TYPE" />
+          <ScalarProperty Name="OCCUPATION" ColumnName="OCCUPATION" />
+          <ScalarProperty Name="NUMBER_YEARS_EMPLOYED" ColumnName="NUMBER_YEARS_EMPLOYED" />
+          <ScalarProperty Name="EMPLOYER_STREET1" ColumnName="EMPLOYER_STREET1" />
+          <ScalarProperty Name="EMPLOYER_STREET2" ColumnName="EMPLOYER_STREET2" />
+          <ScalarProperty Name="EMPLOYER_CITY" ColumnName="EMPLOYER_CITY" />
+          <ScalarProperty Name="EMPLOYER_STATE" ColumnName="EMPLOYER_STATE" />
+          <ScalarProperty Name="EMPLOYER_POSTAL_CODE" ColumnName="EMPLOYER_POSTAL_CODE" />
+          <ScalarProperty Name="EMPLOYER_COUNTRY" ColumnName="EMPLOYER_COUNTRY" />
+          <ScalarProperty Name="ANNUAL_INCOME" ColumnName="ANNUAL_INCOME" />
+          <ScalarProperty Name="TAXRATE" ColumnName="TAXRATE" />
+          <ScalarProperty Name="NETWORTH" ColumnName="NETWORTH" />
+          <ScalarProperty Name="LIQUID_NET_WORTH" ColumnName="LIQUID_NET_WORTH" />
+          <ScalarProperty Name="BANK_NAME" ColumnName="BANK_NAME" />
+          <ScalarProperty Name="BANK_STATE" ColumnName="BANK_STATE" />
+          <ScalarProperty Name="BANK_COUNTRY" ColumnName="BANK_COUNTRY" />
+          <ScalarProperty Name="RISK_TOLERANCE" ColumnName="RISK_TOLERANCE" />
+          <ScalarProperty Name="KNOWLEDGE_LEVEL" ColumnName="KNOWLEDGE_LEVEL" />
+          <ScalarProperty Name="YEARS_EXPERIENCE" ColumnName="YEARS_EXPERIENCE" />
+          <ScalarProperty Name="TRANSACTIONS_PER_YEAR" ColumnName="TRANSACTIONS_PER_YEAR" />
+          <ScalarProperty Name="AVERAGE_SIZE_PER_TRADE" ColumnName="AVERAGE_SIZE_PER_TRADE" />
+          <ScalarProperty Name="ID_FIRST_TYPE" ColumnName="ID_FIRST_TYPE" />
+          <ScalarProperty Name="ID_FIRST_PLACE_ISSUANCE" ColumnName="ID_FIRST_PLACE_ISSUANCE" />
+          <ScalarProperty Name="ID_FIRST_NUMBER" ColumnName="ID_FIRST_NUMBER" />
+          <ScalarProperty Name="ID_FIRST_EXPIRATION" ColumnName="ID_FIRST_EXPIRATION" />
+          <ScalarProperty Name="ID_SECOND_TYPE" ColumnName="ID_SECOND_TYPE" />
+          <ScalarProperty Name="ID_SECOND_PLACE_ISSUANCE" ColumnName="ID_SECOND_PLACE_ISSUANCE" />
+          <ScalarProperty Name="ID_SECOND_NUMBER" ColumnName="ID_SECOND_NUMBER" />
+          <ScalarProperty Name="ID_SECOND_EXPIRATION" ColumnName="ID_SECOND_EXPIRATION" />
+          <ScalarProperty Name="FIRST_REFERENCE_COMPANY_NAME" ColumnName="FIRST_REFERENCE_COMPANY_NAME" />
+          <ScalarProperty Name="FIRST_REFERENCE_NAME" ColumnName="FIRST_REFERENCE_NAME" />
+          <ScalarProperty Name="FIRST_REFERENCE_PHONE" ColumnName="FIRST_REFERENCE_PHONE" />
+          <ScalarProperty Name="FIRST_REFERENCE_EMAIL" ColumnName="FIRST_REFERENCE_EMAIL" />
+          <ScalarProperty Name="SECOND_REFERENCE_NAME" ColumnName="SECOND_REFERENCE_NAME" />
+          <ScalarProperty Name="SECOND_REFERENCE_PHONE" ColumnName="SECOND_REFERENCE_PHONE" />
+          <ScalarProperty Name="SECOND_REFERENCE_EMAIL" ColumnName="SECOND_REFERENCE_EMAIL" />
+          <ScalarProperty Name="THIRD_REFERENCE_NAME" ColumnName="THIRD_REFERENCE_NAME" />
+          <ScalarProperty Name="THIRD_REFERENCE_PHONE" ColumnName="THIRD_REFERENCE_PHONE" />
+          <ScalarProperty Name="THIRD_REFERENCE_EMAIL" ColumnName="THIRD_REFERENCE_EMAIL" />
+          <ScalarProperty Name="SUBMISSION_DATE" ColumnName="SUBMISSION_DATE" />
+          <ScalarProperty Name="SIGNATURE" ColumnName="SIGNATURE" />
+          <ScalarProperty Name="SIG_HASH" ColumnName="SIG_HASH" />
+          <ScalarProperty Name="Account_Status" ColumnName="Account_Status" />
+          <ScalarProperty Name="joint_application_residence" ColumnName="joint_application_residence" />
+          <ScalarProperty Name="joint_application_investment_objecives" ColumnName="joint_application_investment_objecives" />
+          <ScalarProperty Name="joint_application_affiliations" ColumnName="joint_application_affiliations" />
+          <ScalarProperty Name="joint_application_fullname_brokerageEmployeee" ColumnName="joint_application_fullname_brokerageEmployeee" />
+          <ScalarProperty Name="joint_application_fullname_director" ColumnName="joint_application_fullname_director" />
+          <ScalarProperty Name="joint_application_is_brokerageEmployeee" ColumnName="joint_application_is_brokerageEmployeee" />
+          <ScalarProperty Name="joint_application_is_director" ColumnName="joint_application_is_director" />
+          <ScalarProperty Name="joint_application_is_employed_security_industry" ColumnName="joint_application_is_employed_security_industry" />
+          <ScalarProperty Name="joint_application_relationship_brokerageEmployeee" ColumnName="joint_application_relationship_brokerageEmployeee" />
+          <ScalarProperty Name="joint_application_relationship_director" ColumnName="joint_application_relationship_director" />
+          <ScalarProperty Name="income_source" ColumnName="income_source" />
+          <ScalarProperty Name="account_disclaimers" ColumnName="account_disclaimers" />
+          <ScalarProperty Name="client_agreement" ColumnName="client_agreement" />
+          <ScalarProperty Name="fatca_agreement" ColumnName="fatca_agreement" />
+          <ScalarProperty Name="unsolicited_acknowledgement_agreement" ColumnName="unsolicited_acknowledgement_agreement" />
+          <ScalarProperty Name="client_acknowledgement" ColumnName="client_acknowledgement" />
+          <ScalarProperty Name="letter_of_authorization" ColumnName="letter_of_authorization" />
+          <ScalarProperty Name="risk_disclosure" ColumnName="risk_disclosure" />
+          <ScalarProperty Name="LAST_UPDATE_TIMESTAMP" ColumnName="LAST_UPDATE_TIMESTAMP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="accountnotsatisfieds">
+      <EntityTypeMapping TypeName="suretraderModel.accountnotsatisfied">
+        <MappingFragment StoreEntitySet="accountnotsatisfied">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NotSatisfiedTitle" ColumnName="NotSatisfiedTitle" />
+          <ScalarProperty Name="idCustomer" ColumnName="idCustomer" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="accounttypeworkflows">
+      <EntityTypeMapping TypeName="suretraderModel.accounttypeworkflow">
+        <MappingFragment StoreEntitySet="accounttypeworkflow">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountTypeId" ColumnName="AccountTypeId" />
+          <ScalarProperty Name="PageId" ColumnName="PageId" />
+          <ScalarProperty Name="OrderBY" ColumnName="OrderBY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="affiliations_master">
+      <EntityTypeMapping TypeName="suretraderModel.affiliations_master">
+        <MappingFragment StoreEntitySet="affiliations_master">
+          <ScalarProperty Name="idAFFILIATION" ColumnName="idAFFILIATION" />
+          <ScalarProperty Name="QUESTION" ColumnName="QUESTION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="application_errors">
+      <EntityTypeMapping TypeName="suretraderModel.application_errors">
+        <MappingFragment StoreEntitySet="application_errors">
+          <ScalarProperty Name="idAPPLICATION_ERRORS" ColumnName="idAPPLICATION_ERRORS" />
+          <ScalarProperty Name="idCUSTOMER" ColumnName="idCUSTOMER" />
+          <ScalarProperty Name="idSCREEN" ColumnName="idSCREEN" />
+          <ScalarProperty Name="idFIELD" ColumnName="idFIELD" />
+          <ScalarProperty Name="FIELD_NAME" ColumnName="FIELD_NAME" />
+          <ScalarProperty Name="ERROR_DESC" ColumnName="ERROR_DESC" />
+          <ScalarProperty Name="idOPERATOR" ColumnName="idOPERATOR" />
+          <ScalarProperty Name="LAST_UPDATE_TIMESTAMP" ColumnName="LAST_UPDATE_TIMESTAMP" />
+          <ScalarProperty Name="idAccountHolder" ColumnName="idAccountHolder" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="commentBy" ColumnName="commentBy" />
+          <ScalarProperty Name="controlDisplayname" ColumnName="controlDisplayname" />
+          <ScalarProperty Name="corporate_Owner_Id" ColumnName="corporate_Owner_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="application_flow">
+      <EntityTypeMapping TypeName="suretraderModel.application_flow">
+        <MappingFragment StoreEntitySet="application_flow">
+          <ScalarProperty Name="idAPPLICATION_FLOW" ColumnName="idAPPLICATION_FLOW" />
+          <ScalarProperty Name="idVISITOR" ColumnName="idVISITOR" />
+          <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+          <ScalarProperty Name="PHONE_NUMBER" ColumnName="PHONE_NUMBER" />
+          <ScalarProperty Name="CUSTOMER_NUMBER" ColumnName="CUSTOMER_NUMBER" />
+          <ScalarProperty Name="PAGE_NAME" ColumnName="PAGE_NAME" />
+          <ScalarProperty Name="PAGE_URL" ColumnName="PAGE_URL" />
+          <ScalarProperty Name="PAGE_START_TIME" ColumnName="PAGE_START_TIME" />
+          <ScalarProperty Name="PAGE_END_TIME" ColumnName="PAGE_END_TIME" />
+          <ScalarProperty Name="SUBMIT_CLICK_START_TIME" ColumnName="SUBMIT_CLICK_START_TIME" />
+          <ScalarProperty Name="SUBMIT_CLICK_END_TIME" ColumnName="SUBMIT_CLICK_END_TIME" />
+          <ScalarProperty Name="ERROR" ColumnName="ERROR" />
+          <ScalarProperty Name="LAST_UPDATE_TIMESTAMP" ColumnName="LAST_UPDATE_TIMESTAMP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="audit_log_buying_power">
+      <EntityTypeMapping TypeName="suretraderModel.audit_log_buying_power">
+        <MappingFragment StoreEntitySet="audit_log_buying_power">
+          <ScalarProperty Name="idaudit_log_buying_power" ColumnName="idaudit_log_buying_power" />
+          <ScalarProperty Name="idCustomer" ColumnName="idCustomer" />
+          <ScalarProperty Name="idaccount_holder" ColumnName="idaccount_holder" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="audit_log_iboss_account">
+      <EntityTypeMapping TypeName="suretraderModel.audit_log_iboss_account">
+        <MappingFragment StoreEntitySet="audit_log_iboss_account">
+          <ScalarProperty Name="idaudit_log_Iboss_account" ColumnName="idaudit_log_Iboss_account" />
+          <ScalarProperty Name="idaccount_number" ColumnName="idaccount_number" />
+          <ScalarProperty Name="idcustomer" ColumnName="idcustomer" />
+          <ScalarProperty Name="idaccount_holder" ColumnName="idaccount_holder" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="message" ColumnName="message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="audit_log_manual_buying_power">
+      <EntityTypeMapping TypeName="suretraderModel.audit_log_manual_buying_power">
+        <MappingFragment StoreEntitySet="audit_log_manual_buying_power">
+          <ScalarProperty Name="idaudit_log_manual_buying_power" ColumnName="idaudit_log_manual_buying_power" />
+          <ScalarProperty Name="idmanual_buying_power" ColumnName="idmanual_buying_power" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="updated_by" ColumnName="updated_by" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="corp_beneficiary">
+      <EntityTypeMapping TypeName="suretraderModel.corp_beneficiary">
+        <MappingFragment StoreEntitySet="corp_beneficiary">
+          <ScalarProperty Name="corp_beneficiary_id" ColumnName="corp_beneficiary_id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="corp_account_Id" ColumnName="corp_account_Id" />
+          <ScalarProperty Name="full_name" ColumnName="full_name" />
+          <ScalarProperty Name="attorneypower" ColumnName="attorneypower" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="corp_director">
+      <EntityTypeMapping TypeName="suretraderModel.corp_director">
+        <MappingFragment StoreEntitySet="corp_director">
+          <ScalarProperty Name="idcorp_Director_Id" ColumnName="idcorp_Director_Id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="corp_account_Id" ColumnName="corp_account_Id" />
+          <ScalarProperty Name="full_name" ColumnName="full_name" />
+          <ScalarProperty Name="attorneypower" ColumnName="attorneypower" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="corp_officer">
+      <EntityTypeMapping TypeName="suretraderModel.corp_officer">
+        <MappingFragment StoreEntitySet="corp_officer">
+          <ScalarProperty Name="corp_officer_id" ColumnName="corp_officer_id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="corp_account_Id" ColumnName="corp_account_Id" />
+          <ScalarProperty Name="full_name" ColumnName="full_name" />
+          <ScalarProperty Name="attorneypower" ColumnName="attorneypower" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="corpacnt_owner_officer">
+      <EntityTypeMapping TypeName="suretraderModel.corpacnt_owner_officer">
+        <MappingFragment StoreEntitySet="corpacnt_owner_officer">
+          <ScalarProperty Name="owner_officer_id" ColumnName="owner_officer_id" />
+          <ScalarProperty Name="owner_officer" ColumnName="owner_officer" />
+          <ScalarProperty Name="full_name" ColumnName="full_name" />
+          <ScalarProperty Name="crop_account_id" ColumnName="crop_account_id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="attorneypower" ColumnName="attorneypower" />
+          <ScalarProperty Name="OwnerType" ColumnName="OwnerType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="corporate_supporting_document">
+      <EntityTypeMapping TypeName="suretraderModel.corporate_supporting_document">
+        <MappingFragment StoreEntitySet="corporate_supporting_document">
+          <ScalarProperty Name="idSUPPORTING_DOCUMENT" ColumnName="idSUPPORTING_DOCUMENT" />
+          <ScalarProperty Name="idCUSTOMER" ColumnName="idCUSTOMER" />
+          <ScalarProperty Name="idACCOUNT_HOLDER" ColumnName="idACCOUNT_HOLDER" />
+          <ScalarProperty Name="MASTER_TYPE" ColumnName="MASTER_TYPE" />
+          <ScalarProperty Name="DOCUMENT_SEQUENCE" ColumnName="DOCUMENT_SEQUENCE" />
+          <ScalarProperty Name="SUB_TYPE" ColumnName="SUB_TYPE" />
+          <ScalarProperty Name="ISSUEPLACE" ColumnName="ISSUEPLACE" />
+          <ScalarProperty Name="DOCUMENT_NUMBER" ColumnName="DOCUMENT_NUMBER" />
+          <ScalarProperty Name="EXPIRATION" ColumnName="EXPIRATION" />
+          <ScalarProperty Name="FILE_PATH" ColumnName="FILE_PATH" />
+          <ScalarProperty Name="FILE_STATUS" ColumnName="FILE_STATUS" />
+          <ScalarProperty Name="LAST_UPDATE_DATE_TIME" ColumnName="LAST_UPDATE_DATE_TIME" />
+          <ScalarProperty Name="FormNo" ColumnName="FormNo" />
+          <ScalarProperty Name="owner_officer_id" ColumnName="owner_officer_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="corporate_tax">
+      <EntityTypeMapping TypeName="suretraderModel.corporate_tax">
+        <MappingFragment StoreEntitySet="corporate_tax">
+          <ScalarProperty Name="corporate_tax_id" ColumnName="corporate_tax_id" />
+          <ScalarProperty Name="beneficialname" ColumnName="beneficialname" />
+          <ScalarProperty Name="countrycitizenship" ColumnName="countrycitizenship" />
+          <ScalarProperty Name="recevingpaymentname" ColumnName="recevingpaymentname" />
+          <ScalarProperty Name="corporation" ColumnName="corporation" />
+          <ScalarProperty Name="disregardedentity" ColumnName="disregardedentity" />
+          <ScalarProperty Name="partnership" ColumnName="partnership" />
+          <ScalarProperty Name="simpletrust" ColumnName="simpletrust" />
+          <ScalarProperty Name="grantortrust" ColumnName="grantortrust" />
+          <ScalarProperty Name="complextrust" ColumnName="complextrust" />
+          <ScalarProperty Name="estategovernment" ColumnName="estategovernment" />
+          <ScalarProperty Name="centralbankofissue" ColumnName="centralbankofissue" />
+          <ScalarProperty Name="taxexemptornization" ColumnName="taxexemptornization" />
+          <ScalarProperty Name="privatefoundation" ColumnName="privatefoundation" />
+          <ScalarProperty Name="hybridmakingatreatyclaim" ColumnName="hybridmakingatreatyclaim" />
+          <ScalarProperty Name="nonparticipatingffi" ColumnName="nonparticipatingffi" />
+          <ScalarProperty Name="participatingffi" ColumnName="participatingffi" />
+          <ScalarProperty Name="Reportingmodelffi_1" ColumnName="Reportingmodelffi_1" />
+          <ScalarProperty Name="Repotingmodelffi_2" ColumnName="Repotingmodelffi_2" />
+          <ScalarProperty Name="registereddeemedcomplaintffi" ColumnName="registereddeemedcomplaintffi" />
+          <ScalarProperty Name="sponsoredffi" ColumnName="sponsoredffi" />
+          <ScalarProperty Name="certifieddeemedcompliantlocalbank" ColumnName="certifieddeemedcompliantlocalbank" />
+          <ScalarProperty Name="certifieddeemedcompliantlowvalueaccount" ColumnName="certifieddeemedcompliantlowvalueaccount" />
+          <ScalarProperty Name="certifieddeemedcompliantinvestmentvehicle" ColumnName="certifieddeemedcompliantinvestmentvehicle" />
+          <ScalarProperty Name="ownerdocumentffi" ColumnName="ownerdocumentffi" />
+          <ScalarProperty Name="resticteddistributor" ColumnName="resticteddistributor" />
+          <ScalarProperty Name="nonreportingigaffi" ColumnName="nonreportingigaffi" />
+          <ScalarProperty Name="foreigngovernment" ColumnName="foreigngovernment" />
+          <ScalarProperty Name="internationalorganization" ColumnName="internationalorganization" />
+          <ScalarProperty Name="Exemptretirementplans" ColumnName="Exemptretirementplans" />
+          <ScalarProperty Name="Entitywhollybeneficialowned" ColumnName="Entitywhollybeneficialowned" />
+          <ScalarProperty Name="Territoryfinancialinstitution_" ColumnName="Territoryfinancialinstitution." />
+          <ScalarProperty Name="Nonfinancialgroupentity" ColumnName="Nonfinancialgroupentity" />
+          <ScalarProperty Name="Exceptednonfinanciastartupcompany" ColumnName="Exceptednonfinanciastartupcompany" />
+          <ScalarProperty Name="Exceptednonfinancialentityliquidation" ColumnName="Exceptednonfinancialentityliquidation" />
+          <ScalarProperty Name="organization501" ColumnName="organization501" />
+          <ScalarProperty Name="Nonprofitorganization" ColumnName="Nonprofitorganization" />
+          <ScalarProperty Name="PubliclytradedNFFENFFEaffiliate" ColumnName="PubliclytradedNFFENFFEaffiliate" />
+          <ScalarProperty Name="ExceptedterritoryNFFE" ColumnName="ExceptedterritoryNFFE" />
+          <ScalarProperty Name="ActiveNFFE" ColumnName="ActiveNFFE" />
+          <ScalarProperty Name="PassiveNFFE" ColumnName="PassiveNFFE" />
+          <ScalarProperty Name="ExceptedinteraffiliateFFI" ColumnName="ExceptedinteraffiliateFFI" />
+          <ScalarProperty Name="Directreporting" ColumnName="Directreporting" />
+          <ScalarProperty Name="SponsoreddirectreportingNFFE" ColumnName="SponsoreddirectreportingNFFE" />
+          <ScalarProperty Name="Permanentresidenceaddress" ColumnName="Permanentresidenceaddress" />
+          <ScalarProperty Name="Citytownstateprovinceresidence" ColumnName="Citytownstateprovinceresidence" />
+          <ScalarProperty Name="Countryresidence" ColumnName="Countryresidence" />
+          <ScalarProperty Name="Mailingaddress" ColumnName="Mailingaddress" />
+          <ScalarProperty Name="MailingCitytownstateprovince" ColumnName="MailingCitytownstateprovince" />
+          <ScalarProperty Name="mailingCountry" ColumnName="mailingCountry" />
+          <ScalarProperty Name="ustaxpayeridentificationnumber" ColumnName="ustaxpayeridentificationnumber" />
+          <ScalarProperty Name="GIINcheckbox" ColumnName="GIINcheckbox" />
+          <ScalarProperty Name="ForeignTINcheckbox" ColumnName="ForeignTINcheckbox" />
+          <ScalarProperty Name="GIIN" ColumnName="GIIN" />
+          <ScalarProperty Name="ForeignTIN" ColumnName="ForeignTIN" />
+          <ScalarProperty Name="Referencenumber" ColumnName="Referencenumber" />
+          <ScalarProperty Name="LimitedBranch" ColumnName="LimitedBranch" />
+          <ScalarProperty Name="ReportingModel1FFI" ColumnName="ReportingModel1FFI" />
+          <ScalarProperty Name="Usbranch" ColumnName="Usbranch" />
+          <ScalarProperty Name="ParticipatingFFI2" ColumnName="ParticipatingFFI2" />
+          <ScalarProperty Name="ReportingModel2FF" ColumnName="ReportingModel2FF" />
+          <ScalarProperty Name="Addressofdisregardedentityorbranch" ColumnName="Addressofdisregardedentityorbranch" />
+          <ScalarProperty Name="DisregardedCitytownstateprovince" ColumnName="DisregardedCitytownstateprovince" />
+          <ScalarProperty Name="DisregardedCountry" ColumnName="DisregardedCountry" />
+          <ScalarProperty Name="DisregardedGIIN" ColumnName="DisregardedGIIN" />
+          <ScalarProperty Name="Claimbeneficialowner" ColumnName="Claimbeneficialowner" />
+          <ScalarProperty Name="corporate_taxcol" ColumnName="corporate_taxcol" />
+          <ScalarProperty Name="Claimresident" ColumnName="Claimresident" />
+          <ScalarProperty Name="Claimbeneficialownerderives" ColumnName="Claimbeneficialownerderives" />
+          <ScalarProperty Name="Claimbeneficialownerclaiming" ColumnName="Claimbeneficialownerclaiming" />
+          <ScalarProperty Name="ClaimArticle" ColumnName="ClaimArticle" />
+          <ScalarProperty Name="Claimrate" ColumnName="Claimrate" />
+          <ScalarProperty Name="Claimincome" ColumnName="Claimincome" />
+          <ScalarProperty Name="SponsoredNameofsponsoringentity" ColumnName="SponsoredNameofsponsoringentity" />
+          <ScalarProperty Name="SponsoredcertifythattheentityidentifiedFFI" ColumnName="SponsoredcertifythattheentityidentifiedFFI" />
+          <ScalarProperty Name="SponsoredIcertifythattheentityidentified957" ColumnName="SponsoredIcertifythattheentityidentified957" />
+          <ScalarProperty Name="CertifiedDeemedCompliantIcertifythatheFFI" ColumnName="CertifiedDeemedCompliantIcertifythatheFFI" />
+          <ScalarProperty Name="CertifiedDeemedCompliantIcertifythattheFFI" ColumnName="CertifiedDeemedCompliantIcertifythattheFFI" />
+          <ScalarProperty Name="CertifiedDeemedCompliantSponsoredName" ColumnName="CertifiedDeemedCompliantSponsoredName" />
+          <ScalarProperty Name="CertifiedDeemedCompliantSponsoredIcertify" ColumnName="CertifiedDeemedCompliantSponsoredIcertify" />
+          <ScalarProperty Name="CertifiedDeemedCompliantLimitedLifeIcertify" ColumnName="CertifiedDeemedCompliantLimitedLifeIcertify" />
+          <ScalarProperty Name="CertifiedInvestmentAdvisorsIcertify" ColumnName="CertifiedInvestmentAdvisorsIcertify" />
+          <ScalarProperty Name="OwnerDocumentedFFIcertify1" ColumnName="OwnerDocumentedFFIcertify1" />
+          <ScalarProperty Name="OwnerDocumentedFFIcertify2" ColumnName="OwnerDocumentedFFIcertify2" />
+          <ScalarProperty Name="OwnerDocumentedFFIcertify3" ColumnName="OwnerDocumentedFFIcertify3" />
+          <ScalarProperty Name="OwnerDocumentedFFIcertify4" ColumnName="OwnerDocumentedFFIcertify4" />
+          <ScalarProperty Name="RestrictedDistributorIcertify" ColumnName="RestrictedDistributorIcertify" />
+          <ScalarProperty Name="RestrictedDistributorHasbeenbound" ColumnName="RestrictedDistributorHasbeenbound" />
+          <ScalarProperty Name="RestrictedDistributorcurrentlybound" ColumnName="RestrictedDistributorcurrentlybound" />
+          <ScalarProperty Name="NonreportingIGAFFIIcertify" ColumnName="NonreportingIGAFFIIcertify" />
+          <ScalarProperty Name="NonreportingIGAFFIUnitedStatesand" ColumnName="NonreportingIGAFFIUnitedStatesand" />
+          <ScalarProperty Name="NonreportingIGAFFIIstreated" ColumnName="NonreportingIGAFFIIstreated" />
+          <ScalarProperty Name="ForeignGovernmentIcertify" ColumnName="ForeignGovernmentIcertify" />
+          <ScalarProperty Name="InternationalOrganizationIcertify1" ColumnName="InternationalOrganizationIcertify1" />
+          <ScalarProperty Name="InternationalOrganizationIcertify2" ColumnName="InternationalOrganizationIcertify2" />
+          <ScalarProperty Name="ExemptRetirementPlansIcertifya" ColumnName="ExemptRetirementPlansIcertifya" />
+          <ScalarProperty Name="ExemptRetirementPlansIcertifyb" ColumnName="ExemptRetirementPlansIcertifyb" />
+          <ScalarProperty Name="ExemptRetirementPlansIcertifyc" ColumnName="ExemptRetirementPlansIcertifyc" />
+          <ScalarProperty Name="ExemptRetirementPlansIcertifyd" ColumnName="ExemptRetirementPlansIcertifyd" />
+          <ScalarProperty Name="ExemptRetirementPlansIcertifye" ColumnName="ExemptRetirementPlansIcertifye" />
+          <ScalarProperty Name="ExemptRetirementPlansIcertifyf" ColumnName="ExemptRetirementPlansIcertifyf" />
+          <ScalarProperty Name="EntityWhollyOwnedIcertify" ColumnName="EntityWhollyOwnedIcertify" />
+          <ScalarProperty Name="TerritoryFinancialInstitutionIcertify" ColumnName="TerritoryFinancialInstitutionIcertify" />
+          <ScalarProperty Name="ExceptedNonfinancialGroupIcertify" ColumnName="ExceptedNonfinancialGroupIcertify" />
+          <ScalarProperty Name="ExceptedNonfinancialIcertify" ColumnName="ExceptedNonfinancialIcertify" />
+          <ScalarProperty Name="ExceptedNonfinancialWasformed" ColumnName="ExceptedNonfinancialWasformed" />
+          <ScalarProperty Name="ExceptedNonfinancialLiquidationIcertify" ColumnName="ExceptedNonfinancialLiquidationIcertify" />
+          <ScalarProperty Name="ExceptedNonfinancialLiquidationFiledplan" ColumnName="ExceptedNonfinancialLiquidationFiledplan" />
+          <ScalarProperty Name="Organization501cIcertify" ColumnName="Organization501cIcertify" />
+          <ScalarProperty Name="Organization501cHasbeendetermination" ColumnName="Organization501cHasbeendetermination" />
+          <ScalarProperty Name="NonProfitOrganizationIcertify" ColumnName="NonProfitOrganizationIcertify" />
+          <ScalarProperty Name="PubliclyTradedNFFEIcertifya" ColumnName="PubliclyTradedNFFEIcertifya" />
+          <ScalarProperty Name="PubliclyTradedNFFEstocka" ColumnName="PubliclyTradedNFFEstocka" />
+          <ScalarProperty Name="PubliclyTradedNFFEIcertifyb" ColumnName="PubliclyTradedNFFEIcertifyb" />
+          <ScalarProperty Name="PubliclyTradedNFFEstockb" ColumnName="PubliclyTradedNFFEstockb" />
+          <ScalarProperty Name="PubliclyTradedNFFEnameofthesecurities" ColumnName="PubliclyTradedNFFEnameofthesecurities" />
+          <ScalarProperty Name="ExceptedTerritoryNFFEIcertify" ColumnName="ExceptedTerritoryNFFEIcertify" />
+          <ScalarProperty Name="ActiveNFFEIcertify" ColumnName="ActiveNFFEIcertify" />
+          <ScalarProperty Name="PassiveNFFEIcertifya" ColumnName="PassiveNFFEIcertifya" />
+          <ScalarProperty Name="PassiveNFFEIcertifyb" ColumnName="PassiveNFFEIcertifyb" />
+          <ScalarProperty Name="PassiveNFFEIcertifyc" ColumnName="PassiveNFFEIcertifyc" />
+          <ScalarProperty Name="ExceptedInterAffiliateFFIIcertify" ColumnName="ExceptedInterAffiliateFFIIcertify" />
+          <ScalarProperty Name="SponsoredDirectReportingNFFEicertify" ColumnName="SponsoredDirectReportingNFFEicertify" />
+          <ScalarProperty Name="Certificationsignature" ColumnName="Certificationsignature" />
+          <ScalarProperty Name="Certificationprintname" ColumnName="Certificationprintname" />
+          <ScalarProperty Name="Certificationdate" ColumnName="Certificationdate" />
+          <ScalarProperty Name="Certificationicertify" ColumnName="Certificationicertify" />
+          <ScalarProperty Name="SubstantialUSOwnersName1" ColumnName="SubstantialUSOwnersName1" />
+          <ScalarProperty Name="SubstantialUSOwnersAddress1" ColumnName="SubstantialUSOwnersAddress1" />
+          <ScalarProperty Name="SubstantialUSOwnersTin1" ColumnName="SubstantialUSOwnersTin1" />
+          <ScalarProperty Name="SubstantialUSOwnersName2" ColumnName="SubstantialUSOwnersName2" />
+          <ScalarProperty Name="SubstantialUSOwnersAddress2" ColumnName="SubstantialUSOwnersAddress2" />
+          <ScalarProperty Name="SubstantialUSOwnersTin2" ColumnName="SubstantialUSOwnersTin2" />
+          <ScalarProperty Name="SubstantialUSOwnersName3" ColumnName="SubstantialUSOwnersName3" />
+          <ScalarProperty Name="SubstantialUSOwnersAddress3" ColumnName="SubstantialUSOwnersAddress3" />
+          <ScalarProperty Name="SubstantialUSOwnersTin3" ColumnName="SubstantialUSOwnersTin3" />
+          <ScalarProperty Name="beneficialownermeetstreatyarticle" ColumnName="beneficialownermeetstreatyarticle" />
+          <ScalarProperty Name="Certifieddeemedcompliantlimitedlife" ColumnName="Certifieddeemedcompliantlimitedlife" />
+          <ScalarProperty Name="CertifieddeemedCompliantnvestmentmanager" ColumnName="CertifieddeemedCompliantnvestmentmanager" />
+          <ScalarProperty Name="hybridmakingatreatyclaimno" ColumnName="hybridmakingatreatyclaimno" />
+          <ScalarProperty Name="idCUSTOMER" ColumnName="idCUSTOMER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="corporateagreementdisclaimers">
+      <EntityTypeMapping TypeName="suretraderModel.corporateagreementdisclaimer">
+        <MappingFragment StoreEntitySet="corporateagreementdisclaimers">
+          <ScalarProperty Name="Corporate_Agreement_Id" ColumnName="Corporate_Agreement_Id" />
+          <ScalarProperty Name="owner_officer_id" ColumnName="owner_officer_id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="AccountHolderId" ColumnName="AccountHolderId" />
+          <ScalarProperty Name="UnsolicitedAcknowledgemet" ColumnName="UnsolicitedAcknowledgemet" />
+          <ScalarProperty Name="FACTA" ColumnName="FACTA" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="countries">
+      <EntityTypeMapping TypeName="suretraderModel.country">
+        <MappingFragment StoreEntitySet="countries">
+          <ScalarProperty Name="idCOUNTRY" ColumnName="idCOUNTRY" />
+          <ScalarProperty Name="COUNTRY_CODE" ColumnName="COUNTRY_CODE" />
+          <ScalarProperty Name="COUNTRY_NAME" ColumnName="COUNTRY_NAME" />
+          <ScalarProperty Name="ISO_Code" ColumnName="ISO_Code" />
+          <ScalarProperty Name="ISO_COUNTRY" ColumnName="ISO_COUNTRY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="crop_account">
+      <EntityTypeMapping TypeName="suretraderModel.crop_account">
+        <MappingFragment StoreEntitySet="crop_account">
+          <ScalarProperty Name="crop_account_id" ColumnName="crop_account_id" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+          <ScalarProperty Name="street_address" ColumnName="street_address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state_province" ColumnName="state_province" />
+          <ScalarProperty Name="zip_code" ColumnName="zip_code" />
+          <ScalarProperty Name="idcountry" ColumnName="idcountry" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="creare_ts" ColumnName="creare_ts" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="idACCOUNT_HOLDER" ColumnName="idACCOUNT_HOLDER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="crop_acnt_incorp">
+      <EntityTypeMapping TypeName="suretraderModel.crop_acnt_incorp">
+        <MappingFragment StoreEntitySet="crop_acnt_incorp">
+          <ScalarProperty Name="crop_acnt_incorp_id" ColumnName="crop_acnt_incorp_id" />
+          <ScalarProperty Name="crop_account_id" ColumnName="crop_account_id" />
+          <ScalarProperty Name="incorp_country_id" ColumnName="incorp_country_id" />
+          <ScalarProperty Name="incorp_date" ColumnName="incorp_date" />
+          <ScalarProperty Name="president_name" ColumnName="president_name" />
+          <ScalarProperty Name="secretary_name" ColumnName="secretary_name" />
+          <ScalarProperty Name="in_good_standing" ColumnName="in_good_standing" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="idACCOUNT_HOLDER" ColumnName="idACCOUNT_HOLDER" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="crop_reference">
+      <EntityTypeMapping TypeName="suretraderModel.crop_reference">
+        <MappingFragment StoreEntitySet="crop_reference">
+          <ScalarProperty Name="crop_reference_id" ColumnName="crop_reference_id" />
+          <ScalarProperty Name="crop_account_id" ColumnName="crop_account_id" />
+          <ScalarProperty Name="ref_lkp_id" ColumnName="ref_lkp_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="crop_reference_lkp">
+      <EntityTypeMapping TypeName="suretraderModel.crop_reference_lkp">
+        <MappingFragment StoreEntitySet="crop_reference_lkp">
+          <ScalarProperty Name="ref_lkp" ColumnName="ref_lkp" />
+          <ScalarProperty Name="ref_text" ColumnName="ref_text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="crop_resolution">
+      <EntityTypeMapping TypeName="suretraderModel.crop_resolution">
+        <MappingFragment StoreEntitySet="crop_resolution">
+          <ScalarProperty Name="crop_resolution_id" ColumnName="crop_resolution_id" />
+          <ScalarProperty Name="crop_account_id" ColumnName="crop_account_id" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="officer_emp_title" ColumnName="officer_emp_title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cta_master">
+      <EntityTypeMapping TypeName="suretraderModel.cta_master">
+        <MappingFragment StoreEntitySet="cta_master">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cust_linked_account">
+      <EntityTypeMapping TypeName="suretraderModel.cust_linked_account">
+        <MappingFragment StoreEntitySet="cust_linked_account">
+          <ScalarProperty Name="idCustomer" ColumnName="idCustomer" />
+          <ScalarProperty Name="account_type" ColumnName="account_type" />
+          <ScalarProperty Name="account_seq" ColumnName="account_seq" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customer_account_comments">
+      <EntityTypeMapping TypeName="suretraderModel.customer_account_comments">
+        <MappingFragment StoreEntitySet="customer_account_comments">
+          <ScalarProperty Name="idcustomer_account_comments" ColumnName="idcustomer_account_comments" />
+          <ScalarProperty Name="idCustomer" ColumnName="idCustomer" />
+          <ScalarProperty Name="idaccount_holder" ColumnName="idaccount_holder" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customer_kyc_comments">
+      <EntityTypeMapping TypeName="suretraderModel.customer_kyc_comments">
+        <MappingFragment StoreEntitySet="customer_kyc_comments">
+          <ScalarProperty Name="idcustomer_kyc_comments" ColumnName="idcustomer_kyc_comments" />
+          <ScalarProperty Name="idCustomer" ColumnName="idCustomer" />
+          <ScalarProperty Name="id_kycInformation" ColumnName="id_kycInformation" />
+          <ScalarProperty Name="idkyc_master" ColumnName="idkyc_master" />
+          <ScalarProperty Name="kyc_comments" ColumnName="kyc_comments" />
+          <ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+          <ScalarProperty Name="ModifiedById" ColumnName="ModifiedById" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customer_sourceoffunds">
+      <EntityTypeMapping TypeName="suretraderModel.customer_sourceoffunds">
+        <MappingFragment StoreEntitySet="customer_sourceoffunds">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="IdCUSTOMER" ColumnName="IdCUSTOMER" />
+          <ScalarProperty Name="FUNDS_SOURCE" ColumnName="FUNDS_SOURCE" />
+          <ScalarProperty Name="Funds_Percent" ColumnName="Funds_Percent" />
+          <ScalarProperty Name="FUNDS_SOURCE_DESC" ColumnName="FUNDS_SOURCE_DESC" />
+          <ScalarProperty Name="FUNDING_AMOUNT" ColumnName="FUNDING_AMOUNT" />
+          <ScalarProperty Name="WIRE_ORIGIN_COUNTRY" ColumnName="WIRE_ORIGIN_COUNTRY" />
+          <ScalarProperty Name="WIRE_DEST_COUNTRY" ColumnName="WIRE_DEST_COUNTRY" />
+          <ScalarProperty Name="OTHER_AMOUNT1" ColumnName="OTHER_AMOUNT1" />
+          <ScalarProperty Name="OTHER_AMOUNT1_DATE" ColumnName="OTHER_AMOUNT1_DATE" />
+          <ScalarProperty Name="OTHER_AMOUNT2" ColumnName="OTHER_AMOUNT2" />
+          <ScalarProperty Name="OTHER_AMOUNT2_DATE" ColumnName="OTHER_AMOUNT2_DATE" />
+          <ScalarProperty Name="OTHER_AMOUNT3" ColumnName="OTHER_AMOUNT3" />
+          <ScalarProperty Name="OTHER_AMOUNT3_DATE" ColumnName="OTHER_AMOUNT3_DATE" />
+          <ScalarProperty Name="EXPECTED_ACCOUNT_SIZE" ColumnName="EXPECTED_ACCOUNT_SIZE" />
+          <ScalarProperty Name="FundsNumber" ColumnName="FundsNumber" />
+          <ScalarProperty Name="idACCOUNT_HOLDER" ColumnName="idACCOUNT_HOLDER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="suretraderModel.customer">
+        <MappingFragment StoreEntitySet="customers">
+          <ScalarProperty Name="idCUSTOMER" ColumnName="idCUSTOMER" />
+          <ScalarProperty Name="ACCOUNT_STATUS" ColumnName="ACCOUNT_STATUS" />
+          <ScalarProperty Name="ACCOUNT_TYPE" ColumnName="ACCOUNT_TYPE" />
+          <ScalarProperty Name="ACCOUNT_SUB_TYPE" ColumnName="ACCOUNT_SUB_TYPE" />
+          <ScalarProperty Name="DASUserName" ColumnName="DASUserName" />
+          <ScalarProperty Name="idDASTRADER" ColumnName="idDASTRADER" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="enc_password" ColumnName="enc_password" />
+          <ScalarProperty Name="ACTIVATION_KEY" ColumnName="ACTIVATION_KEY" />
+          <ScalarProperty Name="IS_ACTIVATED" ColumnName="IS_ACTIVATED" />
+          <ScalarProperty Name="SUBMISSION_DATE" ColumnName="SUBMISSION_DATE" />
+          <ScalarProperty Name="ACTIVATION_DATETIME" ColumnName="ACTIVATION_DATETIME" />
+          <ScalarProperty Name="IS_UNSUBSCRIBE" ColumnName="IS_UNSUBSCRIBE" />
+          <ScalarProperty Name="APPLICATION_COMPLETED" ColumnName="APPLICATION_COMPLETED" />
+          <ScalarProperty Name="SOFT_TRADER_PRO" ColumnName="SOFT_TRADER_PRO" />
+          <ScalarProperty Name="how_do_you_hear" ColumnName="how_do_you_hear" />
+          <ScalarProperty Name="SOFT_TRADER" ColumnName="SOFT_TRADER" />
+          <ScalarProperty Name="PinkSheet1" ColumnName="PinkSheet1" />
+          <ScalarProperty Name="OPRAOptions1" ColumnName="OPRAOptions1" />
+          <ScalarProperty Name="EMiniFutures1" ColumnName="EMiniFutures1" />
+          <ScalarProperty Name="TSXCanadian1" ColumnName="TSXCanadian1" />
+          <ScalarProperty Name="RegionalQuotes" ColumnName="RegionalQuotes" />
+          <ScalarProperty Name="NasdaqTotalView" ColumnName="NasdaqTotalView" />
+          <ScalarProperty Name="PinkSheet2" ColumnName="PinkSheet2" />
+          <ScalarProperty Name="OPRAOptions" ColumnName="OPRAOptions" />
+          <ScalarProperty Name="NewsBody" ColumnName="NewsBody" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="Send_Email_FlowA" ColumnName="Send_Email_FlowA" />
+          <ScalarProperty Name="promo_code" ColumnName="promo_code" />
+          <ScalarProperty Name="Account_Number" ColumnName="Account_Number" />
+          <ScalarProperty Name="updatebuyingpower" ColumnName="updatebuyingpower" />
+          <ScalarProperty Name="is_reset_confirmed" ColumnName="is_reset_confirmed" />
+          <ScalarProperty Name="reset_date" ColumnName="reset_date" />
+          <ScalarProperty Name="how_do_you_hear_other" ColumnName="how_do_you_hear_other" />
+          <ScalarProperty Name="verification_status" ColumnName="verification_status" />
+          <ScalarProperty Name="politically_exposed" ColumnName="politically_exposed" />
+          <ScalarProperty Name="LAST_UPDATE_TIMESTAMP" ColumnName="LAST_UPDATE_TIMESTAMP" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="addnotes" ColumnName="addnotes" />
+          <ScalarProperty Name="riskrating" ColumnName="riskrating" />
+          <ScalarProperty Name="withdrawal_pin" ColumnName="withdrawal_pin" />
+          <ScalarProperty Name="migrated_account" ColumnName="migrated_account" />
+          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+          <ScalarProperty Name="Is_MD" ColumnName="Is_MD" />
+          <ScalarProperty Name="Is_Created_Account" ColumnName="Is_Created_Account" />
+          <ScalarProperty Name="reset_status" ColumnName="reset_status" />
+          <ScalarProperty Name="reset_string" ColumnName="reset_string" />
+          <ScalarProperty Name="u_status" ColumnName="u_status" />
+          <ScalarProperty Name="p_status" ColumnName="p_status" />
+          <ScalarProperty Name="unblock_status" ColumnName="unblock_status" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="Unsalted_Password" ColumnName="Unsalted_Password" />
+          <ScalarProperty Name="Unsalted_Password1" ColumnName="Unsalted_Password1" />
+          <ScalarProperty Name="use_market_data" ColumnName="use_market_data" />
+          <ScalarProperty Name="receive_market_data" ColumnName="receive_market_data" />
+          <ScalarProperty Name="engaged_provide_investment" ColumnName="engaged_provide_investment" />
+          <ScalarProperty Name="engaged_asset_manager" ColumnName="engaged_asset_manager" />
+          <ScalarProperty Name="nasdaq_level_1" ColumnName="nasdaq_level_1" />
+          <ScalarProperty Name="NYSE_AMEX_level_1" ColumnName="NYSE_AMEX_level_1" />
+          <ScalarProperty Name="Monthly_total" ColumnName="Monthly_total" />
+          <ScalarProperty Name="softwareIagree" ColumnName="softwareIagree" />
+          <ScalarProperty Name="News_Headline" ColumnName="News_Headline" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customers_lv">
+      <EntityTypeMapping TypeName="suretraderModel.customers_lv">
+        <MappingFragment StoreEntitySet="customers_lv">
+          <ScalarProperty Name="idCUSTOMER" ColumnName="idCUSTOMER" />
+          <ScalarProperty Name="ACCOUNT_STATUS" ColumnName="ACCOUNT_STATUS" />
+          <ScalarProperty Name="ACCOUNT_TYPE" ColumnName="ACCOUNT_TYPE" />
+          <ScalarProperty Name="ACCOUNT_SUB_TYPE" ColumnName="ACCOUNT_SUB_TYPE" />
+          <ScalarProperty Name="DASUserName" ColumnName="DASUserName" />
+          <ScalarProperty Name="idDASTRADER" ColumnName="idDASTRADER" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="ACTIVATION_KEY" ColumnName="ACTIVATION_KEY" />
+          <ScalarProperty Name="IS_ACTIVATED" ColumnName="IS_ACTIVATED" />
+          <ScalarProperty Name="SUBMISSION_DATE" ColumnName="SUBMISSION_DATE" />
+          <ScalarProperty Name="ACTIVATION_DATETIME" ColumnName="ACTIVATION_DATETIME" />
+          <ScalarProperty Name="IS_UNSUBSCRIBE" ColumnName="IS_UNSUBSCRIBE" />
+          <ScalarProperty Name="APPLICATION_COMPLETED" ColumnName="APPLICATION_COMPLETED" />
+          <ScalarProperty Name="SOFT_TRADER_PRO" ColumnName="SOFT_TRADER_PRO" />
+          <ScalarProperty Name="how_do_you_hear" ColumnName="how_do_you_hear" />
+          <ScalarProperty Name="SOFT_TRADER" ColumnName="SOFT_TRADER" />
+          <ScalarProperty Name="PinkSheet1" ColumnName="PinkSheet1" />
+          <ScalarProperty Name="OPRAOptions1" ColumnName="OPRAOptions1" />
+          <ScalarProperty Name="EMiniFutures1" ColumnName="EMiniFutures1" />
+          <ScalarProperty Name="TSXCanadian1" ColumnName="TSXCanadian1" />
+          <ScalarProperty Name="RegionalQuotes" ColumnName="RegionalQuotes" />
+          <ScalarProperty Name="NasdaqTotalView" ColumnName="NasdaqTotalView" />
+          <ScalarProperty Name="PinkSheet2" ColumnName="PinkSheet2" />
+          <ScalarProperty Name="OPRAOptions" ColumnName="OPRAOptions" />
+          <ScalarProperty Name="NewsBody" ColumnName="NewsBody" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="Unsalted_Password" ColumnName="Unsalted_Password" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="Send_Email_FlowA" ColumnName="Send_Email_FlowA" />
+          <ScalarProperty Name="promo_code" ColumnName="promo_code" />
+          <ScalarProperty Name="Account_Number" ColumnName="Account_Number" />
+          <ScalarProperty Name="updatebuyingpower" ColumnName="updatebuyingpower" />
+          <ScalarProperty Name="is_reset_confirmed" ColumnName="is_reset_confirmed" />
+          <ScalarProperty Name="reset_date" ColumnName="reset_date" />
+          <ScalarProperty Name="how_do_you_hear_other" ColumnName="how_do_you_hear_other" />
+          <ScalarProperty Name="verification_status" ColumnName="verification_status" />
+          <ScalarProperty Name="politically_exposed" ColumnName="politically_exposed" />
+          <ScalarProperty Name="LAST_UPDATE_TIMESTAMP" ColumnName="LAST_UPDATE_TIMESTAMP" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="addnotes" ColumnName="addnotes" />
+          <ScalarProperty Name="riskrating" ColumnName="riskrating" />
+          <ScalarProperty Name="withdrawal_pin" ColumnName="withdrawal_pin" />
+          <ScalarProperty Name="migrated_account" ColumnName="migrated_account" />
+          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+          <ScalarProperty Name="Is_MD" ColumnName="Is_MD" />
+          <ScalarProperty Name="Is_Created_Account" ColumnName="Is_Created_Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="demo_customers">
+      <EntityTypeMapping TypeName="suretraderModel.demo_customers">
+        <MappingFragment StoreEntitySet="demo_customers">
+          <ScalarProperty Name="idDemo_Customer" ColumnName="idDemo_Customer" />
+          <ScalarProperty Name="idDASTRADER" ColumnName="idDASTRADER" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="ACTIVATION_KEY" ColumnName="ACTIVATION_KEY" />
+          <ScalarProperty Name="IS_ACTIVATED" ColumnName="IS_ACTIVATED" />
+          <ScalarProperty Name="SUBMISSION_DATE" ColumnName="SUBMISSION_DATE" />
+          <ScalarProperty Name="ACTIVATION_DATETIME" ColumnName="ACTIVATION_DATETIME" />
+          <ScalarProperty Name="Unsalted_Password" ColumnName="Unsalted_Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+          <ScalarProperty Name="Send_Email_FlowA" ColumnName="Send_Email_FlowA" />
+          <ScalarProperty Name="promo_code" ColumnName="promo_code" />
+          <ScalarProperty Name="source" ColumnName="source" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="updated_by" ColumnName="updated_by" />
+          <ScalarProperty Name="updates_date" ColumnName="updates_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="document_master">
+      <EntityTypeMapping TypeName="suretraderModel.document_master">
+        <MappingFragment StoreEntitySet="document_master">
+          <ScalarProperty Name="iddocument_master" ColumnName="iddocument_master" />
+          <ScalarProperty Name="document_name" ColumnName="document_name" />
+          <ScalarProperty Name="idaccount_type" ColumnName="idaccount_type" />
+          <ScalarProperty Name="country_type" ColumnName="country_type" />
+          <ScalarProperty Name="sort_order" ColumnName="sort_order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="email_flows">
+      <EntityTypeMapping TypeName="suretraderModel.email_flows">
+        <MappingFragment StoreEntitySet="email_flows">
+          <ScalarProperty Name="idemail_flows" ColumnName="idemail_flows" />
+          <ScalarProperty Name="Send_Email_FlowA" ColumnName="Send_Email_FlowA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="errorloggings">
+      <EntityTypeMapping TypeName="suretraderModel.errorlogging">
+        <MappingFragment StoreEntitySet="errorlogging">
+          <ScalarProperty Name="idErrorLogging" ColumnName="idErrorLogging" />
+          <ScalarProperty Name="LoggedInUserName" ColumnName="LoggedInUserName" />
+          <ScalarProperty Name="PageURl" ColumnName="PageURl" />
+          <ScalarProperty Name="DateTIme" ColumnName="DateTIme" />
+          <ScalarProperty Name="Exception" ColumnName="Exception" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fundrecords">
+      <EntityTypeMapping TypeName="suretraderModel.fundrecord">
+        <MappingFragment StoreEntitySet="fundrecord">
+          <ScalarProperty Name="idCUSTOMER" ColumnName="idCUSTOMER" />
+          <ScalarProperty Name="fundRecID" ColumnName="fundRecID" />
+          <ScalarProperty Name="orederNo" ColumnName="orederNo" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="getaccounthistories">
+      <EntityTypeMapping TypeName="suretraderModel.getaccounthistory">
+        <MappingFragment StoreEntitySet="getaccounthistory">
+          <ScalarProperty Name="idaccounthistory" ColumnName="idaccounthistory" />
+          <ScalarProperty Name="accountidno" ColumnName="accountidno" />
+          <ScalarProperty Name="accountprefix" ColumnName="accountprefix" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="government_identification">
+      <EntityTypeMapping TypeName="suretraderModel.government_identification">
+        <MappingFragment StoreEntitySet="government_identification">
+          <ScalarProperty Name="idGOVERNMENT_IDENTIFICATION" ColumnName="idGOVERNMENT_IDENTIFICATION" />
+          <ScalarProperty Name="idCUSTOMER" ColumnName="idCUSTOMER" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="ISSUEPLACE" ColumnName="ISSUEPLACE" />
+          <ScalarProperty Name="NUMBER" ColumnName="NUMBER" />
+          <ScalarProperty Name="EXPIRATION" ColumnName="EXPIRATION" />
+          <ScalarProperty Name="FILE_NAME" ColumnName="FILE_NAME" />
+          <ScalarProperty Name="FILE" ColumnName="FILE" />
+          <ScalarProperty Name="idACCOUNT_HOLDER" ColumnName="idACCOUNT_HOLDER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="highest_degree">
+      <EntityTypeMapping TypeName="suretraderModel.highest_degree">
+        <MappingFragment StoreEntitySet="highest_degree">
+          <ScalarProperty Name="idHIGHEST_DEGREE" ColumnName="idHIGHEST_DEGREE" />
+          <ScalarProperty Name="DEGREE" ColumnName="DEGREE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="identity_declaration">
+      <EntityTypeMapping TypeName="suretraderModel.identity_declaration">
+        <MappingFragment StoreEntitySet="identity_declaration">
+          <ScalarProperty Name="identity_declaration_id" ColumnName="identity_declaration_id" />
+          <ScalarProperty Name="owner_officer_id" ColumnName="owner_officer_id" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="street_address" ColumnName="street_address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state_province" ColumnName="state_province" />
+          <ScalarProperty Name="idcountry" ColumnName="idcountry" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="mobile_number" ColumnName="mobile_number" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+          <ScalarProperty Name="place_of_birth" ColumnName="place_of_birth" />
+          <ScalarProperty Name="citizenship" ColumnName="citizenship" />
+          <ScalarProperty Name="is_convicted" ColumnName="is_convicted" />
+          <ScalarProperty Name="is_convicted_detail" ColumnName="is_convicted_detail" />
+          <ScalarProperty Name="has_involuntary_closure" ColumnName="has_involuntary_closure" />
+          <ScalarProperty Name="has_involuntary_closure_detail" ColumnName="has_involuntary_closure_detail" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="zipcode" ColumnName="zipcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="identity_education_declaration">
+      <EntityTypeMapping TypeName="suretraderModel.identity_education_declaration">
+        <MappingFragment StoreEntitySet="identity_education_declaration">
+          <ScalarProperty Name="ididentity_declaration_id" ColumnName="ididentity_declaration_id" />
+          <ScalarProperty Name="school_name" ColumnName="school_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="identity_employment_declaration">
+      <EntityTypeMapping TypeName="suretraderModel.identity_employment_declaration">
+        <MappingFragment StoreEntitySet="identity_employment_declaration">
+          <ScalarProperty Name="identity_employment_declaration_id" ColumnName="identity_employment_declaration_id" />
+          <ScalarProperty Name="emp_status" ColumnName="emp_status" />
+          <ScalarProperty Name="occupation" ColumnName="occupation" />
+          <ScalarProperty Name="employer" ColumnName="employer" />
+          <ScalarProperty Name="business_type" ColumnName="business_type" />
+          <ScalarProperty Name="years_employed" ColumnName="years_employed" />
+          <ScalarProperty Name="street_address" ColumnName="street_address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state_province" ColumnName="state_province" />
+          <ScalarProperty Name="zip_code" ColumnName="zip_code" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="street_address_2" ColumnName="street_address_2" />
+          <ScalarProperty Name="School_Name" ColumnName="School_Name" />
+          <ScalarProperty Name="Year_of_Started" ColumnName="Year_of_Started" />
+          <ScalarProperty Name="Date_of_Graduation" ColumnName="Date_of_Graduation" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="owner_officer_id" ColumnName="owner_officer_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="income_source">
+      <EntityTypeMapping TypeName="suretraderModel.income_source">
+        <MappingFragment StoreEntitySet="income_source">
+          <ScalarProperty Name="income_source_id" ColumnName="income_source_id" />
+          <ScalarProperty Name="source_title" ColumnName="source_title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ip_block">
+      <EntityTypeMapping TypeName="suretraderModel.ip_block">
+        <MappingFragment StoreEntitySet="ip_block">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ip" ColumnName="ip" />
+          <ScalarProperty Name="date_time" ColumnName="date_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ip_log">
+      <EntityTypeMapping TypeName="suretraderModel.ip_log">
+        <MappingFragment StoreEntitySet="ip_log">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ip" ColumnName="ip" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="update_date_time" ColumnName="update_date_time" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="updateBy" ColumnName="updateBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iptables">
+      <EntityTypeMapping TypeName="suretraderModel.iptable">
+        <MappingFragment StoreEntitySet="iptable">
+          <ScalarProperty Name="IPid" ColumnName="IPid" />
+          <ScalarProperty Name="IPAdress" ColumnName="IPAdress" />
+          <ScalarProperty Name="IsIPValid" ColumnName="IsIPValid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kyc_information">
+      <EntityTypeMapping TypeName="suretraderModel.kyc_information">
+        <MappingFragment StoreEntitySet="kyc_information">
+          <ScalarProperty Name="idkyc_information" ColumnName="idkyc_information" />
+          <ScalarProperty Name="account_number" ColumnName="account_number" />
+          <ScalarProperty Name="missing_document" ColumnName="missing_document" />
+          <ScalarProperty Name="reviewed_approved_by" ColumnName="reviewed_approved_by" />
+          <ScalarProperty Name="placed_das" ColumnName="placed_das" />
+          <ScalarProperty Name="datetime" ColumnName="datetime" />
+          <ScalarProperty Name="form_completed" ColumnName="form_completed" />
+          <ScalarProperty Name="valid_photo_ids" ColumnName="valid_photo_ids" />
+          <ScalarProperty Name="bank_account_information" ColumnName="bank_account_information" />
+          <ScalarProperty Name="emp_add_phn_no" ColumnName="emp_add_phn_no" />
+          <ScalarProperty Name="unemployed" ColumnName="unemployed" />
+          <ScalarProperty Name="student" ColumnName="student" />
+          <ScalarProperty Name="uaa" ColumnName="uaa" />
+          <ScalarProperty Name="fatca" ColumnName="fatca" />
+          <ScalarProperty Name="w_8_form" ColumnName="w_8_form" />
+          <ScalarProperty Name="w_9_from" ColumnName="w_9_from" />
+          <ScalarProperty Name="o_fac" ColumnName="o_fac" />
+          <ScalarProperty Name="financial_information" ColumnName="financial_information" />
+          <ScalarProperty Name="reference" ColumnName="reference" />
+          <ScalarProperty Name="uploadfile" ColumnName="uploadfile" />
+          <ScalarProperty Name="customerID" ColumnName="customerID" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="RiskRating" ColumnName="RiskRating" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kyc_master">
+      <EntityTypeMapping TypeName="suretraderModel.kyc_master">
+        <MappingFragment StoreEntitySet="kyc_master">
+          <ScalarProperty Name="idkyc_master" ColumnName="idkyc_master" />
+          <ScalarProperty Name="kyc_type" ColumnName="kyc_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="leads">
+      <EntityTypeMapping TypeName="suretraderModel.lead">
+        <MappingFragment StoreEntitySet="leads">
+          <ScalarProperty Name="idLead" ColumnName="idLead" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="LAST_UPDATE_TIMESTAMP" ColumnName="LAST_UPDATE_TIMESTAMP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="manual_buying_power">
+      <EntityTypeMapping TypeName="suretraderModel.manual_buying_power">
+        <MappingFragment StoreEntitySet="manual_buying_power">
+          <ScalarProperty Name="idmanual_buying_power" ColumnName="idmanual_buying_power" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="idaccount_number" ColumnName="idaccount_number" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="new_deposit_amount" ColumnName="new_deposit_amount" />
+          <ScalarProperty Name="is_processed" ColumnName="is_processed" />
+          <ScalarProperty Name="withdrawal_amount" ColumnName="withdrawal_amount" />
+          <ScalarProperty Name="is_cash_movement" ColumnName="is_cash_movement" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="updated_by" ColumnName="updated_by" />
+          <ScalarProperty Name="updated_date" ColumnName="updated_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="missing_documents">
+      <EntityTypeMapping TypeName="suretraderModel.missing_documents">
+        <MappingFragment StoreEntitySet="missing_documents">
+          <ScalarProperty Name="idmissing_documents" ColumnName="idmissing_documents" />
+          <ScalarProperty Name="idcustomer" ColumnName="idcustomer" />
+          <ScalarProperty Name="idaccount_holder" ColumnName="idaccount_holder" />
+          <ScalarProperty Name="iddocument_master" ColumnName="iddocument_master" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="notsatisfiedlists">
+      <EntityTypeMapping TypeName="suretraderModel.notsatisfiedlist">
+        <MappingFragment StoreEntitySet="notsatisfiedlist">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pages">
+      <EntityTypeMapping TypeName="suretraderModel.page">
+        <MappingFragment StoreEntitySet="pages">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+          <ScalarProperty Name="ControllerName" ColumnName="ControllerName" />
+          <ScalarProperty Name="icons" ColumnName="icons" />
+          <ScalarProperty Name="pagestype" ColumnName="pagestype" />
+          <ScalarProperty Name="pagedivid" ColumnName="pagedivid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="permissions">
+      <EntityTypeMapping TypeName="suretraderModel.permission">
+        <MappingFragment StoreEntitySet="permission">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="PermissionGroupId" ColumnName="PermissionGroupId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsLandingPage" ColumnName="IsLandingPage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="permissiongroups">
+      <EntityTypeMapping TypeName="suretraderModel.permissiongroup">
+        <MappingFragment StoreEntitySet="permissiongroup">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="OrderBy" ColumnName="OrderBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="permissioninroles">
+      <EntityTypeMapping TypeName="suretraderModel.permissioninrole">
+        <MappingFragment StoreEntitySet="permissioninrole">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PermissionGroupId" ColumnName="PermissionGroupId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ReadOnly" ColumnName="ReadOnly" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pincoderequests">
+      <EntityTypeMapping TypeName="suretraderModel.pincoderequest">
+        <MappingFragment StoreEntitySet="pincoderequest">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProcessedByUser" ColumnName="ProcessedByUser" />
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+          <ScalarProperty Name="RequestByUser" ColumnName="RequestByUser" />
+          <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="promo_codes">
+      <EntityTypeMapping TypeName="suretraderModel.promo_codes">
+        <MappingFragment StoreEntitySet="promo_codes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="promo_code" ColumnName="promo_code" />
+          <ScalarProperty Name="promo_details" ColumnName="promo_details" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+          <ScalarProperty Name="expire_date" ColumnName="expire_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="questionresponses">
+      <EntityTypeMapping TypeName="suretraderModel.questionresponse">
+        <MappingFragment StoreEntitySet="questionresponse">
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="Response" ColumnName="Response" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reference_documents">
+      <EntityTypeMapping TypeName="suretraderModel.reference_documents">
+        <MappingFragment StoreEntitySet="reference_documents">
+          <ScalarProperty Name="idREFERENCE_DOCUMENT" ColumnName="idREFERENCE_DOCUMENT" />
+          <ScalarProperty Name="idCUSTOMER" ColumnName="idCUSTOMER" />
+          <ScalarProperty Name="idACCOUNT_HOLDER" ColumnName="idACCOUNT_HOLDER" />
+          <ScalarProperty Name="FILE1_NAME" ColumnName="FILE1_NAME" />
+          <ScalarProperty Name="FILE1_PATH" ColumnName="FILE1_PATH" />
+          <ScalarProperty Name="FILE2_NAME" ColumnName="FILE2_NAME" />
+          <ScalarProperty Name="FILE2_PATH" ColumnName="FILE2_PATH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="riskratingtrackingdetails">
+      <EntityTypeMapping TypeName="suretraderModel.riskratingtrackingdetail">
+        <MappingFragment StoreEntitySet="riskratingtrackingdetail">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="customerid" ColumnName="customerid" />
+          <ScalarProperty Name="accountholderid" ColumnName="accountholderid" />
+          <ScalarProperty Name="oldrating" ColumnName="oldrating" />
+          <ScalarProperty Name="Newrating" ColumnName="Newrating" />
+          <ScalarProperty Name="updateBy" ColumnName="updateBy" />
+          <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roles">
+      <EntityTypeMapping TypeName="suretraderModel.role">
+        <MappingFragment StoreEntitySet="roles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="pageland" ColumnName="pageland" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="security_questions">
+      <EntityTypeMapping TypeName="suretraderModel.security_questions">
+        <MappingFragment StoreEntitySet="security_questions">
+          <ScalarProperty Name="idQUESTION" ColumnName="idQUESTION" />
+          <ScalarProperty Name="QUESTION" ColumnName="QUESTION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="securityquestions">
+      <EntityTypeMapping TypeName="suretraderModel.securityquestion">
+        <MappingFragment StoreEntitySet="securityquestion">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="source_of_funds">
+      <EntityTypeMapping TypeName="suretraderModel.source_of_funds">
+        <MappingFragment StoreEntitySet="source_of_funds">
+          <ScalarProperty Name="idCUSTOMER" ColumnName="idCUSTOMER" />
+          <ScalarProperty Name="FUNDS_SOURCE" ColumnName="FUNDS_SOURCE" />
+          <ScalarProperty Name="FUNDS_SOURCE_DESC" ColumnName="FUNDS_SOURCE_DESC" />
+          <ScalarProperty Name="FUNDING_AMOUNT" ColumnName="FUNDING_AMOUNT" />
+          <ScalarProperty Name="WIRE_ORIGIN_COUNTRY" ColumnName="WIRE_ORIGIN_COUNTRY" />
+          <ScalarProperty Name="WIRE_DEST_COUNTRY" ColumnName="WIRE_DEST_COUNTRY" />
+          <ScalarProperty Name="OTHER_AMOUNT1" ColumnName="OTHER_AMOUNT1" />
+          <ScalarProperty Name="OTHER_AMOUNT1_DATE" ColumnName="OTHER_AMOUNT1_DATE" />
+          <ScalarProperty Name="OTHER_AMOUNT2" ColumnName="OTHER_AMOUNT2" />
+          <ScalarProperty Name="OTHER_AMOUNT2_DATE" ColumnName="OTHER_AMOUNT2_DATE" />
+          <ScalarProperty Name="OTHER_AMOUNT3" ColumnName="OTHER_AMOUNT3" />
+          <ScalarProperty Name="OTHER_AMOUNT3_DATE" ColumnName="OTHER_AMOUNT3_DATE" />
+          <ScalarProperty Name="EXPECTED_ACCOUNT_SIZE" ColumnName="EXPECTED_ACCOUNT_SIZE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="student_form">
+      <EntityTypeMapping TypeName="suretraderModel.student_form">
+        <MappingFragment StoreEntitySet="student_form">
+          <ScalarProperty Name="idCUSTOMER" ColumnName="idCUSTOMER" />
+          <ScalarProperty Name="STUDENT_SCHOOL_NAME" ColumnName="STUDENT_SCHOOL_NAME" />
+          <ScalarProperty Name="STUDENT_YEAR_OF_STARTED" ColumnName="STUDENT_YEAR_OF_STARTED" />
+          <ScalarProperty Name="STUDENT_ADDRESS" ColumnName="STUDENT_ADDRESS" />
+          <ScalarProperty Name="STUDENT_EXPECTED_DATE_OF_GRADUATION" ColumnName="STUDENT_EXPECTED_DATE_OF_GRADUATION" />
+          <ScalarProperty Name="STUDENT_COUNTRY" ColumnName="STUDENT_COUNTRY" />
+          <ScalarProperty Name="STUDENT_STATE" ColumnName="STUDENT_STATE" />
+          <ScalarProperty Name="STUDENT_CITY" ColumnName="STUDENT_CITY" />
+          <ScalarProperty Name="STUDENT_POSTAL" ColumnName="STUDENT_POSTAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="supporting_document">
+      <EntityTypeMapping TypeName="suretraderModel.supporting_document">
+        <MappingFragment StoreEntitySet="supporting_document">
+          <ScalarProperty Name="idSUPPORTING_DOCUMENT" ColumnName="idSUPPORTING_DOCUMENT" />
+          <ScalarProperty Name="idCUSTOMER" ColumnName="idCUSTOMER" />
+          <ScalarProperty Name="idACCOUNT_HOLDER" ColumnName="idACCOUNT_HOLDER" />
+          <ScalarProperty Name="MASTER_TYPE" ColumnName="MASTER_TYPE" />
+          <ScalarProperty Name="DOCUMENT_SEQUENCE" ColumnName="DOCUMENT_SEQUENCE" />
+          <ScalarProperty Name="SUB_TYPE" ColumnName="SUB_TYPE" />
+          <ScalarProperty Name="ISSUEPLACE" ColumnName="ISSUEPLACE" />
+          <ScalarProperty Name="DOCUMENT_NUMBER" ColumnName="DOCUMENT_NUMBER" />
+          <ScalarProperty Name="EXPIRATION" ColumnName="EXPIRATION" />
+          <ScalarProperty Name="FILE_PATH" ColumnName="FILE_PATH" />
+          <ScalarProperty Name="FILE_STATUS" ColumnName="FILE_STATUS" />
+          <ScalarProperty Name="LAST_UPDATE_DATE_TIME" ColumnName="LAST_UPDATE_DATE_TIME" />
+          <ScalarProperty Name="FormNo" ColumnName="FormNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="supporting_documents">
+      <EntityTypeMapping TypeName="suretraderModel.supporting_documents">
+        <MappingFragment StoreEntitySet="supporting_documents">
+          <ScalarProperty Name="idSUPPORTING_DOCUMENT" ColumnName="idSUPPORTING_DOCUMENT" />
+          <ScalarProperty Name="idCUSTOMER" ColumnName="idCUSTOMER" />
+          <ScalarProperty Name="idACCOUNT_HOLDER" ColumnName="idACCOUNT_HOLDER" />
+          <ScalarProperty Name="FILE1_NAME" ColumnName="FILE1_NAME" />
+          <ScalarProperty Name="FILE1_PATH" ColumnName="FILE1_PATH" />
+          <ScalarProperty Name="FILE2_NAME" ColumnName="FILE2_NAME" />
+          <ScalarProperty Name="FILE2_PATH" ColumnName="FILE2_PATH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="taxinfoes">
+      <EntityTypeMapping TypeName="suretraderModel.taxinfo">
+        <MappingFragment StoreEntitySet="taxinfo">
+          <ScalarProperty Name="idCUSTOMER" ColumnName="idCUSTOMER" />
+          <ScalarProperty Name="idACCOUNT_HOLDER" ColumnName="idACCOUNT_HOLDER" />
+          <ScalarProperty Name="taxID" ColumnName="taxID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="res_address" ColumnName="res_address" />
+          <ScalarProperty Name="res_stateCityPin" ColumnName="res_stateCityPin" />
+          <ScalarProperty Name="res_country" ColumnName="res_country" />
+          <ScalarProperty Name="mail_address" ColumnName="mail_address" />
+          <ScalarProperty Name="mail_stateCityPin" ColumnName="mail_stateCityPin" />
+          <ScalarProperty Name="mail_country" ColumnName="mail_country" />
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="FTIN" ColumnName="FTIN" />
+          <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="residentOf" ColumnName="residentOf" />
+          <ScalarProperty Name="article" ColumnName="article" />
+          <ScalarProperty Name="rate" ColumnName="rate" />
+          <ScalarProperty Name="typeofincome" ColumnName="typeofincome" />
+          <ScalarProperty Name="reasonfortreaty" ColumnName="reasonfortreaty" />
+          <ScalarProperty Name="businessname" ColumnName="businessname" />
+          <ScalarProperty Name="payeecode" ColumnName="payeecode" />
+          <ScalarProperty Name="FATCAcode" ColumnName="FATCAcode" />
+          <ScalarProperty Name="taxClass" ColumnName="taxClass" />
+          <ScalarProperty Name="EIN" ColumnName="EIN" />
+          <ScalarProperty Name="reqNameAdd" ColumnName="reqNameAdd" />
+          <ScalarProperty Name="accNo" ColumnName="accNo" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="taxClasstext" ColumnName="taxClasstext" />
+          <ScalarProperty Name="LAST_UPDATE_TIMESTAMP" ColumnName="LAST_UPDATE_TIMESTAMP" />
+          <ScalarProperty Name="Is_Agree" ColumnName="Is_Agree" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trackings">
+      <EntityTypeMapping TypeName="suretraderModel.tracking">
+        <MappingFragment StoreEntitySet="tracking">
+          <ScalarProperty Name="idTRACKING" ColumnName="idTRACKING" />
+          <ScalarProperty Name="idVISITOR" ColumnName="idVISITOR" />
+          <ScalarProperty Name="PAGE_URL" ColumnName="PAGE_URL" />
+          <ScalarProperty Name="START_TIME" ColumnName="START_TIME" />
+          <ScalarProperty Name="END_TIME" ColumnName="END_TIME" />
+          <ScalarProperty Name="REFERRING_DOMAIN" ColumnName="REFERRING_DOMAIN" />
+          <ScalarProperty Name="REFFERING_URL" ColumnName="REFFERING_URL" />
+          <ScalarProperty Name="IP_ADDRESS" ColumnName="IP_ADDRESS" />
+          <ScalarProperty Name="LAST_UPDATE_TIMESTAMP" ColumnName="LAST_UPDATE_TIMESTAMP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="updated_account_status_list">
+      <EntityTypeMapping TypeName="suretraderModel.updated_account_status_list">
+        <MappingFragment StoreEntitySet="updated_account_status_list">
+          <ScalarProperty Name="idupdated_account_status_List" ColumnName="idupdated_account_status_List" />
+          <ScalarProperty Name="idCUSTOMER" ColumnName="idCUSTOMER" />
+          <ScalarProperty Name="existing_account_status" ColumnName="existing_account_status" />
+          <ScalarProperty Name="updated_account_status" ColumnName="updated_account_status" />
+          <ScalarProperty Name="account_type" ColumnName="account_type" />
+          <ScalarProperty Name="account_number" ColumnName="account_number" />
+          <ScalarProperty Name="updated_date" ColumnName="updated_date" />
+          <ScalarProperty Name="updated_by" ColumnName="updated_by" />
+          <ScalarProperty Name="OldAccountType" ColumnName="OldAccountType" />
+          <ScalarProperty Name="NewAccountType" ColumnName="NewAccountType" />
+          <ScalarProperty Name="OldRiskrating" ColumnName="OldRiskrating" />
+          <ScalarProperty Name="newriskrating" ColumnName="newriskrating" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="suretraderModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="SecurityQuestionId" ColumnName="SecurityQuestionId" />
+          <ScalarProperty Name="SecurtityAnswer" ColumnName="SecurtityAnswer" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="PasswordResetUrl" ColumnName="PasswordResetUrl" />
+          <ScalarProperty Name="PasswordResetRequestIP" ColumnName="PasswordResetRequestIP" />
+          <ScalarProperty Name="PasswordResetProcessIP" ColumnName="PasswordResetProcessIP" />
+          <ScalarProperty Name="PasswordResetRequestDateTime" ColumnName="PasswordResetRequestDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_security_questions">
+      <EntityTypeMapping TypeName="suretraderModel.user_security_questions">
+        <MappingFragment StoreEntitySet="user_security_questions">
+          <ScalarProperty Name="recordId" ColumnName="recordId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="securityQuestionId" ColumnName="securityQuestionId" />
+          <ScalarProperty Name="questionResponse" ColumnName="questionResponse" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userinroles">
+      <EntityTypeMapping TypeName="suretraderModel.userinrole">
+        <MappingFragment StoreEntitySet="userinrole">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userloginaudits">
+      <EntityTypeMapping TypeName="suretraderModel.userloginaudit">
+        <MappingFragment StoreEntitySet="userloginaudit">
+          <ScalarProperty Name="userloginauditid" ColumnName="userloginauditid" />
+          <ScalarProperty Name="LogId" ColumnName="LogId" />
+          <ScalarProperty Name="IpAdress" ColumnName="IpAdress" />
+          <ScalarProperty Name="logindate" ColumnName="logindate" />
+          <ScalarProperty Name="logoutdate" ColumnName="logoutdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userloginlogs">
+      <EntityTypeMapping TypeName="suretraderModel.userloginlog">
+        <MappingFragment StoreEntitySet="userloginlog">
+          <ScalarProperty Name="LogId" ColumnName="LogId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="LogDateTime" ColumnName="LogDateTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="IpAdress" ColumnName="IpAdress" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="NumberOfAttempt" ColumnName="NumberOfAttempt" />
+          <ScalarProperty Name="IsFromFrontOffice" ColumnName="IsFromFrontOffice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userworkflows">
+      <EntityTypeMapping TypeName="suretraderModel.userworkflow">
+        <MappingFragment StoreEntitySet="userworkflow">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PageId" ColumnName="PageId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="RejectedBy" ColumnName="RejectedBy" />
+          <ScalarProperty Name="RejectedDate" ColumnName="RejectedDate" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="landingpage" ColumnName="landingpage" />
+          <ScalarProperty Name="AccountHolderId" ColumnName="AccountHolderId" />
+          <ScalarProperty Name="corporate_Director_Id" ColumnName="corporate_Director_Id" />
+          <ScalarProperty Name="CorporatemenuStaus" ColumnName="CorporatemenuStaus" />
+          <ScalarProperty Name="corporate_officer_Id" ColumnName="corporate_officer_Id" />
+          <ScalarProperty Name="corporate_beneficiary_Id" ColumnName="corporate_beneficiary_Id" />
+          <ScalarProperty Name="corporate_Owner_Id" ColumnName="corporate_Owner_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="visitor_sessions">
+      <EntityTypeMapping TypeName="suretraderModel.visitor_sessions">
+        <MappingFragment StoreEntitySet="visitor_sessions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="visitor_id" ColumnName="visitor_id" />
+          <ScalarProperty Name="session_id" ColumnName="session_id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="expired" ColumnName="expired" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="visitors">
+      <EntityTypeMapping TypeName="suretraderModel.visitor">
+        <MappingFragment StoreEntitySet="visitors">
+          <ScalarProperty Name="idVISITOR" ColumnName="idVISITOR" />
+          <ScalarProperty Name="IP_ADDRESS" ColumnName="IP_ADDRESS" />
+          <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="CUSTOMER_NUMBER" ColumnName="CUSTOMER_NUMBER" />
+          <ScalarProperty Name="LAST_UPDATE_TIMESTAMP" ColumnName="LAST_UPDATE_TIMESTAMP" />
+          <ScalarProperty Name="APPLICATION_COMPLETED" ColumnName="APPLICATION_COMPLETED" />
+          <ScalarProperty Name="affiliate_referral" ColumnName="affiliate_referral" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="w9_taxinfo">
+      <EntityTypeMapping TypeName="suretraderModel.w9_taxinfo">
+        <MappingFragment StoreEntitySet="w9_taxinfo">
+          <ScalarProperty Name="W9_TaxInfo_Id" ColumnName="W9_TaxInfo_Id" />
+          <ScalarProperty Name="Customer_Id" ColumnName="Customer_Id" />
+          <ScalarProperty Name="AccountHolderId" ColumnName="AccountHolderId" />
+          <ScalarProperty Name="W9_Name" ColumnName="W9_Name" />
+          <ScalarProperty Name="W9_Businessname" ColumnName="W9_Businessname" />
+          <ScalarProperty Name="W9_Individualsole" ColumnName="W9_Individualsole" />
+          <ScalarProperty Name="W9_CCorporation" ColumnName="W9_CCorporation" />
+          <ScalarProperty Name="W9_SCorporation" ColumnName="W9_SCorporation" />
+          <ScalarProperty Name="W9_Partnership" ColumnName="W9_Partnership" />
+          <ScalarProperty Name="W9_Trustestate" ColumnName="W9_Trustestate" />
+          <ScalarProperty Name="W9_Limitedliabilitycompany" ColumnName="W9_Limitedliabilitycompany" />
+          <ScalarProperty Name="W9_Enterthetaxclassification" ColumnName="W9_Enterthetaxclassification" />
+          <ScalarProperty Name="W9_Exemptpayeecode" ColumnName="W9_Exemptpayeecode" />
+          <ScalarProperty Name="W9_ExemptionfromFATCA" ColumnName="W9_ExemptionfromFATCA" />
+          <ScalarProperty Name="W9_Other" ColumnName="W9_Other" />
+          <ScalarProperty Name="W9_Address" ColumnName="W9_Address" />
+          <ScalarProperty Name="W9_CitystateZIP" ColumnName="W9_CitystateZIP" />
+          <ScalarProperty Name="W9_Listaccountnumber" ColumnName="W9_Listaccountnumber" />
+          <ScalarProperty Name="W9_Requesternameaddress" ColumnName="W9_Requesternameaddress" />
+          <ScalarProperty Name="W9_Socialsecuritynumber" ColumnName="W9_Socialsecuritynumber" />
+          <ScalarProperty Name="W9_Employeridentificationnumber" ColumnName="W9_Employeridentificationnumber" />
+          <ScalarProperty Name="W9_IAgree" ColumnName="W9_IAgree" />
+          <ScalarProperty Name="LAST_UPDATE_TIMESTAMP" ColumnName="LAST_UPDATE_TIMESTAMP" />
+          <ScalarProperty Name="W9_OtherDetail" ColumnName="W9_OtherDetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zoho_visitor">
+      <EntityTypeMapping TypeName="suretraderModel.zoho_visitor">
+        <MappingFragment StoreEntitySet="zoho_visitor">
+          <ScalarProperty Name="visitorId" ColumnName="visitorId" />
+          <ScalarProperty Name="last_updated_date" ColumnName="last_updated_date" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="accountholders_bkup">
+      <EntityTypeMapping TypeName="suretraderModel.accountholders_bkup">
+        <MappingFragment StoreEntitySet="accountholders_bkup">
+          <ScalarProperty Name="idACCOUNT_HOLDER" ColumnName="idACCOUNT_HOLDER" />
+          <ScalarProperty Name="idCUSTOMER" ColumnName="idCUSTOMER" />
+          <ScalarProperty Name="MEMBER_TYPE" ColumnName="MEMBER_TYPE" />
+          <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+          <ScalarProperty Name="MIDDLE_NAME" ColumnName="MIDDLE_NAME" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+          <ScalarProperty Name="COUNTRY_CITIZENSHIP_ID" ColumnName="COUNTRY_CITIZENSHIP_ID" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="SECURITY_QUESTION" ColumnName="SECURITY_QUESTION" />
+          <ScalarProperty Name="SECURITY_ANSWER" ColumnName="SECURITY_ANSWER" />
+          <ScalarProperty Name="RESIDENTIAL_COUNTRY" ColumnName="RESIDENTIAL_COUNTRY" />
+          <ScalarProperty Name="RESIDENTIAL_CITY" ColumnName="RESIDENTIAL_CITY" />
+          <ScalarProperty Name="RESIDENTIAL_STREET1" ColumnName="RESIDENTIAL_STREET1" />
+          <ScalarProperty Name="RESIDENTIAL_STREET2" ColumnName="RESIDENTIAL_STREET2" />
+          <ScalarProperty Name="RESIDENTIAL_STATE" ColumnName="RESIDENTIAL_STATE" />
+          <ScalarProperty Name="RESIDENTIAL_POSTALCODE" ColumnName="RESIDENTIAL_POSTALCODE" />
+          <ScalarProperty Name="MAILING_COUNTRY" ColumnName="MAILING_COUNTRY" />
+          <ScalarProperty Name="MAILING_CITY" ColumnName="MAILING_CITY" />
+          <ScalarProperty Name="MAILING_STREET1" ColumnName="MAILING_STREET1" />
+          <ScalarProperty Name="MAILING_STREET2" ColumnName="MAILING_STREET2" />
+          <ScalarProperty Name="MAILING_STATE" ColumnName="MAILING_STATE" />
+          <ScalarProperty Name="MAILING_POSTALCODE" ColumnName="MAILING_POSTALCODE" />
+          <ScalarProperty Name="PHONE_HOME" ColumnName="PHONE_HOME" />
+          <ScalarProperty Name="PHONE_WORK" ColumnName="PHONE_WORK" />
+          <ScalarProperty Name="PHONE_MOBILE" ColumnName="PHONE_MOBILE" />
+          <ScalarProperty Name="MARITAL_STATUS" ColumnName="MARITAL_STATUS" />
+          <ScalarProperty Name="DEPENDANTS" ColumnName="DEPENDANTS" />
+          <ScalarProperty Name="HIGHEST_DEGREE" ColumnName="HIGHEST_DEGREE" />
+          <ScalarProperty Name="HIGHEST_DEGREE_SCHOOL_NAME" ColumnName="HIGHEST_DEGREE_SCHOOL_NAME" />
+          <ScalarProperty Name="EMPLOYMENT_STATUS" ColumnName="EMPLOYMENT_STATUS" />
+          <ScalarProperty Name="EMPLOYER_NAME" ColumnName="EMPLOYER_NAME" />
+          <ScalarProperty Name="BUSINESS_TYPE" ColumnName="BUSINESS_TYPE" />
+          <ScalarProperty Name="OCCUPATION" ColumnName="OCCUPATION" />
+          <ScalarProperty Name="NUMBER_YEARS_EMPLOYED" ColumnName="NUMBER_YEARS_EMPLOYED" />
+          <ScalarProperty Name="EMPLOYER_STREET1" ColumnName="EMPLOYER_STREET1" />
+          <ScalarProperty Name="EMPLOYER_STREET2" ColumnName="EMPLOYER_STREET2" />
+          <ScalarProperty Name="EMPLOYER_CITY" ColumnName="EMPLOYER_CITY" />
+          <ScalarProperty Name="EMPLOYER_STATE" ColumnName="EMPLOYER_STATE" />
+          <ScalarProperty Name="EMPLOYER_POSTAL_CODE" ColumnName="EMPLOYER_POSTAL_CODE" />
+          <ScalarProperty Name="EMPLOYER_COUNTRY" ColumnName="EMPLOYER_COUNTRY" />
+          <ScalarProperty Name="ANNUAL_INCOME" ColumnName="ANNUAL_INCOME" />
+          <ScalarProperty Name="TAXRATE" ColumnName="TAXRATE" />
+          <ScalarProperty Name="NETWORTH" ColumnName="NETWORTH" />
+          <ScalarProperty Name="LIQUID_NET_WORTH" ColumnName="LIQUID_NET_WORTH" />
+          <ScalarProperty Name="BANK_NAME" ColumnName="BANK_NAME" />
+          <ScalarProperty Name="BANK_STATE" ColumnName="BANK_STATE" />
+          <ScalarProperty Name="BANK_COUNTRY" ColumnName="BANK_COUNTRY" />
+          <ScalarProperty Name="RISK_TOLERANCE" ColumnName="RISK_TOLERANCE" />
+          <ScalarProperty Name="KNOWLEDGE_LEVEL" ColumnName="KNOWLEDGE_LEVEL" />
+          <ScalarProperty Name="YEARS_EXPERIENCE" ColumnName="YEARS_EXPERIENCE" />
+          <ScalarProperty Name="TRANSACTIONS_PER_YEAR" ColumnName="TRANSACTIONS_PER_YEAR" />
+          <ScalarProperty Name="AVERAGE_SIZE_PER_TRADE" ColumnName="AVERAGE_SIZE_PER_TRADE" />
+          <ScalarProperty Name="ID_FIRST_TYPE" ColumnName="ID_FIRST_TYPE" />
+          <ScalarProperty Name="ID_FIRST_PLACE_ISSUANCE" ColumnName="ID_FIRST_PLACE_ISSUANCE" />
+          <ScalarProperty Name="ID_FIRST_NUMBER" ColumnName="ID_FIRST_NUMBER" />
+          <ScalarProperty Name="ID_FIRST_EXPIRATION" ColumnName="ID_FIRST_EXPIRATION" />
+          <ScalarProperty Name="ID_SECOND_TYPE" ColumnName="ID_SECOND_TYPE" />
+          <ScalarProperty Name="ID_SECOND_PLACE_ISSUANCE" ColumnName="ID_SECOND_PLACE_ISSUANCE" />
+          <ScalarProperty Name="ID_SECOND_NUMBER" ColumnName="ID_SECOND_NUMBER" />
+          <ScalarProperty Name="ID_SECOND_EXPIRATION" ColumnName="ID_SECOND_EXPIRATION" />
+          <ScalarProperty Name="FIRST_REFERENCE_COMPANY_NAME" ColumnName="FIRST_REFERENCE_COMPANY_NAME" />
+          <ScalarProperty Name="FIRST_REFERENCE_NAME" ColumnName="FIRST_REFERENCE_NAME" />
+          <ScalarProperty Name="FIRST_REFERENCE_PHONE" ColumnName="FIRST_REFERENCE_PHONE" />
+          <ScalarProperty Name="FIRST_REFERENCE_EMAIL" ColumnName="FIRST_REFERENCE_EMAIL" />
+          <ScalarProperty Name="SECOND_REFERENCE_NAME" ColumnName="SECOND_REFERENCE_NAME" />
+          <ScalarProperty Name="SECOND_REFERENCE_PHONE" ColumnName="SECOND_REFERENCE_PHONE" />
+          <ScalarProperty Name="SECOND_REFERENCE_EMAIL" ColumnName="SECOND_REFERENCE_EMAIL" />
+          <ScalarProperty Name="THIRD_REFERENCE_NAME" ColumnName="THIRD_REFERENCE_NAME" />
+          <ScalarProperty Name="THIRD_REFERENCE_PHONE" ColumnName="THIRD_REFERENCE_PHONE" />
+          <ScalarProperty Name="THIRD_REFERENCE_EMAIL" ColumnName="THIRD_REFERENCE_EMAIL" />
+          <ScalarProperty Name="SUBMISSION_DATE" ColumnName="SUBMISSION_DATE" />
+          <ScalarProperty Name="SIGNATURE" ColumnName="SIGNATURE" />
+          <ScalarProperty Name="SIG_HASH" ColumnName="SIG_HASH" />
+          <ScalarProperty Name="Account_Status" ColumnName="Account_Status" />
+          <ScalarProperty Name="joint_application_residence" ColumnName="joint_application_residence" />
+          <ScalarProperty Name="joint_application_investment_objecives" ColumnName="joint_application_investment_objecives" />
+          <ScalarProperty Name="joint_application_affiliations" ColumnName="joint_application_affiliations" />
+          <ScalarProperty Name="joint_application_fullname_brokerageEmployeee" ColumnName="joint_application_fullname_brokerageEmployeee" />
+          <ScalarProperty Name="joint_application_fullname_director" ColumnName="joint_application_fullname_director" />
+          <ScalarProperty Name="joint_application_is_brokerageEmployeee" ColumnName="joint_application_is_brokerageEmployeee" />
+          <ScalarProperty Name="joint_application_is_director" ColumnName="joint_application_is_director" />
+          <ScalarProperty Name="joint_application_is_employed_security_industry" ColumnName="joint_application_is_employed_security_industry" />
+          <ScalarProperty Name="joint_application_relationship_brokerageEmployeee" ColumnName="joint_application_relationship_brokerageEmployeee" />
+          <ScalarProperty Name="joint_application_relationship_director" ColumnName="joint_application_relationship_director" />
+          <ScalarProperty Name="income_source" ColumnName="income_source" />
+          <ScalarProperty Name="account_disclaimers" ColumnName="account_disclaimers" />
+          <ScalarProperty Name="client_agreement" ColumnName="client_agreement" />
+          <ScalarProperty Name="fatca_agreement" ColumnName="fatca_agreement" />
+          <ScalarProperty Name="unsolicited_acknowledgement_agreement" ColumnName="unsolicited_acknowledgement_agreement" />
+          <ScalarProperty Name="client_acknowledgement" ColumnName="client_acknowledgement" />
+          <ScalarProperty Name="letter_of_authorization" ColumnName="letter_of_authorization" />
+          <ScalarProperty Name="risk_disclosure" ColumnName="risk_disclosure" />
+          <ScalarProperty Name="LAST_UPDATE_TIMESTAMP" ColumnName="LAST_UPDATE_TIMESTAMP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cta_form">
+      <EntityTypeMapping TypeName="suretraderModel.cta_form">
+        <MappingFragment StoreEntitySet="cta_form">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="visitor_id" ColumnName="visitor_id" />
+          <ScalarProperty Name="cta_master_id" ColumnName="cta_master_id" />
+          <ScalarProperty Name="page_url" ColumnName="page_url" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cta_form_fields">
+      <EntityTypeMapping TypeName="suretraderModel.cta_form_fields">
+        <MappingFragment StoreEntitySet="cta_form_fields">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="visitor_id" ColumnName="visitor_id" />
+          <ScalarProperty Name="cta_master_id" ColumnName="cta_master_id" />
+          <ScalarProperty Name="cta_form_id" ColumnName="cta_form_id" />
+          <ScalarProperty Name="form_field" ColumnName="form_field" />
+          <ScalarProperty Name="field_value" ColumnName="field_value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vaccounthistories">
+      <EntityTypeMapping TypeName="suretraderModel.vaccounthistory">
+        <MappingFragment StoreEntitySet="vaccounthistory">
+          <ScalarProperty Name="idaccounthistory" ColumnName="idaccounthistory" />
+          <ScalarProperty Name="accountidno" ColumnName="accountidno" />
+          <ScalarProperty Name="accountprefix" ColumnName="accountprefix" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vuserlists">
+      <EntityTypeMapping TypeName="suretraderModel.vuserlist">
+        <MappingFragment StoreEntitySet="vuserlist">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedByUserFirstName" ColumnName="CreatedByUserFirstName" />
+          <ScalarProperty Name="CreatedByUserLastName" ColumnName="CreatedByUserLastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="create_iboss_account" FunctionName="suretraderModel.Store.create_iboss_account" />
+    <FunctionImportMapping FunctionImportName="proc_account_cleanup" FunctionName="suretraderModel.Store.proc_account_cleanup" />
+    <FunctionImportMapping FunctionImportName="UnBlock_lock_user" FunctionName="suretraderModel.Store.UnBlock_lock_user" />
+  </EntityContainerMapping>
+</Mapping>

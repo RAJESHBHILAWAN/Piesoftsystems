@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="suretrader_trackingModelStoreContainer" CdmEntityContainer="suretrader_trackingEntities">
+    <EntitySetMapping Name="cta_form">
+      <EntityTypeMapping TypeName="suretrader_trackingModel.cta_form">
+        <MappingFragment StoreEntitySet="cta_form">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="visitor_id" ColumnName="visitor_id" />
+          <ScalarProperty Name="cta_master_id" ColumnName="cta_master_id" />
+          <ScalarProperty Name="page_url" ColumnName="page_url" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cta_form_fields">
+      <EntityTypeMapping TypeName="suretrader_trackingModel.cta_form_fields">
+        <MappingFragment StoreEntitySet="cta_form_fields">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="visitor_id" ColumnName="visitor_id" />
+          <ScalarProperty Name="cta_master_id" ColumnName="cta_master_id" />
+          <ScalarProperty Name="cta_form_id" ColumnName="cta_form_id" />
+          <ScalarProperty Name="form_field" ColumnName="form_field" />
+          <ScalarProperty Name="field_value" ColumnName="field_value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cta_master">
+      <EntityTypeMapping TypeName="suretrader_trackingModel.cta_master">
+        <MappingFragment StoreEntitySet="cta_master">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trackings">
+      <EntityTypeMapping TypeName="suretrader_trackingModel.tracking">
+        <MappingFragment StoreEntitySet="tracking">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="visitor_id" ColumnName="visitor_id" />
+          <ScalarProperty Name="visitor_session_id" ColumnName="visitor_session_id" />
+          <ScalarProperty Name="page_url" ColumnName="page_url" />
+          <ScalarProperty Name="start_time" ColumnName="start_time" />
+          <ScalarProperty Name="end_time" ColumnName="end_time" />
+          <ScalarProperty Name="host" ColumnName="host" />
+          <ScalarProperty Name="referring_domain" ColumnName="referring_domain" />
+          <ScalarProperty Name="last_event_type" ColumnName="last_event_type" />
+          <ScalarProperty Name="last_event_id" ColumnName="last_event_id" />
+          <ScalarProperty Name="last_event_class" ColumnName="last_event_class" />
+          <ScalarProperty Name="redirected_on" ColumnName="redirected_on" />
+          <ScalarProperty Name="referring_url" ColumnName="referring_url" />
+          <ScalarProperty Name="ip_address" ColumnName="ip_address" />
+          <ScalarProperty Name="page_name" ColumnName="page_name" />
+          <ScalarProperty Name="keyword" ColumnName="keyword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="visitors">
+      <EntityTypeMapping TypeName="suretrader_trackingModel.visitor">
+        <MappingFragment StoreEntitySet="visitor">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="token" ColumnName="token" />
+          <ScalarProperty Name="ip_address" ColumnName="ip_address" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="application_started" ColumnName="application_started" />
+          <ScalarProperty Name="application_completed" ColumnName="application_completed" />
+          <ScalarProperty Name="customer_number" ColumnName="customer_number" />
+          <ScalarProperty Name="affiliate_referral" ColumnName="affiliate_referral" />
+          <ScalarProperty Name="is_opportunity" ColumnName="is_opportunity" />
+          <ScalarProperty Name="exepcted_revenue" ColumnName="exepcted_revenue" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="date_modified" ColumnName="date_modified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="visitor_sessions">
+      <EntityTypeMapping TypeName="suretrader_trackingModel.visitor_sessions">
+        <MappingFragment StoreEntitySet="visitor_sessions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="visitor_id" ColumnName="visitor_id" />
+          <ScalarProperty Name="session_id" ColumnName="session_id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="expired" ColumnName="expired" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="suretrader_trackingModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="suretrader_trackingModelStoreContainer">
+    <EntitySet Name="cta_form" EntityType="suretrader_trackingModel.Store.cta_form" store:Type="Tables" Schema="mond_crm" />
+    <EntitySet Name="cta_form_fields" EntityType="suretrader_trackingModel.Store.cta_form_fields" store:Type="Tables" Schema="mond_crm" />
+    <EntitySet Name="cta_master" EntityType="suretrader_trackingModel.Store.cta_master" store:Type="Tables" Schema="mond_crm" />
+    <EntitySet Name="tracking" EntityType="suretrader_trackingModel.Store.tracking" store:Type="Tables" Schema="mond_crm" />
+    <EntitySet Name="visitor" EntityType="suretrader_trackingModel.Store.visitor" store:Type="Tables" Schema="mond_crm" />
+    <EntitySet Name="visitor_sessions" EntityType="suretrader_trackingModel.Store.visitor_sessions" store:Type="Tables" Schema="mond_crm" />
+  </EntityContainer>
+  <EntityType Name="cta_form">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="visitor_id" Type="int" Nullable="false" />
+    <Property Name="cta_master_id" Type="int" Nullable="false" />
+    <Property Name="page_url" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="date_created" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="cta_form_fields">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="visitor_id" Type="int" Nullable="false" />
+    <Property Name="cta_master_id" Type="int" Nullable="false" />
+    <Property Name="cta_form_id" Type="int" Nullable="false" />
+    <Property Name="form_field" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="field_value" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="cta_master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Description" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tracking">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="visitor_id" Type="int" Nullable="false" />
+    <Property Name="visitor_session_id" Type="int" Nullable="false" />
+    <Property Name="page_url" Type="varchar" Nullable="false" MaxLength="145" />
+    <Property Name="start_time" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="end_time" Type="timestamp" Nullable="false" />
+    <Property Name="host" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="referring_domain" Type="varchar" Nullable="false" MaxLength="145" />
+    <Property Name="last_event_type" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="last_event_id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="last_event_class" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="redirected_on" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="referring_url" Type="varchar" Nullable="false" MaxLength="145" />
+    <Property Name="ip_address" Type="varchar" Nullable="false" MaxLength="145" />
+    <Property Name="page_name" Type="varchar" Nullable="false" MaxLength="145" />
+    <Property Name="keyword" Type="varchar" Nullable="false" MaxLength="145" />
+  </EntityType>
+  <EntityType Name="visitor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="token" Type="varchar" Nullable="false" MaxLength="145" />
+    <Property Name="ip_address" Type="varchar" Nullable="false" MaxLength="145" />
+    <Property Name="email" Type="varchar" Nullable="false" MaxLength="145" />
+    <Property Name="first_name" Type="varchar" Nullable="false" MaxLength="145" />
+    <Property Name="last_name" Type="varchar" Nullable="false" MaxLength="145" />
+    <Property Name="phone" Type="varchar" Nullable="false" MaxLength="145" />
+    <Property Name="application_started" Type="bool" Nullable="false" />
+    <Property Name="application_completed" Type="bool" Nullable="false" />
+    <Property Name="customer_number" Type="varchar" Nullable="false" MaxLength="145" />
+    <Property Name="affiliate_referral" Type="varchar" Nullable="false" MaxLength="145" />
+    <Property Name="is_opportunity" Type="bool" Nullable="false" />
+    <Property Name="exepcted_revenue" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="visitor_sessions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="visitor_id" Type="int" Nullable="false" />
+    <Property Name="session_id" Type="varchar" Nullable="false" MaxLength="145" />
+    <Property Name="created_at" Type="datetime" Nullable="false" />
+    <Property Name="updated_at" Type="datetime" Nullable="false" />
+    <Property Name="expired" Type="bool" Nullable="false" />
+  </EntityType>
+</Schema>

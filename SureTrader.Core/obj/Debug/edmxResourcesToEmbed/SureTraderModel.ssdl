@@ -1,0 +1,2043 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="suretraderModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="account_block">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="date_time" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="account_holder_affiliations">
+    <Key>
+      <PropertyRef Name="idACCOUNT_HOLDER" />
+      <PropertyRef Name="idAFFILIATION" />
+    </Key>
+    <Property Name="idACCOUNT_HOLDER" Type="int" Nullable="false" />
+    <Property Name="idAFFILIATION" Type="int" Nullable="false" />
+    <Property Name="ANSWER" Type="enum" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'def.suretrader.account_number' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="account_number">
+          <Property Name="idaccountnumber" Type="int" />
+          <Property Name="accountprefix" Type="varchar" MaxLength="10" />
+        </EntityType>-->
+  <EntityType Name="account_type">
+    <Key>
+      <PropertyRef Name="idaccount_type" />
+    </Key>
+    <Property Name="idaccount_type" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="account_type" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="accountholders">
+    <Key>
+      <PropertyRef Name="idACCOUNT_HOLDER" />
+    </Key>
+    <Property Name="idACCOUNT_HOLDER" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCUSTOMER" Type="int" Nullable="false" />
+    <Property Name="MEMBER_TYPE" Type="enum" />
+    <Property Name="FIRST_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="MIDDLE_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="COUNTRY_CITIZENSHIP_ID" Type="int" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="256" />
+    <Property Name="SECURITY_QUESTION" Type="int" />
+    <Property Name="SECURITY_ANSWER" Type="varchar" MaxLength="256" />
+    <Property Name="RESIDENTIAL_COUNTRY" Type="int" />
+    <Property Name="RESIDENTIAL_CITY" Type="varchar" MaxLength="50" />
+    <Property Name="RESIDENTIAL_STREET1" Type="varchar" MaxLength="100" />
+    <Property Name="RESIDENTIAL_STREET2" Type="varchar" MaxLength="100" />
+    <Property Name="RESIDENTIAL_STATE" Type="varchar" MaxLength="50" />
+    <Property Name="RESIDENTIAL_POSTALCODE" Type="varchar" MaxLength="50" />
+    <Property Name="MAILING_COUNTRY" Type="int" />
+    <Property Name="MAILING_CITY" Type="varchar" MaxLength="50" />
+    <Property Name="MAILING_STREET1" Type="varchar" MaxLength="100" />
+    <Property Name="MAILING_STREET2" Type="varchar" MaxLength="100" />
+    <Property Name="MAILING_STATE" Type="varchar" MaxLength="50" />
+    <Property Name="MAILING_POSTALCODE" Type="varchar" MaxLength="50" />
+    <Property Name="PHONE_HOME" Type="varchar" MaxLength="20" />
+    <Property Name="PHONE_WORK" Type="varchar" MaxLength="20" />
+    <Property Name="PHONE_MOBILE" Type="varchar" MaxLength="20" />
+    <Property Name="MARITAL_STATUS" Type="enum" />
+    <Property Name="DEPENDANTS" Type="int" />
+    <Property Name="HIGHEST_DEGREE" Type="int" />
+    <Property Name="HIGHEST_DEGREE_SCHOOL_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="EMPLOYMENT_STATUS" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_NAME" Type="varchar" MaxLength="70" />
+    <Property Name="BUSINESS_TYPE" Type="varchar" MaxLength="50" />
+    <Property Name="OCCUPATION" Type="varchar" MaxLength="50" />
+    <Property Name="NUMBER_YEARS_EMPLOYED" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_STREET1" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_STREET2" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_CITY" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_STATE" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_POSTAL_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_COUNTRY" Type="varchar" MaxLength="50" />
+    <Property Name="ANNUAL_INCOME" Type="varchar" MaxLength="50" />
+    <Property Name="TAXRATE" Type="varchar" MaxLength="50" />
+    <Property Name="NETWORTH" Type="varchar" MaxLength="50" />
+    <Property Name="LIQUID_NET_WORTH" Type="varchar" MaxLength="50" />
+    <Property Name="BANK_NAME" Type="varchar" MaxLength="70" />
+    <Property Name="BANK_STATE" Type="varchar" MaxLength="50" />
+    <Property Name="BANK_COUNTRY" Type="int" />
+    <Property Name="RISK_TOLERANCE" Type="varchar" MaxLength="70" />
+    <Property Name="KNOWLEDGE_LEVEL" Type="varchar" MaxLength="50" />
+    <Property Name="YEARS_EXPERIENCE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TRANSACTIONS_PER_YEAR" Type="int" />
+    <Property Name="AVERAGE_SIZE_PER_TRADE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ID_FIRST_TYPE" Type="varchar" MaxLength="50" />
+    <Property Name="ID_FIRST_PLACE_ISSUANCE" Type="varchar" MaxLength="50" />
+    <Property Name="ID_FIRST_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="ID_FIRST_EXPIRATION" Type="date" />
+    <Property Name="ID_SECOND_TYPE" Type="varchar" MaxLength="50" />
+    <Property Name="ID_SECOND_PLACE_ISSUANCE" Type="varchar" MaxLength="50" />
+    <Property Name="ID_SECOND_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="ID_SECOND_EXPIRATION" Type="date" />
+    <Property Name="FIRST_REFERENCE_COMPANY_NAME" Type="varchar" MaxLength="70" />
+    <Property Name="FIRST_REFERENCE_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="FIRST_REFERENCE_PHONE" Type="varchar" MaxLength="20" />
+    <Property Name="FIRST_REFERENCE_EMAIL" Type="varchar" MaxLength="256" />
+    <Property Name="SECOND_REFERENCE_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="SECOND_REFERENCE_PHONE" Type="varchar" MaxLength="20" />
+    <Property Name="SECOND_REFERENCE_EMAIL" Type="varchar" MaxLength="256" />
+    <Property Name="THIRD_REFERENCE_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="THIRD_REFERENCE_PHONE" Type="varchar" MaxLength="20" />
+    <Property Name="THIRD_REFERENCE_EMAIL" Type="varchar" MaxLength="256" />
+    <Property Name="SUBMISSION_DATE" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SIGNATURE" Type="text" />
+    <Property Name="SIG_HASH" Type="varchar" MaxLength="128" />
+    <Property Name="Account_Status" Type="varchar" MaxLength="50" />
+    <Property Name="joint_application_residence" Type="varchar" MaxLength="255" />
+    <Property Name="joint_application_investment_objecives" Type="varchar" MaxLength="155" />
+    <Property Name="joint_application_affiliations" Type="varchar" MaxLength="255" />
+    <Property Name="joint_application_fullname_brokerageEmployeee" Type="varchar" MaxLength="255" />
+    <Property Name="joint_application_fullname_director" Type="varchar" MaxLength="255" />
+    <Property Name="joint_application_is_brokerageEmployeee" Type="bool" />
+    <Property Name="joint_application_is_director" Type="bool" />
+    <Property Name="joint_application_is_employed_security_industry" Type="bool" />
+    <Property Name="joint_application_relationship_brokerageEmployeee" Type="varchar" MaxLength="255" />
+    <Property Name="joint_application_relationship_director" Type="varchar" MaxLength="255" />
+    <Property Name="income_source" Type="int" />
+    <Property Name="account_disclaimers" Type="enum" />
+    <Property Name="client_agreement" Type="enum" />
+    <Property Name="fatca_agreement" Type="enum" />
+    <Property Name="unsolicited_acknowledgement_agreement" Type="enum" />
+    <Property Name="client_acknowledgement" Type="enum" />
+    <Property Name="letter_of_authorization" Type="enum" />
+    <Property Name="risk_disclosure" Type="enum" />
+    <Property Name="LAST_UPDATE_TIMESTAMP" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="INVESTMENT_YEARS_EXPERIENCE" Type="varchar" MaxLength="45" />
+    <Property Name="PostalCode" Type="varchar" MaxLength="30" />
+    <Property Name="PuporseOfAccount" Type="varchar" MaxLength="50" />
+    <Property Name="PuporseOfAccountOther" Type="varchar" MaxLength="200" />
+    <Property Name="CountryOfResidancy" Type="varchar" MaxLength="50" />
+    <Property Name="NomineeDocument" Type="varchar" MaxLength="500" />
+    <Property Name="NomineeName" Type="varchar" MaxLength="45" />
+    <Property Name="NomineePhoneNo" Type="varchar" MaxLength="20" />
+    <Property Name="NomineeRelation" Type="varchar" MaxLength="45" />
+    <Property Name="bankstreet" Type="varchar" MaxLength="500" />
+    <Property Name="First_References_streetaddrs" Type="varchar" MaxLength="250" />
+    <Property Name="Second_References_streetaddrs" Type="varchar" MaxLength="250" />
+    <Property Name="Third_References_streetaddrs" Type="varchar" MaxLength="250" />
+    <Property Name="SpouseFirstName" Type="varchar" MaxLength="100" />
+    <Property Name="SpouseLastName" Type="varchar" MaxLength="100" />
+    <Property Name="SpouseDOB" Type="datetime" Precision="0" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.suretrader.accountholders_bkup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="accountholders_bkup">
+    <Key>
+      <PropertyRef Name="idACCOUNT_HOLDER" />
+      <PropertyRef Name="idCUSTOMER" />
+      <PropertyRef Name="SUBMISSION_DATE" />
+      <PropertyRef Name="LAST_UPDATE_TIMESTAMP" />
+    </Key>
+    <Property Name="idACCOUNT_HOLDER" Type="int" Nullable="false" />
+    <Property Name="idCUSTOMER" Type="int" Nullable="false" />
+    <Property Name="MEMBER_TYPE" Type="enum" />
+    <Property Name="FIRST_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="MIDDLE_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="COUNTRY_CITIZENSHIP_ID" Type="int" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="256" />
+    <Property Name="SECURITY_QUESTION" Type="int" />
+    <Property Name="SECURITY_ANSWER" Type="varchar" MaxLength="256" />
+    <Property Name="RESIDENTIAL_COUNTRY" Type="int" />
+    <Property Name="RESIDENTIAL_CITY" Type="varchar" MaxLength="50" />
+    <Property Name="RESIDENTIAL_STREET1" Type="varchar" MaxLength="100" />
+    <Property Name="RESIDENTIAL_STREET2" Type="varchar" MaxLength="100" />
+    <Property Name="RESIDENTIAL_STATE" Type="varchar" MaxLength="50" />
+    <Property Name="RESIDENTIAL_POSTALCODE" Type="varchar" MaxLength="50" />
+    <Property Name="MAILING_COUNTRY" Type="int" />
+    <Property Name="MAILING_CITY" Type="varchar" MaxLength="50" />
+    <Property Name="MAILING_STREET1" Type="varchar" MaxLength="100" />
+    <Property Name="MAILING_STREET2" Type="varchar" MaxLength="100" />
+    <Property Name="MAILING_STATE" Type="varchar" MaxLength="50" />
+    <Property Name="MAILING_POSTALCODE" Type="varchar" MaxLength="50" />
+    <Property Name="PHONE_HOME" Type="varchar" MaxLength="20" />
+    <Property Name="PHONE_WORK" Type="varchar" MaxLength="20" />
+    <Property Name="PHONE_MOBILE" Type="varchar" MaxLength="20" />
+    <Property Name="MARITAL_STATUS" Type="enum" />
+    <Property Name="DEPENDANTS" Type="int" />
+    <Property Name="HIGHEST_DEGREE" Type="int" />
+    <Property Name="HIGHEST_DEGREE_SCHOOL_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="EMPLOYMENT_STATUS" Type="enum" />
+    <Property Name="EMPLOYER_NAME" Type="varchar" MaxLength="70" />
+    <Property Name="BUSINESS_TYPE" Type="varchar" MaxLength="50" />
+    <Property Name="OCCUPATION" Type="varchar" MaxLength="50" />
+    <Property Name="NUMBER_YEARS_EMPLOYED" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_STREET1" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_STREET2" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_CITY" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_STATE" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_POSTAL_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_COUNTRY" Type="varchar" MaxLength="50" />
+    <Property Name="ANNUAL_INCOME" Type="varchar" MaxLength="50" />
+    <Property Name="TAXRATE" Type="varchar" MaxLength="50" />
+    <Property Name="NETWORTH" Type="varchar" MaxLength="50" />
+    <Property Name="LIQUID_NET_WORTH" Type="varchar" MaxLength="50" />
+    <Property Name="BANK_NAME" Type="varchar" MaxLength="70" />
+    <Property Name="BANK_STATE" Type="varchar" MaxLength="50" />
+    <Property Name="BANK_COUNTRY" Type="int" />
+    <Property Name="RISK_TOLERANCE" Type="varchar" MaxLength="70" />
+    <Property Name="KNOWLEDGE_LEVEL" Type="varchar" MaxLength="50" />
+    <Property Name="YEARS_EXPERIENCE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TRANSACTIONS_PER_YEAR" Type="int" />
+    <Property Name="AVERAGE_SIZE_PER_TRADE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ID_FIRST_TYPE" Type="varchar" MaxLength="50" />
+    <Property Name="ID_FIRST_PLACE_ISSUANCE" Type="varchar" MaxLength="50" />
+    <Property Name="ID_FIRST_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="ID_FIRST_EXPIRATION" Type="date" />
+    <Property Name="ID_SECOND_TYPE" Type="varchar" MaxLength="50" />
+    <Property Name="ID_SECOND_PLACE_ISSUANCE" Type="varchar" MaxLength="50" />
+    <Property Name="ID_SECOND_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="ID_SECOND_EXPIRATION" Type="date" />
+    <Property Name="FIRST_REFERENCE_COMPANY_NAME" Type="varchar" MaxLength="70" />
+    <Property Name="FIRST_REFERENCE_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="FIRST_REFERENCE_PHONE" Type="varchar" MaxLength="20" />
+    <Property Name="FIRST_REFERENCE_EMAIL" Type="varchar" MaxLength="256" />
+    <Property Name="SECOND_REFERENCE_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="SECOND_REFERENCE_PHONE" Type="varchar" MaxLength="20" />
+    <Property Name="SECOND_REFERENCE_EMAIL" Type="varchar" MaxLength="256" />
+    <Property Name="THIRD_REFERENCE_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="THIRD_REFERENCE_PHONE" Type="varchar" MaxLength="20" />
+    <Property Name="THIRD_REFERENCE_EMAIL" Type="varchar" MaxLength="256" />
+    <Property Name="SUBMISSION_DATE" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SIGNATURE" Type="text" />
+    <Property Name="SIG_HASH" Type="varchar" MaxLength="128" />
+    <Property Name="Account_Status" Type="varchar" MaxLength="50" />
+    <Property Name="joint_application_residence" Type="varchar" MaxLength="255" />
+    <Property Name="joint_application_investment_objecives" Type="varchar" MaxLength="155" />
+    <Property Name="joint_application_affiliations" Type="varchar" MaxLength="255" />
+    <Property Name="joint_application_fullname_brokerageEmployeee" Type="varchar" MaxLength="255" />
+    <Property Name="joint_application_fullname_director" Type="varchar" MaxLength="255" />
+    <Property Name="joint_application_is_brokerageEmployeee" Type="bool" />
+    <Property Name="joint_application_is_director" Type="bool" />
+    <Property Name="joint_application_is_employed_security_industry" Type="bool" />
+    <Property Name="joint_application_relationship_brokerageEmployeee" Type="varchar" MaxLength="255" />
+    <Property Name="joint_application_relationship_director" Type="varchar" MaxLength="255" />
+    <Property Name="income_source" Type="int" />
+    <Property Name="account_disclaimers" Type="enum" />
+    <Property Name="client_agreement" Type="enum" />
+    <Property Name="fatca_agreement" Type="enum" />
+    <Property Name="unsolicited_acknowledgement_agreement" Type="enum" />
+    <Property Name="client_acknowledgement" Type="enum" />
+    <Property Name="letter_of_authorization" Type="enum" />
+    <Property Name="risk_disclosure" Type="enum" />
+    <Property Name="LAST_UPDATE_TIMESTAMP" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="accountholders_lv">
+    <Key>
+      <PropertyRef Name="idACCOUNT_HOLDER" />
+    </Key>
+    <Property Name="idACCOUNT_HOLDER" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCUSTOMER" Type="int" Nullable="false" />
+    <Property Name="MEMBER_TYPE" Type="enum" />
+    <Property Name="FIRST_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="MIDDLE_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="COUNTRY_CITIZENSHIP_ID" Type="int" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="256" />
+    <Property Name="SECURITY_QUESTION" Type="int" />
+    <Property Name="SECURITY_ANSWER" Type="varchar" MaxLength="256" />
+    <Property Name="RESIDENTIAL_COUNTRY" Type="int" />
+    <Property Name="RESIDENTIAL_CITY" Type="varchar" MaxLength="50" />
+    <Property Name="RESIDENTIAL_STREET1" Type="varchar" MaxLength="100" />
+    <Property Name="RESIDENTIAL_STREET2" Type="varchar" MaxLength="100" />
+    <Property Name="RESIDENTIAL_STATE" Type="varchar" MaxLength="50" />
+    <Property Name="RESIDENTIAL_POSTALCODE" Type="varchar" MaxLength="50" />
+    <Property Name="MAILING_COUNTRY" Type="int" />
+    <Property Name="MAILING_CITY" Type="varchar" MaxLength="50" />
+    <Property Name="MAILING_STREET1" Type="varchar" MaxLength="100" />
+    <Property Name="MAILING_STREET2" Type="varchar" MaxLength="100" />
+    <Property Name="MAILING_STATE" Type="varchar" MaxLength="50" />
+    <Property Name="MAILING_POSTALCODE" Type="varchar" MaxLength="50" />
+    <Property Name="PHONE_HOME" Type="varchar" MaxLength="20" />
+    <Property Name="PHONE_WORK" Type="varchar" MaxLength="20" />
+    <Property Name="PHONE_MOBILE" Type="varchar" MaxLength="20" />
+    <Property Name="MARITAL_STATUS" Type="enum" />
+    <Property Name="DEPENDANTS" Type="int" />
+    <Property Name="HIGHEST_DEGREE" Type="int" />
+    <Property Name="HIGHEST_DEGREE_SCHOOL_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="EMPLOYMENT_STATUS" Type="enum" />
+    <Property Name="EMPLOYER_NAME" Type="varchar" MaxLength="70" />
+    <Property Name="BUSINESS_TYPE" Type="varchar" MaxLength="50" />
+    <Property Name="OCCUPATION" Type="varchar" MaxLength="50" />
+    <Property Name="NUMBER_YEARS_EMPLOYED" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_STREET1" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_STREET2" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_CITY" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_STATE" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_POSTAL_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYER_COUNTRY" Type="varchar" MaxLength="50" />
+    <Property Name="ANNUAL_INCOME" Type="varchar" MaxLength="50" />
+    <Property Name="TAXRATE" Type="varchar" MaxLength="50" />
+    <Property Name="NETWORTH" Type="varchar" MaxLength="50" />
+    <Property Name="LIQUID_NET_WORTH" Type="varchar" MaxLength="50" />
+    <Property Name="BANK_NAME" Type="varchar" MaxLength="70" />
+    <Property Name="BANK_STATE" Type="varchar" MaxLength="50" />
+    <Property Name="BANK_COUNTRY" Type="int" />
+    <Property Name="RISK_TOLERANCE" Type="varchar" MaxLength="70" />
+    <Property Name="KNOWLEDGE_LEVEL" Type="varchar" MaxLength="50" />
+    <Property Name="YEARS_EXPERIENCE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TRANSACTIONS_PER_YEAR" Type="int" />
+    <Property Name="AVERAGE_SIZE_PER_TRADE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ID_FIRST_TYPE" Type="varchar" MaxLength="50" />
+    <Property Name="ID_FIRST_PLACE_ISSUANCE" Type="varchar" MaxLength="50" />
+    <Property Name="ID_FIRST_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="ID_FIRST_EXPIRATION" Type="date" />
+    <Property Name="ID_SECOND_TYPE" Type="varchar" MaxLength="50" />
+    <Property Name="ID_SECOND_PLACE_ISSUANCE" Type="varchar" MaxLength="50" />
+    <Property Name="ID_SECOND_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="ID_SECOND_EXPIRATION" Type="date" />
+    <Property Name="FIRST_REFERENCE_COMPANY_NAME" Type="varchar" MaxLength="70" />
+    <Property Name="FIRST_REFERENCE_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="FIRST_REFERENCE_PHONE" Type="varchar" MaxLength="20" />
+    <Property Name="FIRST_REFERENCE_EMAIL" Type="varchar" MaxLength="256" />
+    <Property Name="SECOND_REFERENCE_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="SECOND_REFERENCE_PHONE" Type="varchar" MaxLength="20" />
+    <Property Name="SECOND_REFERENCE_EMAIL" Type="varchar" MaxLength="256" />
+    <Property Name="THIRD_REFERENCE_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="THIRD_REFERENCE_PHONE" Type="varchar" MaxLength="20" />
+    <Property Name="THIRD_REFERENCE_EMAIL" Type="varchar" MaxLength="256" />
+    <Property Name="SUBMISSION_DATE" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SIGNATURE" Type="text" />
+    <Property Name="SIG_HASH" Type="varchar" MaxLength="128" />
+    <Property Name="Account_Status" Type="varchar" MaxLength="50" />
+    <Property Name="joint_application_residence" Type="varchar" MaxLength="255" />
+    <Property Name="joint_application_investment_objecives" Type="varchar" MaxLength="155" />
+    <Property Name="joint_application_affiliations" Type="varchar" MaxLength="255" />
+    <Property Name="joint_application_fullname_brokerageEmployeee" Type="varchar" MaxLength="255" />
+    <Property Name="joint_application_fullname_director" Type="varchar" MaxLength="255" />
+    <Property Name="joint_application_is_brokerageEmployeee" Type="bool" />
+    <Property Name="joint_application_is_director" Type="bool" />
+    <Property Name="joint_application_is_employed_security_industry" Type="bool" />
+    <Property Name="joint_application_relationship_brokerageEmployeee" Type="varchar" MaxLength="255" />
+    <Property Name="joint_application_relationship_director" Type="varchar" MaxLength="255" />
+    <Property Name="income_source" Type="int" />
+    <Property Name="account_disclaimers" Type="enum" />
+    <Property Name="client_agreement" Type="enum" />
+    <Property Name="fatca_agreement" Type="enum" />
+    <Property Name="unsolicited_acknowledgement_agreement" Type="enum" />
+    <Property Name="client_acknowledgement" Type="enum" />
+    <Property Name="letter_of_authorization" Type="enum" />
+    <Property Name="risk_disclosure" Type="enum" />
+    <Property Name="LAST_UPDATE_TIMESTAMP" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="accountnotsatisfied">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NotSatisfiedTitle" Type="varchar" MaxLength="100" />
+    <Property Name="idCustomer" Type="int" />
+    <Property Name="Comments" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="accounttypeworkflow">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountTypeId" Type="int" />
+    <Property Name="PageId" Type="int" />
+    <Property Name="OrderBY" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="affiliations_master">
+    <Key>
+      <PropertyRef Name="idAFFILIATION" />
+    </Key>
+    <Property Name="idAFFILIATION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QUESTION" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="application_errors">
+    <Key>
+      <PropertyRef Name="idAPPLICATION_ERRORS" />
+    </Key>
+    <Property Name="idAPPLICATION_ERRORS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCUSTOMER" Type="int" Nullable="false" />
+    <Property Name="idSCREEN" Type="int" Nullable="false" />
+    <Property Name="idFIELD" Type="int" />
+    <Property Name="FIELD_NAME" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="ERROR_DESC" Type="varchar" MaxLength="256" />
+    <Property Name="idOPERATOR" Type="int" Nullable="false" />
+    <Property Name="LAST_UPDATE_TIMESTAMP" Type="varchar" MaxLength="45" />
+    <Property Name="idAccountHolder" Type="int" />
+    <Property Name="AccountType" Type="varchar" MaxLength="45" />
+    <Property Name="commentBy" Type="varchar" MaxLength="45" />
+    <Property Name="controlDisplayname" Type="varchar" MaxLength="45" />
+    <Property Name="corporate_Owner_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="application_flow">
+    <Key>
+      <PropertyRef Name="idAPPLICATION_FLOW" />
+    </Key>
+    <Property Name="idAPPLICATION_FLOW" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idVISITOR" Type="int" Nullable="false" />
+    <Property Name="FIRST_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="PHONE_NUMBER" Type="varchar" MaxLength="20" />
+    <Property Name="CUSTOMER_NUMBER" Type="varchar" MaxLength="45" />
+    <Property Name="PAGE_NAME" Type="enum" Nullable="false" />
+    <Property Name="PAGE_URL" Type="varchar" MaxLength="2083" Nullable="false" />
+    <Property Name="PAGE_START_TIME" Type="datetime" Precision="0" />
+    <Property Name="PAGE_END_TIME" Type="datetime" Precision="0" />
+    <Property Name="SUBMIT_CLICK_START_TIME" Type="datetime" Precision="0" />
+    <Property Name="SUBMIT_CLICK_END_TIME" Type="datetime" Precision="0" />
+    <Property Name="ERROR" Type="text" />
+    <Property Name="LAST_UPDATE_TIMESTAMP" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="audit_log_buying_power">
+    <Key>
+      <PropertyRef Name="idaudit_log_buying_power" />
+    </Key>
+    <Property Name="idaudit_log_buying_power" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCustomer" Type="int" />
+    <Property Name="idaccount_holder" Type="int" />
+    <Property Name="date_created" Type="datetime" Precision="0" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="audit_log_iboss_account">
+    <Key>
+      <PropertyRef Name="idaudit_log_Iboss_account" />
+    </Key>
+    <Property Name="idaudit_log_Iboss_account" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idaccount_number" Type="varchar" MaxLength="45" />
+    <Property Name="idcustomer" Type="int" />
+    <Property Name="idaccount_holder" Type="int" />
+    <Property Name="date_created" Type="datetime" Precision="0" StoreGeneratedPattern="Identity" />
+    <Property Name="message" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="audit_log_manual_buying_power">
+    <Key>
+      <PropertyRef Name="idaudit_log_manual_buying_power" />
+    </Key>
+    <Property Name="idaudit_log_manual_buying_power" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idmanual_buying_power" Type="int" />
+    <Property Name="date_created" Type="datetime" Precision="0" StoreGeneratedPattern="Identity" />
+    <Property Name="updated_by" Type="int" />
+    <Property Name="Status" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="corp_beneficiary">
+    <Key>
+      <PropertyRef Name="corp_beneficiary_id" />
+    </Key>
+    <Property Name="corp_beneficiary_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="corp_account_Id" Type="int" />
+    <Property Name="full_name" Type="varchar" MaxLength="100" />
+    <Property Name="attorneypower" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="corp_director">
+    <Key>
+      <PropertyRef Name="idcorp_Director_Id" />
+    </Key>
+    <Property Name="idcorp_Director_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="corp_account_Id" Type="int" />
+    <Property Name="full_name" Type="varchar" MaxLength="45" />
+    <Property Name="attorneypower" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="corp_officer">
+    <Key>
+      <PropertyRef Name="corp_officer_id" />
+    </Key>
+    <Property Name="corp_officer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="corp_account_Id" Type="int" />
+    <Property Name="full_name" Type="varchar" MaxLength="100" />
+    <Property Name="attorneypower" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="corpacnt_owner_officer">
+    <Key>
+      <PropertyRef Name="owner_officer_id" />
+    </Key>
+    <Property Name="owner_officer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="owner_officer" Type="varchar" MaxLength="100" />
+    <Property Name="full_name" Type="varchar" MaxLength="100" />
+    <Property Name="crop_account_id" Type="int" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="attorneypower" Type="bit" Nullable="false" />
+    <Property Name="OwnerType" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="corporate_supporting_document">
+    <Key>
+      <PropertyRef Name="idSUPPORTING_DOCUMENT" />
+    </Key>
+    <Property Name="idSUPPORTING_DOCUMENT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCUSTOMER" Type="int" Nullable="false" />
+    <Property Name="idACCOUNT_HOLDER" Type="int" Nullable="false" />
+    <Property Name="MASTER_TYPE" Type="enum" />
+    <Property Name="DOCUMENT_SEQUENCE" Type="tinyint" />
+    <Property Name="SUB_TYPE" Type="varchar" MaxLength="100" />
+    <Property Name="ISSUEPLACE" Type="varchar" MaxLength="50" />
+    <Property Name="DOCUMENT_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="EXPIRATION" Type="varchar" MaxLength="11" />
+    <Property Name="FILE_PATH" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="FILE_STATUS" Type="enum" />
+    <Property Name="LAST_UPDATE_DATE_TIME" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+    <Property Name="FormNo" Type="int" />
+    <Property Name="owner_officer_id" Type="int" />
+  </EntityType>
+  <EntityType Name="corporate_tax">
+    <Key>
+      <PropertyRef Name="corporate_tax_id" />
+    </Key>
+    <Property Name="corporate_tax_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="beneficialname" Type="varchar" MaxLength="250" />
+    <Property Name="countrycitizenship" Type="varchar" MaxLength="250" />
+    <Property Name="recevingpaymentname" Type="varchar" MaxLength="250" />
+    <Property Name="corporation" Type="varchar" MaxLength="250" />
+    <Property Name="disregardedentity" Type="bit" Nullable="false" />
+    <Property Name="partnership" Type="bit" Nullable="false" />
+    <Property Name="simpletrust" Type="bit" Nullable="false" />
+    <Property Name="grantortrust" Type="bit" Nullable="false" />
+    <Property Name="complextrust" Type="bit" Nullable="false" />
+    <Property Name="estategovernment" Type="bit" Nullable="false" />
+    <Property Name="centralbankofissue" Type="bit" Nullable="false" />
+    <Property Name="taxexemptornization" Type="bit" Nullable="false" />
+    <Property Name="privatefoundation" Type="bit" Nullable="false" />
+    <Property Name="hybridmakingatreatyclaim" Type="varchar" MaxLength="10" />
+    <Property Name="nonparticipatingffi" Type="bit" Nullable="false" />
+    <Property Name="participatingffi" Type="bit" Nullable="false" />
+    <Property Name="Reportingmodelffi_1" Type="bit" Nullable="false" />
+    <Property Name="Repotingmodelffi_2" Type="bit" Nullable="false" />
+    <Property Name="registereddeemedcomplaintffi" Type="bit" Nullable="false" />
+    <Property Name="sponsoredffi" Type="bit" Nullable="false" />
+    <Property Name="certifieddeemedcompliantlocalbank" Type="bit" Nullable="false" />
+    <Property Name="certifieddeemedcompliantlowvalueaccount" Type="bit" Nullable="false" />
+    <Property Name="certifieddeemedcompliantinvestmentvehicle" Type="bit" Nullable="false" />
+    <Property Name="ownerdocumentffi" Type="bit" Nullable="false" />
+    <Property Name="resticteddistributor" Type="bit" Nullable="false" />
+    <Property Name="nonreportingigaffi" Type="bit" Nullable="false" />
+    <Property Name="foreigngovernment" Type="bit" Nullable="false" />
+    <Property Name="internationalorganization" Type="bit" Nullable="false" />
+    <Property Name="Exemptretirementplans" Type="bit" Nullable="false" />
+    <Property Name="Entitywhollybeneficialowned" Type="bit" Nullable="false" />
+    <Property Name="Territoryfinancialinstitution." Type="bit" Nullable="false" />
+    <Property Name="Nonfinancialgroupentity" Type="bit" Nullable="false" />
+    <Property Name="Exceptednonfinanciastartupcompany" Type="bit" Nullable="false" />
+    <Property Name="Exceptednonfinancialentityliquidation" Type="bit" Nullable="false" />
+    <Property Name="organization501" Type="bit" Nullable="false" />
+    <Property Name="Nonprofitorganization" Type="bit" Nullable="false" />
+    <Property Name="PubliclytradedNFFENFFEaffiliate" Type="bit" Nullable="false" />
+    <Property Name="ExceptedterritoryNFFE" Type="bit" Nullable="false" />
+    <Property Name="ActiveNFFE" Type="bit" Nullable="false" />
+    <Property Name="PassiveNFFE" Type="bit" Nullable="false" />
+    <Property Name="ExceptedinteraffiliateFFI" Type="bit" Nullable="false" />
+    <Property Name="Directreporting" Type="bit" Nullable="false" />
+    <Property Name="SponsoreddirectreportingNFFE" Type="bit" Nullable="false" />
+    <Property Name="Permanentresidenceaddress" Type="varchar" MaxLength="250" />
+    <Property Name="Citytownstateprovinceresidence" Type="varchar" MaxLength="250" />
+    <Property Name="Countryresidence" Type="varchar" MaxLength="250" />
+    <Property Name="Mailingaddress" Type="varchar" MaxLength="250" />
+    <Property Name="MailingCitytownstateprovince" Type="varchar" MaxLength="250" />
+    <Property Name="mailingCountry" Type="varchar" MaxLength="250" />
+    <Property Name="ustaxpayeridentificationnumber" Type="varchar" MaxLength="250" />
+    <Property Name="GIINcheckbox" Type="bit" Nullable="false" />
+    <Property Name="ForeignTINcheckbox" Type="bit" Nullable="false" />
+    <Property Name="GIIN" Type="varchar" MaxLength="250" />
+    <Property Name="ForeignTIN" Type="varchar" MaxLength="250" />
+    <Property Name="Referencenumber" Type="varchar" MaxLength="250" />
+    <Property Name="LimitedBranch" Type="bit" Nullable="false" />
+    <Property Name="ReportingModel1FFI" Type="bit" Nullable="false" />
+    <Property Name="Usbranch" Type="bit" Nullable="false" />
+    <Property Name="ParticipatingFFI2" Type="bit" Nullable="false" />
+    <Property Name="ReportingModel2FF" Type="bit" Nullable="false" />
+    <Property Name="Addressofdisregardedentityorbranch" Type="varchar" MaxLength="250" />
+    <Property Name="DisregardedCitytownstateprovince" Type="varchar" MaxLength="250" />
+    <Property Name="DisregardedCountry" Type="varchar" MaxLength="250" />
+    <Property Name="DisregardedGIIN" Type="varchar" MaxLength="250" />
+    <Property Name="Claimbeneficialowner" Type="varchar" MaxLength="250" />
+    <Property Name="corporate_taxcol" Type="bit" Nullable="false" />
+    <Property Name="Claimresident" Type="varchar" MaxLength="250" />
+    <Property Name="Claimbeneficialownerderives" Type="bit" Nullable="false" />
+    <Property Name="Claimbeneficialownerclaiming" Type="bit" Nullable="false" />
+    <Property Name="ClaimArticle" Type="varchar" MaxLength="250" />
+    <Property Name="Claimrate" Type="varchar" MaxLength="250" />
+    <Property Name="Claimincome" Type="varchar" MaxLength="250" />
+    <Property Name="SponsoredNameofsponsoringentity" Type="varchar" MaxLength="250" />
+    <Property Name="SponsoredcertifythattheentityidentifiedFFI" Type="bit" Nullable="false" />
+    <Property Name="SponsoredIcertifythattheentityidentified957" Type="bit" Nullable="false" />
+    <Property Name="CertifiedDeemedCompliantIcertifythatheFFI" Type="bit" Nullable="false" />
+    <Property Name="CertifiedDeemedCompliantIcertifythattheFFI" Type="bit" Nullable="false" />
+    <Property Name="CertifiedDeemedCompliantSponsoredName" Type="varchar" MaxLength="250" />
+    <Property Name="CertifiedDeemedCompliantSponsoredIcertify" Type="bit" Nullable="false" />
+    <Property Name="CertifiedDeemedCompliantLimitedLifeIcertify" Type="bit" Nullable="false" />
+    <Property Name="CertifiedInvestmentAdvisorsIcertify" Type="bit" Nullable="false" />
+    <Property Name="OwnerDocumentedFFIcertify1" Type="bit" Nullable="false" />
+    <Property Name="OwnerDocumentedFFIcertify2" Type="bit" Nullable="false" />
+    <Property Name="OwnerDocumentedFFIcertify3" Type="bit" Nullable="false" />
+    <Property Name="OwnerDocumentedFFIcertify4" Type="bit" Nullable="false" />
+    <Property Name="RestrictedDistributorIcertify" Type="bit" Nullable="false" />
+    <Property Name="RestrictedDistributorHasbeenbound" Type="bit" Nullable="false" />
+    <Property Name="RestrictedDistributorcurrentlybound" Type="bit" Nullable="false" />
+    <Property Name="NonreportingIGAFFIIcertify" Type="bit" Nullable="false" />
+    <Property Name="NonreportingIGAFFIUnitedStatesand" Type="varchar" MaxLength="250" />
+    <Property Name="NonreportingIGAFFIIstreated" Type="varchar" MaxLength="250" />
+    <Property Name="ForeignGovernmentIcertify" Type="bit" Nullable="false" />
+    <Property Name="InternationalOrganizationIcertify1" Type="bit" Nullable="false" />
+    <Property Name="InternationalOrganizationIcertify2" Type="bit" Nullable="false" />
+    <Property Name="ExemptRetirementPlansIcertifya" Type="bit" Nullable="false" />
+    <Property Name="ExemptRetirementPlansIcertifyb" Type="bit" Nullable="false" />
+    <Property Name="ExemptRetirementPlansIcertifyc" Type="bit" Nullable="false" />
+    <Property Name="ExemptRetirementPlansIcertifyd" Type="bit" Nullable="false" />
+    <Property Name="ExemptRetirementPlansIcertifye" Type="bit" Nullable="false" />
+    <Property Name="ExemptRetirementPlansIcertifyf" Type="bit" Nullable="false" />
+    <Property Name="EntityWhollyOwnedIcertify" Type="bit" Nullable="false" />
+    <Property Name="TerritoryFinancialInstitutionIcertify" Type="bit" Nullable="false" />
+    <Property Name="ExceptedNonfinancialGroupIcertify" Type="bit" Nullable="false" />
+    <Property Name="ExceptedNonfinancialIcertify" Type="bit" Nullable="false" />
+    <Property Name="ExceptedNonfinancialWasformed" Type="varchar" MaxLength="250" />
+    <Property Name="ExceptedNonfinancialLiquidationIcertify" Type="bit" Nullable="false" />
+    <Property Name="ExceptedNonfinancialLiquidationFiledplan" Type="varchar" MaxLength="250" />
+    <Property Name="Organization501cIcertify" Type="bit" Nullable="false" />
+    <Property Name="Organization501cHasbeendetermination" Type="varchar" MaxLength="250" />
+    <Property Name="NonProfitOrganizationIcertify" Type="bit" Nullable="false" />
+    <Property Name="PubliclyTradedNFFEIcertifya" Type="bit" Nullable="false" />
+    <Property Name="PubliclyTradedNFFEstocka" Type="varchar" MaxLength="250" />
+    <Property Name="PubliclyTradedNFFEIcertifyb" Type="bit" Nullable="false" />
+    <Property Name="PubliclyTradedNFFEstockb" Type="varchar" MaxLength="250" />
+    <Property Name="PubliclyTradedNFFEnameofthesecurities" Type="varchar" MaxLength="250" />
+    <Property Name="ExceptedTerritoryNFFEIcertify" Type="bit" Nullable="false" />
+    <Property Name="ActiveNFFEIcertify" Type="bit" Nullable="false" />
+    <Property Name="PassiveNFFEIcertifya" Type="bit" Nullable="false" />
+    <Property Name="PassiveNFFEIcertifyb" Type="bit" Nullable="false" />
+    <Property Name="PassiveNFFEIcertifyc" Type="bit" Nullable="false" />
+    <Property Name="ExceptedInterAffiliateFFIIcertify" Type="bit" Nullable="false" />
+    <Property Name="SponsoredDirectReportingNFFEicertify" Type="bit" Nullable="false" />
+    <Property Name="Certificationsignature" Type="varchar" MaxLength="250" />
+    <Property Name="Certificationprintname" Type="varchar" MaxLength="250" />
+    <Property Name="Certificationdate" Type="varchar" MaxLength="250" />
+    <Property Name="Certificationicertify" Type="bit" Nullable="false" />
+    <Property Name="SubstantialUSOwnersName1" Type="varchar" MaxLength="250" />
+    <Property Name="SubstantialUSOwnersAddress1" Type="varchar" MaxLength="250" />
+    <Property Name="SubstantialUSOwnersTin1" Type="varchar" MaxLength="250" />
+    <Property Name="SubstantialUSOwnersName2" Type="varchar" MaxLength="250" />
+    <Property Name="SubstantialUSOwnersAddress2" Type="varchar" MaxLength="250" />
+    <Property Name="SubstantialUSOwnersTin2" Type="varchar" MaxLength="250" />
+    <Property Name="SubstantialUSOwnersName3" Type="varchar" MaxLength="250" />
+    <Property Name="SubstantialUSOwnersAddress3" Type="varchar" MaxLength="250" />
+    <Property Name="SubstantialUSOwnersTin3" Type="varchar" MaxLength="250" />
+    <Property Name="beneficialownermeetstreatyarticle" Type="varchar" MaxLength="250" />
+    <Property Name="Certifieddeemedcompliantlimitedlife" Type="bit" Nullable="false" />
+    <Property Name="CertifieddeemedCompliantnvestmentmanager" Type="bit" Nullable="false" />
+    <Property Name="hybridmakingatreatyclaimno" Type="bit" Nullable="false" />
+    <Property Name="idCUSTOMER" Type="int" />
+  </EntityType>
+  <EntityType Name="corporateagreementdisclaimers">
+    <Key>
+      <PropertyRef Name="Corporate_Agreement_Id" />
+    </Key>
+    <Property Name="Corporate_Agreement_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="owner_officer_id" Type="int" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="AccountHolderId" Type="int" />
+    <Property Name="UnsolicitedAcknowledgemet" Type="enum" />
+    <Property Name="FACTA" Type="enum" />
+    <Property Name="Signature" Type="text" />
+  </EntityType>
+  <EntityType Name="countries">
+    <Key>
+      <PropertyRef Name="idCOUNTRY" />
+    </Key>
+    <Property Name="idCOUNTRY" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COUNTRY_CODE" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="COUNTRY_NAME" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="ISO_Code" Type="varchar" MaxLength="45" />
+    <Property Name="ISO_COUNTRY" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="crop_account">
+    <Key>
+      <PropertyRef Name="crop_account_id" />
+    </Key>
+    <Property Name="crop_account_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="company_name" Type="varchar" MaxLength="50" />
+    <Property Name="street_address" Type="varchar" MaxLength="250" />
+    <Property Name="city" Type="varchar" MaxLength="100" />
+    <Property Name="state_province" Type="varchar" MaxLength="100" />
+    <Property Name="zip_code" Type="varchar" MaxLength="25" />
+    <Property Name="idcountry" Type="int" />
+    <Property Name="phone_number" Type="varchar" MaxLength="25" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="creare_ts" Type="datetime" Precision="0" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="idACCOUNT_HOLDER" Type="int" />
+  </EntityType>
+  <EntityType Name="crop_acnt_incorp">
+    <Key>
+      <PropertyRef Name="crop_acnt_incorp_id" />
+    </Key>
+    <Property Name="crop_acnt_incorp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="crop_account_id" Type="int" />
+    <Property Name="incorp_country_id" Type="int" />
+    <Property Name="incorp_date" Type="datetime" Precision="0" />
+    <Property Name="president_name" Type="varchar" MaxLength="255" />
+    <Property Name="secretary_name" Type="varchar" MaxLength="255" />
+    <Property Name="in_good_standing" Type="char" MaxLength="1" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="idACCOUNT_HOLDER" Type="int" />
+    <Property Name="Reason" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="crop_reference">
+    <Key>
+      <PropertyRef Name="crop_reference_id" />
+    </Key>
+    <Property Name="crop_reference_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="crop_account_id" Type="int" />
+    <Property Name="ref_lkp_id" Type="int" />
+  </EntityType>
+  <EntityType Name="crop_reference_lkp">
+    <Key>
+      <PropertyRef Name="ref_lkp" />
+    </Key>
+    <Property Name="ref_lkp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ref_text" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="crop_resolution">
+    <Key>
+      <PropertyRef Name="crop_resolution_id" />
+    </Key>
+    <Property Name="crop_resolution_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="crop_account_id" Type="int" />
+    <Property Name="first_name" Type="varchar" MaxLength="100" />
+    <Property Name="last_name" Type="varchar" MaxLength="100" />
+    <Property Name="officer_emp_title" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.suretrader.cta_form' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="cta_form">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="visitor_id" />
+      <PropertyRef Name="cta_master_id" />
+      <PropertyRef Name="page_url" />
+      <PropertyRef Name="date_created" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="visitor_id" Type="int" Nullable="false" />
+    <Property Name="cta_master_id" Type="int" Nullable="false" />
+    <Property Name="page_url" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="date_created" Type="datetime" Precision="0" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.suretrader.cta_form_fields' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="cta_form_fields">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="visitor_id" />
+      <PropertyRef Name="cta_master_id" />
+      <PropertyRef Name="cta_form_id" />
+      <PropertyRef Name="form_field" />
+      <PropertyRef Name="field_value" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="visitor_id" Type="int" Nullable="false" />
+    <Property Name="cta_master_id" Type="int" Nullable="false" />
+    <Property Name="cta_form_id" Type="int" Nullable="false" />
+    <Property Name="form_field" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="field_value" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cta_master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cust_linked_account">
+    <Key>
+      <PropertyRef Name="idCustomer" />
+      <PropertyRef Name="account_type" />
+      <PropertyRef Name="account_seq" />
+    </Key>
+    <Property Name="idCustomer" Type="int" Nullable="false" />
+    <Property Name="account_type" Type="enum" Nullable="false" />
+    <Property Name="account_seq" Type="tinyint" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="customer_account_comments">
+    <Key>
+      <PropertyRef Name="idcustomer_account_comments" />
+    </Key>
+    <Property Name="idcustomer_account_comments" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCustomer" Type="int" />
+    <Property Name="idaccount_holder" Type="int" />
+    <Property Name="comments" Type="varchar" MaxLength="4000" />
+    <Property Name="CreatedById" Type="int" />
+    <Property Name="CreatedDate" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="customer_kyc_comments">
+    <Key>
+      <PropertyRef Name="idcustomer_kyc_comments" />
+    </Key>
+    <Property Name="idcustomer_kyc_comments" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCustomer" Type="int" />
+    <Property Name="id_kycInformation" Type="int" />
+    <Property Name="idkyc_master" Type="int" />
+    <Property Name="kyc_comments" Type="varchar" MaxLength="4000" />
+    <Property Name="CreatedById" Type="int" />
+    <Property Name="CreatedDate" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+    <Property Name="LastModifiedDate" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+    <Property Name="ModifiedById" Type="int" />
+  </EntityType>
+  <EntityType Name="customer_sourceoffunds">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCUSTOMER" Type="int" />
+    <Property Name="FUNDS_SOURCE" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Funds_Percent" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="FUNDS_SOURCE_DESC" Type="varchar" MaxLength="200" />
+    <Property Name="FUNDING_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="WIRE_ORIGIN_COUNTRY" Type="int" />
+    <Property Name="WIRE_DEST_COUNTRY" Type="int" />
+    <Property Name="OTHER_AMOUNT1" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="OTHER_AMOUNT1_DATE" Type="date" />
+    <Property Name="OTHER_AMOUNT2" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="OTHER_AMOUNT2_DATE" Type="date" />
+    <Property Name="OTHER_AMOUNT3" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="OTHER_AMOUNT3_DATE" Type="date" />
+    <Property Name="EXPECTED_ACCOUNT_SIZE" Type="varchar" MaxLength="45" />
+    <Property Name="FundsNumber" Type="int" />
+    <Property Name="idACCOUNT_HOLDER" Type="int" />
+  </EntityType>
+  <EntityType Name="customers">
+    <Key>
+      <PropertyRef Name="idCUSTOMER" />
+    </Key>
+    <Property Name="idCUSTOMER" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACCOUNT_STATUS" Type="varchar" MaxLength="50" />
+    <Property Name="ACCOUNT_TYPE" Type="enum" />
+    <Property Name="ACCOUNT_SUB_TYPE" Type="enum" />
+    <Property Name="DASUserName" Type="varchar" MaxLength="70" />
+    <Property Name="idDASTRADER" Type="int" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="enc_password" Type="varchar" MaxLength="256" />
+    <Property Name="ACTIVATION_KEY" Type="varchar" MaxLength="256" />
+    <Property Name="IS_ACTIVATED" Type="bool" Nullable="false" />
+    <Property Name="SUBMISSION_DATE" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACTIVATION_DATETIME" Type="datetime" Precision="0" />
+    <Property Name="IS_UNSUBSCRIBE" Type="bool" Nullable="false" />
+    <Property Name="APPLICATION_COMPLETED" Type="bool" Nullable="false" />
+    <Property Name="SOFT_TRADER_PRO" Type="bool" Nullable="false" />
+    <Property Name="how_do_you_hear" Type="text" />
+    <Property Name="SOFT_TRADER" Type="enum" Nullable="false" />
+    <Property Name="PinkSheet1" Type="varchar" MaxLength="11" />
+    <Property Name="OPRAOptions1" Type="varchar" MaxLength="11" />
+    <Property Name="EMiniFutures1" Type="varchar" MaxLength="11" />
+    <Property Name="TSXCanadian1" Type="varchar" MaxLength="11" />
+    <Property Name="RegionalQuotes" Type="varchar" MaxLength="11" />
+    <Property Name="NasdaqTotalView" Type="varchar" MaxLength="11" />
+    <Property Name="PinkSheet2" Type="varchar" MaxLength="11" />
+    <Property Name="OPRAOptions" Type="varchar" MaxLength="11" />
+    <Property Name="NewsBody" Type="varchar" MaxLength="11" />
+    <Property Name="total" Type="int" Nullable="false" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="100" />
+    <Property Name="Phone_Number" Type="varchar" MaxLength="45" />
+    <Property Name="first_name" Type="varchar" MaxLength="75" />
+    <Property Name="last_name" Type="varchar" MaxLength="75" />
+    <Property Name="Send_Email_FlowA" Type="bit" />
+    <Property Name="promo_code" Type="varchar" MaxLength="100" />
+    <Property Name="Account_Number" Type="varchar" MaxLength="45" />
+    <Property Name="updatebuyingpower" Type="bit" />
+    <Property Name="is_reset_confirmed" Type="enum" />
+    <Property Name="reset_date" Type="datetime" Precision="0" />
+    <Property Name="how_do_you_hear_other" Type="text" />
+    <Property Name="verification_status" Type="enum" />
+    <Property Name="politically_exposed" Type="bool" Nullable="false" />
+    <Property Name="LAST_UPDATE_TIMESTAMP" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="comments" Type="varchar" MaxLength="4000" />
+    <Property Name="addnotes" Type="varchar" MaxLength="100" />
+    <Property Name="riskrating" Type="varchar" MaxLength="45" />
+    <Property Name="withdrawal_pin" Type="varchar" MaxLength="10" />
+    <Property Name="migrated_account" Type="bool" />
+    <Property Name="PinCode" Type="varchar" MaxLength="10" />
+    <Property Name="Is_MD" Type="bit" />
+    <Property Name="Is_Created_Account" Type="bit" />
+    <Property Name="reset_status" Type="int" />
+    <Property Name="reset_string" Type="varchar" MaxLength="1000" />
+    <Property Name="u_status" Type="bool" />
+    <Property Name="p_status" Type="bool" />
+    <Property Name="unblock_status" Type="tinyint" Nullable="false" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="45" />
+    <Property Name="Unsalted_Password" Type="varchar" MaxLength="50" />
+    <Property Name="Unsalted_Password1" Type="varchar" MaxLength="256" />
+    <Property Name="use_market_data" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="receive_market_data" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="engaged_provide_investment" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="engaged_asset_manager" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nasdaq_level_1" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="NYSE_AMEX_level_1" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Monthly_total" Type="int" />
+    <Property Name="softwareIagree" Type="bool" />
+    <Property Name="News_Headline" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="customers_lv">
+    <Key>
+      <PropertyRef Name="idCUSTOMER" />
+    </Key>
+    <Property Name="idCUSTOMER" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACCOUNT_STATUS" Type="varchar" MaxLength="50" />
+    <Property Name="ACCOUNT_TYPE" Type="enum" />
+    <Property Name="ACCOUNT_SUB_TYPE" Type="enum" />
+    <Property Name="DASUserName" Type="varchar" MaxLength="70" />
+    <Property Name="idDASTRADER" Type="int" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="ACTIVATION_KEY" Type="varchar" MaxLength="256" />
+    <Property Name="IS_ACTIVATED" Type="bool" Nullable="false" />
+    <Property Name="SUBMISSION_DATE" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACTIVATION_DATETIME" Type="datetime" Precision="0" />
+    <Property Name="IS_UNSUBSCRIBE" Type="bool" Nullable="false" />
+    <Property Name="APPLICATION_COMPLETED" Type="bool" Nullable="false" />
+    <Property Name="SOFT_TRADER_PRO" Type="bool" Nullable="false" />
+    <Property Name="how_do_you_hear" Type="text" />
+    <Property Name="SOFT_TRADER" Type="enum" Nullable="false" />
+    <Property Name="PinkSheet1" Type="varchar" MaxLength="11" />
+    <Property Name="OPRAOptions1" Type="varchar" MaxLength="11" />
+    <Property Name="EMiniFutures1" Type="varchar" MaxLength="11" />
+    <Property Name="TSXCanadian1" Type="varchar" MaxLength="11" />
+    <Property Name="RegionalQuotes" Type="varchar" MaxLength="11" />
+    <Property Name="NasdaqTotalView" Type="varchar" MaxLength="11" />
+    <Property Name="PinkSheet2" Type="varchar" MaxLength="11" />
+    <Property Name="OPRAOptions" Type="varchar" MaxLength="11" />
+    <Property Name="NewsBody" Type="varchar" MaxLength="11" />
+    <Property Name="total" Type="int" Nullable="false" />
+    <Property Name="Unsalted_Password" Type="varchar" MaxLength="50" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="100" />
+    <Property Name="Phone_Number" Type="varchar" MaxLength="45" />
+    <Property Name="first_name" Type="varchar" MaxLength="75" />
+    <Property Name="last_name" Type="varchar" MaxLength="75" />
+    <Property Name="Send_Email_FlowA" Type="bit" />
+    <Property Name="promo_code" Type="varchar" MaxLength="100" />
+    <Property Name="Account_Number" Type="varchar" MaxLength="45" />
+    <Property Name="updatebuyingpower" Type="bit" />
+    <Property Name="is_reset_confirmed" Type="enum" />
+    <Property Name="reset_date" Type="datetime" Precision="0" />
+    <Property Name="how_do_you_hear_other" Type="text" />
+    <Property Name="verification_status" Type="enum" />
+    <Property Name="politically_exposed" Type="bool" Nullable="false" />
+    <Property Name="LAST_UPDATE_TIMESTAMP" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="comments" Type="varchar" MaxLength="4000" />
+    <Property Name="addnotes" Type="varchar" MaxLength="100" />
+    <Property Name="riskrating" Type="varchar" MaxLength="45" />
+    <Property Name="withdrawal_pin" Type="varchar" MaxLength="10" />
+    <Property Name="migrated_account" Type="bool" />
+    <Property Name="PinCode" Type="varchar" MaxLength="10" />
+    <Property Name="Is_MD" Type="bit" />
+    <Property Name="Is_Created_Account" Type="bit" />
+  </EntityType>
+  <EntityType Name="demo_customers">
+    <Key>
+      <PropertyRef Name="idDemo_Customer" />
+    </Key>
+    <Property Name="idDemo_Customer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idDASTRADER" Type="int" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="ACTIVATION_KEY" Type="varchar" MaxLength="256" />
+    <Property Name="IS_ACTIVATED" Type="bool" Nullable="false" />
+    <Property Name="SUBMISSION_DATE" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACTIVATION_DATETIME" Type="datetime" Precision="0" />
+    <Property Name="Unsalted_Password" Type="varchar" MaxLength="50" />
+    <Property Name="UserName" Type="varchar" MaxLength="45" />
+    <Property Name="Phone_Number" Type="varchar" MaxLength="45" />
+    <Property Name="Send_Email_FlowA" Type="bit" />
+    <Property Name="promo_code" Type="varchar" MaxLength="100" />
+    <Property Name="source" Type="varchar" MaxLength="100" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="updated_by" Type="int" />
+    <Property Name="updates_date" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="document_master">
+    <Key>
+      <PropertyRef Name="iddocument_master" />
+    </Key>
+    <Property Name="iddocument_master" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="document_name" Type="varchar" MaxLength="500" />
+    <Property Name="idaccount_type" Type="int" />
+    <Property Name="country_type" Type="int" />
+    <Property Name="sort_order" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="email_flows">
+    <Key>
+      <PropertyRef Name="idemail_flows" />
+    </Key>
+    <Property Name="idemail_flows" Type="int" Nullable="false" />
+    <Property Name="Send_Email_FlowA" Type="bit" />
+  </EntityType>
+  <EntityType Name="errorlogging">
+    <Key>
+      <PropertyRef Name="idErrorLogging" />
+    </Key>
+    <Property Name="idErrorLogging" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoggedInUserName" Type="varchar" MaxLength="45" />
+    <Property Name="PageURl" Type="varchar" MaxLength="100" />
+    <Property Name="DateTIme" Type="datetime" Precision="0" />
+    <Property Name="Exception" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="fundrecord">
+    <Key>
+      <PropertyRef Name="fundRecID" />
+    </Key>
+    <Property Name="idCUSTOMER" Type="int" Nullable="false" />
+    <Property Name="fundRecID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="orederNo" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="amount" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="getaccounthistory">
+    <Key>
+      <PropertyRef Name="idaccounthistory" />
+    </Key>
+    <Property Name="idaccounthistory" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="accountidno" Type="varchar" MaxLength="45" />
+    <Property Name="accountprefix" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="government_identification">
+    <Key>
+      <PropertyRef Name="idGOVERNMENT_IDENTIFICATION" />
+    </Key>
+    <Property Name="idGOVERNMENT_IDENTIFICATION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCUSTOMER" Type="int" Nullable="false" />
+    <Property Name="TYPE" Type="enum" Nullable="false" />
+    <Property Name="ISSUEPLACE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NUMBER" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EXPIRATION" Type="varchar" MaxLength="11" />
+    <Property Name="FILE_NAME" Type="varchar" MaxLength="255" />
+    <Property Name="FILE" Type="varchar" MaxLength="255" />
+    <Property Name="idACCOUNT_HOLDER" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="highest_degree">
+    <Key>
+      <PropertyRef Name="idHIGHEST_DEGREE" />
+    </Key>
+    <Property Name="idHIGHEST_DEGREE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DEGREE" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="identity_declaration">
+    <Key>
+      <PropertyRef Name="identity_declaration_id" />
+    </Key>
+    <Property Name="identity_declaration_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="owner_officer_id" Type="int" />
+    <Property Name="first_name" Type="varchar" MaxLength="100" />
+    <Property Name="last_name" Type="varchar" MaxLength="100" />
+    <Property Name="street_address" Type="varchar" MaxLength="500" />
+    <Property Name="city" Type="varchar" MaxLength="100" />
+    <Property Name="state_province" Type="varchar" MaxLength="100" />
+    <Property Name="idcountry" Type="int" />
+    <Property Name="phone_number" Type="varchar" MaxLength="20" />
+    <Property Name="mobile_number" Type="varchar" MaxLength="20" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="date_of_birth" Type="date" />
+    <Property Name="place_of_birth" Type="varchar" MaxLength="100" />
+    <Property Name="citizenship" Type="varchar" MaxLength="45" />
+    <Property Name="is_convicted" Type="char" MaxLength="1" />
+    <Property Name="is_convicted_detail" Type="varchar" MaxLength="200" />
+    <Property Name="has_involuntary_closure" Type="char" MaxLength="1" />
+    <Property Name="has_involuntary_closure_detail" Type="varchar" MaxLength="200" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="zipcode" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="identity_education_declaration">
+    <Key>
+      <PropertyRef Name="ididentity_declaration_id" />
+    </Key>
+    <Property Name="ididentity_declaration_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="school_name" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="identity_employment_declaration">
+    <Key>
+      <PropertyRef Name="identity_employment_declaration_id" />
+    </Key>
+    <Property Name="identity_employment_declaration_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="emp_status" Type="varchar" MaxLength="45" />
+    <Property Name="occupation" Type="varchar" MaxLength="100" />
+    <Property Name="employer" Type="varchar" MaxLength="100" />
+    <Property Name="business_type" Type="varchar" MaxLength="45" />
+    <Property Name="years_employed" Type="varchar" MaxLength="45" />
+    <Property Name="street_address" Type="varchar" MaxLength="500" />
+    <Property Name="city" Type="varchar" MaxLength="100" />
+    <Property Name="state_province" Type="varchar" MaxLength="100" />
+    <Property Name="zip_code" Type="varchar" MaxLength="45" />
+    <Property Name="Country" Type="int" />
+    <Property Name="street_address_2" Type="varchar" MaxLength="500" />
+    <Property Name="School_Name" Type="varchar" MaxLength="250" />
+    <Property Name="Year_of_Started" Type="date" />
+    <Property Name="Date_of_Graduation" Type="date" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="owner_officer_id" Type="int" />
+  </EntityType>
+  <EntityType Name="income_source">
+    <Key>
+      <PropertyRef Name="income_source_id" />
+    </Key>
+    <Property Name="income_source_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="source_title" Type="text" />
+  </EntityType>
+  <EntityType Name="ip_block">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ip" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="date_time" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ip_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ip" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="user_id" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="update_date_time" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="status" Type="tinyint" Nullable="false" />
+    <Property Name="updateBy" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="iptable">
+    <Key>
+      <PropertyRef Name="IPid" />
+    </Key>
+    <Property Name="IPid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IPAdress" Type="varchar" MaxLength="50" />
+    <Property Name="IsIPValid" Type="bit" />
+  </EntityType>
+  <EntityType Name="kyc_information">
+    <Key>
+      <PropertyRef Name="idkyc_information" />
+    </Key>
+    <Property Name="idkyc_information" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="account_number" Type="varchar" MaxLength="45" />
+    <Property Name="missing_document" Type="varchar" MaxLength="4000" />
+    <Property Name="reviewed_approved_by" Type="varchar" MaxLength="45" />
+    <Property Name="placed_das" Type="varchar" MaxLength="45" />
+    <Property Name="datetime" Type="datetime" Precision="0" />
+    <Property Name="form_completed" Type="bit" />
+    <Property Name="valid_photo_ids" Type="bit" />
+    <Property Name="bank_account_information" Type="bit" />
+    <Property Name="emp_add_phn_no" Type="bit" />
+    <Property Name="unemployed" Type="bit" />
+    <Property Name="student" Type="bit" />
+    <Property Name="uaa" Type="bit" />
+    <Property Name="fatca" Type="bit" />
+    <Property Name="w_8_form" Type="bit" />
+    <Property Name="w_9_from" Type="bit" />
+    <Property Name="o_fac" Type="bit" />
+    <Property Name="financial_information" Type="bit" />
+    <Property Name="reference" Type="bit" />
+    <Property Name="uploadfile" Type="varchar" MaxLength="100" />
+    <Property Name="customerID" Type="int" />
+    <Property Name="comments" Type="varchar" MaxLength="4000" />
+    <Property Name="RiskRating" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="kyc_master">
+    <Key>
+      <PropertyRef Name="idkyc_master" />
+    </Key>
+    <Property Name="idkyc_master" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kyc_type" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="leads">
+    <Key>
+      <PropertyRef Name="idLead" />
+    </Key>
+    <Property Name="idLead" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="email" Type="varchar" MaxLength="255" />
+    <Property Name="phone" Type="varchar" MaxLength="45" />
+    <Property Name="LAST_UPDATE_TIMESTAMP" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="manual_buying_power">
+    <Key>
+      <PropertyRef Name="idmanual_buying_power" />
+    </Key>
+    <Property Name="idmanual_buying_power" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="45" />
+    <Property Name="idaccount_number" Type="varchar" MaxLength="45" />
+    <Property Name="email" Type="varchar" MaxLength="45" />
+    <Property Name="phone_number" Type="varchar" MaxLength="45" />
+    <Property Name="date_created" Type="datetime" Precision="0" StoreGeneratedPattern="Identity" />
+    <Property Name="new_deposit_amount" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="is_processed" Type="bit" />
+    <Property Name="withdrawal_amount" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="is_cash_movement" Type="bit" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="updated_by" Type="int" />
+    <Property Name="updated_date" Type="datetime" Precision="0" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'def.suretrader.md_accounts' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="md_accounts">
+          <Property Name="account_number" Type="varchar" MaxLength="15" />
+          <Property Name="is_exits" Type="bit" />
+        </EntityType>-->
+  <EntityType Name="missing_documents">
+    <Key>
+      <PropertyRef Name="idmissing_documents" />
+    </Key>
+    <Property Name="idmissing_documents" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idcustomer" Type="int" />
+    <Property Name="idaccount_holder" Type="int" />
+    <Property Name="iddocument_master" Type="int" />
+    <Property Name="comments" Type="varchar" MaxLength="4000" />
+  </EntityType>
+  <EntityType Name="notsatisfiedlist">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="pages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PageName" Type="varchar" MaxLength="100" />
+    <Property Name="ActionName" Type="varchar" MaxLength="100" />
+    <Property Name="ControllerName" Type="varchar" MaxLength="100" />
+    <Property Name="icons" Type="varchar" MaxLength="100" />
+    <Property Name="pagestype" Type="varchar" MaxLength="100" />
+    <Property Name="pagedivid" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="permission">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PageUrl" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PermissionGroupId" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bool" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="UpdatedDate" Type="datetime" Precision="0" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsLandingPage" Type="bool" />
+  </EntityType>
+  <EntityType Name="permissiongroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsActive" Type="bool" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="UpdatedDate" Type="datetime" Precision="0" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="OrderBy" Type="int" />
+  </EntityType>
+  <EntityType Name="permissioninrole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PermissionGroupId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="ReadOnly" Type="bool" />
+    <Property Name="IsActive" Type="bool" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="UpdatedDate" Type="datetime" Precision="0" />
+    <Property Name="UpdatedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="pincoderequest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" />
+    <Property Name="AccountNumber" Type="varchar" MaxLength="50" />
+    <Property Name="PinCode" Type="varchar" MaxLength="10" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="ProcessedByUser" Type="varchar" MaxLength="50" />
+    <Property Name="ProcessedDate" Type="datetime" Precision="0" />
+    <Property Name="RequestByUser" Type="varchar" MaxLength="50" />
+    <Property Name="RequestDate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="promo_codes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="promo_code" Type="varchar" MaxLength="25" />
+    <Property Name="promo_details" Type="varchar" MaxLength="255" />
+    <Property Name="created_date" Type="datetime" Precision="0" StoreGeneratedPattern="Identity" />
+    <Property Name="expire_date" Type="datetime" Precision="0" />
+    <Property Name="created_by" Type="int" />
+  </EntityType>
+  <EntityType Name="questionresponse">
+    <Key>
+      <PropertyRef Name="QuestionId" />
+    </Key>
+    <Property Name="QuestionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Question" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Response" Type="varchar" MaxLength="400" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reference_documents">
+    <Key>
+      <PropertyRef Name="idREFERENCE_DOCUMENT" />
+    </Key>
+    <Property Name="idREFERENCE_DOCUMENT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCUSTOMER" Type="int" Nullable="false" />
+    <Property Name="idACCOUNT_HOLDER" Type="int" />
+    <Property Name="FILE1_NAME" Type="varchar" MaxLength="256" />
+    <Property Name="FILE1_PATH" Type="varchar" MaxLength="256" />
+    <Property Name="FILE2_NAME" Type="varchar" MaxLength="255" />
+    <Property Name="FILE2_PATH" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="riskratingtrackingdetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customerid" Type="int" />
+    <Property Name="accountholderid" Type="int" />
+    <Property Name="oldrating" Type="varchar" MaxLength="45" />
+    <Property Name="Newrating" Type="varchar" MaxLength="45" />
+    <Property Name="updateBy" Type="varchar" MaxLength="45" />
+    <Property Name="updatedate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsActive" Type="bool" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="UpdatedDate" Type="datetime" Precision="0" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="pageland" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="security_questions">
+    <Key>
+      <PropertyRef Name="idQUESTION" />
+    </Key>
+    <Property Name="idQUESTION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QUESTION" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="securityquestion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsActive" Type="bool" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="UpdatedDate" Type="datetime" Precision="0" />
+    <Property Name="UpdatedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="source_of_funds">
+    <Key>
+      <PropertyRef Name="idCUSTOMER" />
+    </Key>
+    <Property Name="idCUSTOMER" Type="int" Nullable="false" />
+    <Property Name="FUNDS_SOURCE" Type="enum" Nullable="false" />
+    <Property Name="FUNDS_SOURCE_DESC" Type="varchar" MaxLength="200" />
+    <Property Name="FUNDING_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="WIRE_ORIGIN_COUNTRY" Type="int" />
+    <Property Name="WIRE_DEST_COUNTRY" Type="int" />
+    <Property Name="OTHER_AMOUNT1" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="OTHER_AMOUNT1_DATE" Type="date" />
+    <Property Name="OTHER_AMOUNT2" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="OTHER_AMOUNT2_DATE" Type="date" />
+    <Property Name="OTHER_AMOUNT3" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="OTHER_AMOUNT3_DATE" Type="date" />
+    <Property Name="EXPECTED_ACCOUNT_SIZE" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="student_form">
+    <Key>
+      <PropertyRef Name="idCUSTOMER" />
+    </Key>
+    <Property Name="idCUSTOMER" Type="int" Nullable="false" />
+    <Property Name="STUDENT_SCHOOL_NAME" Type="varchar" MaxLength="75" />
+    <Property Name="STUDENT_YEAR_OF_STARTED" Type="varchar" MaxLength="10" />
+    <Property Name="STUDENT_ADDRESS" Type="varchar" MaxLength="150" />
+    <Property Name="STUDENT_EXPECTED_DATE_OF_GRADUATION" Type="date" />
+    <Property Name="STUDENT_COUNTRY" Type="int" />
+    <Property Name="STUDENT_STATE" Type="varchar" MaxLength="75" />
+    <Property Name="STUDENT_CITY" Type="varchar" MaxLength="75" />
+    <Property Name="STUDENT_POSTAL" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="supporting_document">
+    <Key>
+      <PropertyRef Name="idSUPPORTING_DOCUMENT" />
+    </Key>
+    <Property Name="idSUPPORTING_DOCUMENT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCUSTOMER" Type="int" Nullable="false" />
+    <Property Name="idACCOUNT_HOLDER" Type="int" Nullable="false" />
+    <Property Name="MASTER_TYPE" Type="enum" Nullable="false" />
+    <Property Name="DOCUMENT_SEQUENCE" Type="tinyint" Nullable="false" />
+    <Property Name="SUB_TYPE" Type="varchar" MaxLength="100" />
+    <Property Name="ISSUEPLACE" Type="varchar" MaxLength="50" />
+    <Property Name="DOCUMENT_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="EXPIRATION" Type="varchar" MaxLength="11" />
+    <Property Name="FILE_PATH" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="FILE_STATUS" Type="enum" />
+    <Property Name="LAST_UPDATE_DATE_TIME" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+    <Property Name="FormNo" Type="int" />
+  </EntityType>
+  <EntityType Name="supporting_documents">
+    <Key>
+      <PropertyRef Name="idSUPPORTING_DOCUMENT" />
+    </Key>
+    <Property Name="idSUPPORTING_DOCUMENT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCUSTOMER" Type="int" Nullable="false" />
+    <Property Name="idACCOUNT_HOLDER" Type="int" />
+    <Property Name="FILE1_NAME" Type="varchar" MaxLength="256" />
+    <Property Name="FILE1_PATH" Type="varchar" MaxLength="256" />
+    <Property Name="FILE2_NAME" Type="varchar" MaxLength="255" />
+    <Property Name="FILE2_PATH" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="taxinfo">
+    <Key>
+      <PropertyRef Name="taxID" />
+    </Key>
+    <Property Name="idCUSTOMER" Type="int" />
+    <Property Name="idACCOUNT_HOLDER" Type="int" />
+    <Property Name="taxID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="country" Type="varchar" MaxLength="50" />
+    <Property Name="res_address" Type="varchar" MaxLength="200" />
+    <Property Name="res_stateCityPin" Type="varchar" MaxLength="100" />
+    <Property Name="res_country" Type="varchar" MaxLength="50" />
+    <Property Name="mail_address" Type="varchar" MaxLength="200" />
+    <Property Name="mail_stateCityPin" Type="varchar" MaxLength="100" />
+    <Property Name="mail_country" Type="varchar" MaxLength="50" />
+    <Property Name="SSN" Type="varchar" MaxLength="20" />
+    <Property Name="FTIN" Type="varchar" MaxLength="20" />
+    <Property Name="RefNo" Type="varchar" MaxLength="200" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="residentOf" Type="varchar" MaxLength="50" />
+    <Property Name="article" Type="varchar" MaxLength="20" />
+    <Property Name="rate" Type="varchar" MaxLength="10" />
+    <Property Name="typeofincome" Type="varchar" MaxLength="200" />
+    <Property Name="reasonfortreaty" Type="varchar" MaxLength="255" />
+    <Property Name="businessname" Type="varchar" MaxLength="100" />
+    <Property Name="payeecode" Type="varchar" MaxLength="20" />
+    <Property Name="FATCAcode" Type="varchar" MaxLength="20" />
+    <Property Name="taxClass" Type="varchar" MaxLength="20" />
+    <Property Name="EIN" Type="varchar" MaxLength="20" />
+    <Property Name="reqNameAdd" Type="varchar" MaxLength="100" />
+    <Property Name="accNo" Type="varchar" MaxLength="100" />
+    <Property Name="type" Type="varchar" MaxLength="5" />
+    <Property Name="taxClasstext" Type="varchar" MaxLength="30" />
+    <Property Name="LAST_UPDATE_TIMESTAMP" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Is_Agree" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tracking">
+    <Key>
+      <PropertyRef Name="idTRACKING" />
+    </Key>
+    <Property Name="idTRACKING" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idVISITOR" Type="int" Nullable="false" />
+    <Property Name="PAGE_URL" Type="varchar" MaxLength="2083" Nullable="false" />
+    <Property Name="START_TIME" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="END_TIME" Type="datetime" Precision="0" />
+    <Property Name="REFERRING_DOMAIN" Type="varchar" MaxLength="254" />
+    <Property Name="REFFERING_URL" Type="varchar" MaxLength="2083" />
+    <Property Name="IP_ADDRESS" Type="varchar" MaxLength="45" />
+    <Property Name="LAST_UPDATE_TIMESTAMP" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="updated_account_status_list">
+    <Key>
+      <PropertyRef Name="idupdated_account_status_List" />
+    </Key>
+    <Property Name="idupdated_account_status_List" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCUSTOMER" Type="int" />
+    <Property Name="existing_account_status" Type="varchar" MaxLength="45" />
+    <Property Name="updated_account_status" Type="varchar" MaxLength="45" />
+    <Property Name="account_type" Type="varchar" MaxLength="45" />
+    <Property Name="account_number" Type="varchar" MaxLength="45" />
+    <Property Name="updated_date" Type="datetime" Precision="0" />
+    <Property Name="updated_by" Type="int" />
+    <Property Name="OldAccountType" Type="varchar" MaxLength="100" />
+    <Property Name="NewAccountType" Type="varchar" MaxLength="100" />
+    <Property Name="OldRiskrating" Type="varchar" MaxLength="45" />
+    <Property Name="newriskrating" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmailId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="SecurityQuestionId" Type="int" />
+    <Property Name="SecurtityAnswer" Type="varchar" MaxLength="100" />
+    <Property Name="IsActive" Type="bool" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Precision="0" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="PasswordResetUrl" Type="varchar" MaxLength="125" />
+    <Property Name="PasswordResetRequestIP" Type="varchar" MaxLength="30" />
+    <Property Name="PasswordResetProcessIP" Type="varchar" MaxLength="30" />
+    <Property Name="PasswordResetRequestDateTime" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="user_security_questions">
+    <Key>
+      <PropertyRef Name="recordId" />
+    </Key>
+    <Property Name="recordId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="securityQuestionId" Type="int" Nullable="false" />
+    <Property Name="questionResponse" Type="varchar" MaxLength="2048" Nullable="false" />
+    <Property Name="createdDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="createdBy" Type="varchar" MaxLength="1024" Nullable="false" />
+    <Property Name="updatedDate" Type="datetime" Precision="0" />
+    <Property Name="updatedBy" Type="varchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="userinrole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bool" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="UpdatedDate" Type="datetime" Precision="0" />
+    <Property Name="UpdatedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="userloginaudit">
+    <Key>
+      <PropertyRef Name="userloginauditid" />
+    </Key>
+    <Property Name="userloginauditid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LogId" Type="int" Nullable="false" />
+    <Property Name="IpAdress" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="logindate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="logoutdate" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="userloginlog">
+    <Key>
+      <PropertyRef Name="LogId" />
+    </Key>
+    <Property Name="LogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="UserPassword" Type="varchar" MaxLength="200" />
+    <Property Name="LogDateTime" Type="datetime" Precision="0" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="IsSuccess" Type="bit" />
+    <Property Name="IpAdress" Type="varchar" MaxLength="45" />
+    <Property Name="EmailId" Type="varchar" MaxLength="75" />
+    <Property Name="NumberOfAttempt" Type="int" />
+    <Property Name="IsFromFrontOffice" Type="bool" />
+  </EntityType>
+  <EntityType Name="userworkflow">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PageId" Type="int" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" Precision="0" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="UpdatedDate" Type="datetime" Precision="0" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="Status" Type="varchar" MaxLength="45" />
+    <Property Name="RejectedBy" Type="varchar" MaxLength="45" />
+    <Property Name="RejectedDate" Type="datetime" Precision="0" />
+    <Property Name="Comments" Type="varchar" MaxLength="250" />
+    <Property Name="landingpage" Type="bit" />
+    <Property Name="AccountHolderId" Type="int" />
+    <Property Name="corporate_Director_Id" Type="bigint" />
+    <Property Name="CorporatemenuStaus" Type="bit" />
+    <Property Name="corporate_officer_Id" Type="bigint" />
+    <Property Name="corporate_beneficiary_Id" Type="bigint" />
+    <Property Name="corporate_Owner_Id" Type="bigint" />
+  </EntityType>
+  <EntityType Name="visitor_sessions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="visitor_id" Type="int" Nullable="false" />
+    <Property Name="session_id" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="created_at" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="updated_at" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="expired" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="visitors">
+    <Key>
+      <PropertyRef Name="idVISITOR" />
+    </Key>
+    <Property Name="idVISITOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IP_ADDRESS" Type="varchar" MaxLength="45" />
+    <Property Name="FIRST_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="256" />
+    <Property Name="PHONE" Type="varchar" MaxLength="20" />
+    <Property Name="CUSTOMER_NUMBER" Type="varchar" MaxLength="45" />
+    <Property Name="LAST_UPDATE_TIMESTAMP" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+    <Property Name="APPLICATION_COMPLETED" Type="int" Nullable="false" />
+    <Property Name="affiliate_referral" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="w9_taxinfo">
+    <Key>
+      <PropertyRef Name="W9_TaxInfo_Id" />
+    </Key>
+    <Property Name="W9_TaxInfo_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Customer_Id" Type="int" />
+    <Property Name="AccountHolderId" Type="int" />
+    <Property Name="W9_Name" Type="varchar" MaxLength="45" />
+    <Property Name="W9_Businessname" Type="varchar" MaxLength="45" />
+    <Property Name="W9_Individualsole" Type="bit" Nullable="false" />
+    <Property Name="W9_CCorporation" Type="bit" Nullable="false" />
+    <Property Name="W9_SCorporation" Type="bit" Nullable="false" />
+    <Property Name="W9_Partnership" Type="bit" Nullable="false" />
+    <Property Name="W9_Trustestate" Type="bit" Nullable="false" />
+    <Property Name="W9_Limitedliabilitycompany" Type="bit" Nullable="false" />
+    <Property Name="W9_Enterthetaxclassification" Type="varchar" MaxLength="45" />
+    <Property Name="W9_Exemptpayeecode" Type="varchar" MaxLength="45" />
+    <Property Name="W9_ExemptionfromFATCA" Type="varchar" MaxLength="45" />
+    <Property Name="W9_Other" Type="bit" Nullable="false" />
+    <Property Name="W9_Address" Type="varchar" MaxLength="45" />
+    <Property Name="W9_CitystateZIP" Type="varchar" MaxLength="45" />
+    <Property Name="W9_Listaccountnumber" Type="varchar" MaxLength="45" />
+    <Property Name="W9_Requesternameaddress" Type="varchar" MaxLength="500" />
+    <Property Name="W9_Socialsecuritynumber" Type="varchar" MaxLength="45" />
+    <Property Name="W9_Employeridentificationnumber" Type="varchar" MaxLength="45" />
+    <Property Name="W9_IAgree" Type="bool" Nullable="false" />
+    <Property Name="LAST_UPDATE_TIMESTAMP" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="W9_OtherDetail" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="zoho_visitor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="visitorId" Type="int" Nullable="false" />
+    <Property Name="last_updated_date" Type="datetime" Precision="0" StoreGeneratedPattern="Identity" />
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.suretrader.vaccounthistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vaccounthistory">
+    <Key>
+      <PropertyRef Name="idaccounthistory" />
+    </Key>
+    <Property Name="idaccounthistory" Type="int" Nullable="false" />
+    <Property Name="accountidno" Type="varchar" MaxLength="45" />
+    <Property Name="accountprefix" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" Precision="0" />
+    <Property Name="FirstName" Type="varchar" MaxLength="100" />
+    <Property Name="LastName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.suretrader.vuserlist' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vuserlist">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="LastName" />
+      <PropertyRef Name="EmailId" />
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="CreatedDate" />
+      <PropertyRef Name="IsActive" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="EmailId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="RoleName" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="IsActive" Type="bool" Nullable="false" />
+    <Property Name="CreatedByUserFirstName" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedByUserLastName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="APPLICATION_FLOW_VISITOR_FRN_KEY">
+    <End Role="visitors" Type="Self.visitors" Multiplicity="1" />
+    <End Role="application_flow" Type="Self.application_flow" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="visitors">
+        <PropertyRef Name="idVISITOR" />
+      </Principal>
+      <Dependent Role="application_flow">
+        <PropertyRef Name="idVISITOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_custlnkacnt_idcust_cust_idcust">
+    <End Role="customers" Type="Self.customers" Multiplicity="1" />
+    <End Role="cust_linked_account" Type="Self.cust_linked_account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="idCUSTOMER" />
+      </Principal>
+      <Dependent Role="cust_linked_account">
+        <PropertyRef Name="idCustomer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SF_CUSTOMER_ID_FRN_KEY">
+    <End Role="customers" Type="Self.customers" Multiplicity="1" />
+    <End Role="student_form" Type="Self.student_form" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="idCUSTOMER" />
+      </Principal>
+      <Dependent Role="student_form">
+        <PropertyRef Name="idCUSTOMER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SOF_CUSTOMER_ID_FRN_KEY">
+    <End Role="customers" Type="Self.customers" Multiplicity="1" />
+    <End Role="source_of_funds" Type="Self.source_of_funds" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="idCUSTOMER" />
+      </Principal>
+      <Dependent Role="source_of_funds">
+        <PropertyRef Name="idCUSTOMER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TRACKING_VISITOR">
+    <End Role="visitors" Type="Self.visitors" Multiplicity="1" />
+    <End Role="tracking" Type="Self.tracking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="visitors">
+        <PropertyRef Name="idVISITOR" />
+      </Principal>
+      <Dependent Role="tracking">
+        <PropertyRef Name="idVISITOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="user_security_questions_ibfk_1">
+    <End Role="securityquestion" Type="Self.securityquestion" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="user_security_questions" Type="Self.user_security_questions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="securityquestion">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="user_security_questions">
+        <PropertyRef Name="securityQuestionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="user_security_questions_ibfk_2">
+    <End Role="user" Type="Self.user" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="user_security_questions" Type="Self.user_security_questions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="user_security_questions">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="create_iboss_account" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="suretrader">
+    <Parameter Name="p_account" Type="varchar" Mode="In" />
+    <Parameter Name="p_accountname" Type="varchar" Mode="In" />
+    <Parameter Name="p_email" Type="varchar" Mode="In" />
+    <Parameter Name="p_password" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="proc_account_cleanup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="suretrader">
+    <Parameter Name="p_email" Type="varchar" Mode="In" />
+    <Parameter Name="p_del" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UnBlock_lock_user" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="suretrader">
+    <Parameter Name="EmailId" Type="varchar" Mode="In" />
+    <Parameter Name="IpAddress" Type="varchar" Mode="In" />
+    <Parameter Name="UpdateBy" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="suretraderModelStoreContainer">
+    <EntitySet Name="account_block" EntityType="Self.account_block" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="account_holder_affiliations" EntityType="Self.account_holder_affiliations" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="account_type" EntityType="Self.account_type" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="accountholders" EntityType="Self.accountholders" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="accountholders_lv" EntityType="Self.accountholders_lv" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="accountnotsatisfied" EntityType="Self.accountnotsatisfied" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="accounttypeworkflow" EntityType="Self.accounttypeworkflow" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="affiliations_master" EntityType="Self.affiliations_master" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="application_errors" EntityType="Self.application_errors" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="application_flow" EntityType="Self.application_flow" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="audit_log_buying_power" EntityType="Self.audit_log_buying_power" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="audit_log_iboss_account" EntityType="Self.audit_log_iboss_account" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="audit_log_manual_buying_power" EntityType="Self.audit_log_manual_buying_power" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="corp_beneficiary" EntityType="Self.corp_beneficiary" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="corp_director" EntityType="Self.corp_director" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="corp_officer" EntityType="Self.corp_officer" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="corpacnt_owner_officer" EntityType="Self.corpacnt_owner_officer" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="corporate_supporting_document" EntityType="Self.corporate_supporting_document" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="corporate_tax" EntityType="Self.corporate_tax" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="corporateagreementdisclaimers" EntityType="Self.corporateagreementdisclaimers" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="countries" EntityType="Self.countries" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="crop_account" EntityType="Self.crop_account" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="crop_acnt_incorp" EntityType="Self.crop_acnt_incorp" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="crop_reference" EntityType="Self.crop_reference" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="crop_reference_lkp" EntityType="Self.crop_reference_lkp" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="crop_resolution" EntityType="Self.crop_resolution" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="cta_master" EntityType="Self.cta_master" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="cust_linked_account" EntityType="Self.cust_linked_account" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="customer_account_comments" EntityType="Self.customer_account_comments" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="customer_kyc_comments" EntityType="Self.customer_kyc_comments" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="customer_sourceoffunds" EntityType="Self.customer_sourceoffunds" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="customers" EntityType="Self.customers" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="customers_lv" EntityType="Self.customers_lv" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="demo_customers" EntityType="Self.demo_customers" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="document_master" EntityType="Self.document_master" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="email_flows" EntityType="Self.email_flows" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="errorlogging" EntityType="Self.errorlogging" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="fundrecord" EntityType="Self.fundrecord" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="getaccounthistory" EntityType="Self.getaccounthistory" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="government_identification" EntityType="Self.government_identification" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="highest_degree" EntityType="Self.highest_degree" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="identity_declaration" EntityType="Self.identity_declaration" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="identity_education_declaration" EntityType="Self.identity_education_declaration" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="identity_employment_declaration" EntityType="Self.identity_employment_declaration" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="income_source" EntityType="Self.income_source" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="ip_block" EntityType="Self.ip_block" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="ip_log" EntityType="Self.ip_log" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="iptable" EntityType="Self.iptable" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="kyc_information" EntityType="Self.kyc_information" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="kyc_master" EntityType="Self.kyc_master" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="leads" EntityType="Self.leads" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="manual_buying_power" EntityType="Self.manual_buying_power" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="missing_documents" EntityType="Self.missing_documents" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="notsatisfiedlist" EntityType="Self.notsatisfiedlist" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="pages" EntityType="Self.pages" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="permission" EntityType="Self.permission" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="permissiongroup" EntityType="Self.permissiongroup" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="permissioninrole" EntityType="Self.permissioninrole" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="pincoderequest" EntityType="Self.pincoderequest" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="promo_codes" EntityType="Self.promo_codes" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="questionresponse" EntityType="Self.questionresponse" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="reference_documents" EntityType="Self.reference_documents" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="riskratingtrackingdetail" EntityType="Self.riskratingtrackingdetail" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="roles" EntityType="Self.roles" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="security_questions" EntityType="Self.security_questions" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="securityquestion" EntityType="Self.securityquestion" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="source_of_funds" EntityType="Self.source_of_funds" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="student_form" EntityType="Self.student_form" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="supporting_document" EntityType="Self.supporting_document" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="supporting_documents" EntityType="Self.supporting_documents" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="taxinfo" EntityType="Self.taxinfo" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="tracking" EntityType="Self.tracking" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="updated_account_status_list" EntityType="Self.updated_account_status_list" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="user" EntityType="Self.user" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="user_security_questions" EntityType="Self.user_security_questions" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="userinrole" EntityType="Self.userinrole" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="userloginaudit" EntityType="Self.userloginaudit" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="userloginlog" EntityType="Self.userloginlog" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="userworkflow" EntityType="Self.userworkflow" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="visitor_sessions" EntityType="Self.visitor_sessions" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="visitors" EntityType="Self.visitors" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="w9_taxinfo" EntityType="Self.w9_taxinfo" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="zoho_visitor" EntityType="Self.zoho_visitor" Schema="suretrader" store:Type="Tables" />
+    <EntitySet Name="accountholders_bkup" EntityType="Self.accountholders_bkup" store:Type="Tables" store:Schema="suretrader">
+      <DefiningQuery>SELECT
+`accountholders_bkup`.`idACCOUNT_HOLDER`, 
+`accountholders_bkup`.`idCUSTOMER`, 
+`accountholders_bkup`.`MEMBER_TYPE`, 
+`accountholders_bkup`.`FIRST_NAME`, 
+`accountholders_bkup`.`MIDDLE_NAME`, 
+`accountholders_bkup`.`LAST_NAME`, 
+`accountholders_bkup`.`COUNTRY_CITIZENSHIP_ID`, 
+`accountholders_bkup`.`DOB`, 
+`accountholders_bkup`.`EMAIL`, 
+`accountholders_bkup`.`SECURITY_QUESTION`, 
+`accountholders_bkup`.`SECURITY_ANSWER`, 
+`accountholders_bkup`.`RESIDENTIAL_COUNTRY`, 
+`accountholders_bkup`.`RESIDENTIAL_CITY`, 
+`accountholders_bkup`.`RESIDENTIAL_STREET1`, 
+`accountholders_bkup`.`RESIDENTIAL_STREET2`, 
+`accountholders_bkup`.`RESIDENTIAL_STATE`, 
+`accountholders_bkup`.`RESIDENTIAL_POSTALCODE`, 
+`accountholders_bkup`.`MAILING_COUNTRY`, 
+`accountholders_bkup`.`MAILING_CITY`, 
+`accountholders_bkup`.`MAILING_STREET1`, 
+`accountholders_bkup`.`MAILING_STREET2`, 
+`accountholders_bkup`.`MAILING_STATE`, 
+`accountholders_bkup`.`MAILING_POSTALCODE`, 
+`accountholders_bkup`.`PHONE_HOME`, 
+`accountholders_bkup`.`PHONE_WORK`, 
+`accountholders_bkup`.`PHONE_MOBILE`, 
+`accountholders_bkup`.`MARITAL_STATUS`, 
+`accountholders_bkup`.`DEPENDANTS`, 
+`accountholders_bkup`.`HIGHEST_DEGREE`, 
+`accountholders_bkup`.`HIGHEST_DEGREE_SCHOOL_NAME`, 
+`accountholders_bkup`.`EMPLOYMENT_STATUS`, 
+`accountholders_bkup`.`EMPLOYER_NAME`, 
+`accountholders_bkup`.`BUSINESS_TYPE`, 
+`accountholders_bkup`.`OCCUPATION`, 
+`accountholders_bkup`.`NUMBER_YEARS_EMPLOYED`, 
+`accountholders_bkup`.`EMPLOYER_STREET1`, 
+`accountholders_bkup`.`EMPLOYER_STREET2`, 
+`accountholders_bkup`.`EMPLOYER_CITY`, 
+`accountholders_bkup`.`EMPLOYER_STATE`, 
+`accountholders_bkup`.`EMPLOYER_POSTAL_CODE`, 
+`accountholders_bkup`.`EMPLOYER_COUNTRY`, 
+`accountholders_bkup`.`ANNUAL_INCOME`, 
+`accountholders_bkup`.`TAXRATE`, 
+`accountholders_bkup`.`NETWORTH`, 
+`accountholders_bkup`.`LIQUID_NET_WORTH`, 
+`accountholders_bkup`.`BANK_NAME`, 
+`accountholders_bkup`.`BANK_STATE`, 
+`accountholders_bkup`.`BANK_COUNTRY`, 
+`accountholders_bkup`.`RISK_TOLERANCE`, 
+`accountholders_bkup`.`KNOWLEDGE_LEVEL`, 
+`accountholders_bkup`.`YEARS_EXPERIENCE`, 
+`accountholders_bkup`.`TRANSACTIONS_PER_YEAR`, 
+`accountholders_bkup`.`AVERAGE_SIZE_PER_TRADE`, 
+`accountholders_bkup`.`ID_FIRST_TYPE`, 
+`accountholders_bkup`.`ID_FIRST_PLACE_ISSUANCE`, 
+`accountholders_bkup`.`ID_FIRST_NUMBER`, 
+`accountholders_bkup`.`ID_FIRST_EXPIRATION`, 
+`accountholders_bkup`.`ID_SECOND_TYPE`, 
+`accountholders_bkup`.`ID_SECOND_PLACE_ISSUANCE`, 
+`accountholders_bkup`.`ID_SECOND_NUMBER`, 
+`accountholders_bkup`.`ID_SECOND_EXPIRATION`, 
+`accountholders_bkup`.`FIRST_REFERENCE_COMPANY_NAME`, 
+`accountholders_bkup`.`FIRST_REFERENCE_NAME`, 
+`accountholders_bkup`.`FIRST_REFERENCE_PHONE`, 
+`accountholders_bkup`.`FIRST_REFERENCE_EMAIL`, 
+`accountholders_bkup`.`SECOND_REFERENCE_NAME`, 
+`accountholders_bkup`.`SECOND_REFERENCE_PHONE`, 
+`accountholders_bkup`.`SECOND_REFERENCE_EMAIL`, 
+`accountholders_bkup`.`THIRD_REFERENCE_NAME`, 
+`accountholders_bkup`.`THIRD_REFERENCE_PHONE`, 
+`accountholders_bkup`.`THIRD_REFERENCE_EMAIL`, 
+`accountholders_bkup`.`SUBMISSION_DATE`, 
+`accountholders_bkup`.`SIGNATURE`, 
+`accountholders_bkup`.`SIG_HASH`, 
+`accountholders_bkup`.`Account_Status`, 
+`accountholders_bkup`.`joint_application_residence`, 
+`accountholders_bkup`.`joint_application_investment_objecives`, 
+`accountholders_bkup`.`joint_application_affiliations`, 
+`accountholders_bkup`.`joint_application_fullname_brokerageEmployeee`, 
+`accountholders_bkup`.`joint_application_fullname_director`, 
+`accountholders_bkup`.`joint_application_is_brokerageEmployeee`, 
+`accountholders_bkup`.`joint_application_is_director`, 
+`accountholders_bkup`.`joint_application_is_employed_security_industry`, 
+`accountholders_bkup`.`joint_application_relationship_brokerageEmployeee`, 
+`accountholders_bkup`.`joint_application_relationship_director`, 
+`accountholders_bkup`.`income_source`, 
+`accountholders_bkup`.`account_disclaimers`, 
+`accountholders_bkup`.`client_agreement`, 
+`accountholders_bkup`.`fatca_agreement`, 
+`accountholders_bkup`.`unsolicited_acknowledgement_agreement`, 
+`accountholders_bkup`.`client_acknowledgement`, 
+`accountholders_bkup`.`letter_of_authorization`, 
+`accountholders_bkup`.`risk_disclosure`, 
+`accountholders_bkup`.`LAST_UPDATE_TIMESTAMP`
+FROM `accountholders_bkup` AS `accountholders_bkup`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="cta_form" EntityType="Self.cta_form" store:Type="Tables" store:Schema="suretrader">
+      <DefiningQuery>SELECT
+`cta_form`.`id`, 
+`cta_form`.`visitor_id`, 
+`cta_form`.`cta_master_id`, 
+`cta_form`.`page_url`, 
+`cta_form`.`date_created`
+FROM `cta_form` AS `cta_form`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="cta_form_fields" EntityType="Self.cta_form_fields" store:Type="Tables" store:Schema="suretrader">
+      <DefiningQuery>SELECT
+`cta_form_fields`.`id`, 
+`cta_form_fields`.`visitor_id`, 
+`cta_form_fields`.`cta_master_id`, 
+`cta_form_fields`.`cta_form_id`, 
+`cta_form_fields`.`form_field`, 
+`cta_form_fields`.`field_value`
+FROM `cta_form_fields` AS `cta_form_fields`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vaccounthistory" EntityType="Self.vaccounthistory" store:Type="Views" store:Schema="suretrader">
+      <DefiningQuery>SELECT
+`vaccounthistory`.`idaccounthistory`, 
+`vaccounthistory`.`accountidno`, 
+`vaccounthistory`.`accountprefix`, 
+`vaccounthistory`.`CreatedDate`, 
+`vaccounthistory`.`FirstName`, 
+`vaccounthistory`.`LastName`
+FROM `vaccounthistory` AS `vaccounthistory`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vuserlist" EntityType="Self.vuserlist" store:Type="Views" store:Schema="suretrader">
+      <DefiningQuery>SELECT
+`vuserlist`.`Id`, 
+`vuserlist`.`FirstName`, 
+`vuserlist`.`LastName`, 
+`vuserlist`.`EmailId`, 
+`vuserlist`.`RoleId`, 
+`vuserlist`.`RoleName`, 
+`vuserlist`.`CreatedDate`, 
+`vuserlist`.`IsActive`, 
+`vuserlist`.`CreatedByUserFirstName`, 
+`vuserlist`.`CreatedByUserLastName`
+FROM `vuserlist` AS `vuserlist`</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="APPLICATION_FLOW_VISITOR_FRN_KEY" Association="Self.APPLICATION_FLOW_VISITOR_FRN_KEY">
+      <End Role="visitors" EntitySet="visitors" />
+      <End Role="application_flow" EntitySet="application_flow" />
+    </AssociationSet>
+    <AssociationSet Name="fk_custlnkacnt_idcust_cust_idcust" Association="Self.fk_custlnkacnt_idcust_cust_idcust">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="cust_linked_account" EntitySet="cust_linked_account" />
+    </AssociationSet>
+    <AssociationSet Name="SF_CUSTOMER_ID_FRN_KEY" Association="Self.SF_CUSTOMER_ID_FRN_KEY">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="student_form" EntitySet="student_form" />
+    </AssociationSet>
+    <AssociationSet Name="SOF_CUSTOMER_ID_FRN_KEY" Association="Self.SOF_CUSTOMER_ID_FRN_KEY">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="source_of_funds" EntitySet="source_of_funds" />
+    </AssociationSet>
+    <AssociationSet Name="TRACKING_VISITOR" Association="Self.TRACKING_VISITOR">
+      <End Role="visitors" EntitySet="visitors" />
+      <End Role="tracking" EntitySet="tracking" />
+    </AssociationSet>
+    <AssociationSet Name="user_security_questions_ibfk_1" Association="Self.user_security_questions_ibfk_1">
+      <End Role="securityquestion" EntitySet="securityquestion" />
+      <End Role="user_security_questions" EntitySet="user_security_questions" />
+    </AssociationSet>
+    <AssociationSet Name="user_security_questions_ibfk_2" Association="Self.user_security_questions_ibfk_2">
+      <End Role="user" EntitySet="user" />
+      <End Role="user_security_questions" EntitySet="user_security_questions" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
