@@ -1,0 +1,17 @@
+E:\TFS\AccountCenter\TFS\AccountCenter\Suretrader_New\SureTrader.Services.Tests\obj\Debug\SureTrader.Services.Tests.csprojResolveAssemblyReference.cache
+E:\TFS\AccountCenter\TFS\AccountCenter\Suretrader_New\SureTrader.Services.Tests\bin\Debug\SureTrader.Services.Tests.dll.config
+E:\TFS\AccountCenter\TFS\AccountCenter\Suretrader_New\SureTrader.Services.Tests\bin\Debug\SureTrader.Services.Tests.dll
+E:\TFS\AccountCenter\TFS\AccountCenter\Suretrader_New\SureTrader.Services.Tests\bin\Debug\SureTrader.Services.Tests.pdb
+E:\TFS\AccountCenter\TFS\AccountCenter\Suretrader_New\SureTrader.Services.Tests\bin\Debug\EntityFramework.dll
+E:\TFS\AccountCenter\TFS\AccountCenter\Suretrader_New\SureTrader.Services.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\TFS\AccountCenter\TFS\AccountCenter\Suretrader_New\SureTrader.Services.Tests\bin\Debug\SureTrader.Core.dll
+E:\TFS\AccountCenter\TFS\AccountCenter\Suretrader_New\SureTrader.Services.Tests\bin\Debug\SureTrader.DI.dll
+E:\TFS\AccountCenter\TFS\AccountCenter\Suretrader_New\SureTrader.Services.Tests\bin\Debug\SureTrader.Services.dll
+E:\TFS\AccountCenter\TFS\AccountCenter\Suretrader_New\SureTrader.Services.Tests\bin\Debug\System.Web.Mvc.dll
+E:\TFS\AccountCenter\TFS\AccountCenter\Suretrader_New\SureTrader.Services.Tests\bin\Debug\SureTrader.Core.pdb
+E:\TFS\AccountCenter\TFS\AccountCenter\Suretrader_New\SureTrader.Services.Tests\bin\Debug\EntityFramework.xml
+E:\TFS\AccountCenter\TFS\AccountCenter\Suretrader_New\SureTrader.Services.Tests\bin\Debug\SureTrader.DI.pdb
+E:\TFS\AccountCenter\TFS\AccountCenter\Suretrader_New\SureTrader.Services.Tests\bin\Debug\SureTrader.Services.pdb
+E:\TFS\AccountCenter\TFS\AccountCenter\Suretrader_New\SureTrader.Services.Tests\bin\Debug\System.Web.Mvc.xml
+E:\TFS\AccountCenter\TFS\AccountCenter\Suretrader_New\SureTrader.Services.Tests\obj\Debug\SureTrader.Services.Tests.dll
+E:\TFS\AccountCenter\TFS\AccountCenter\Suretrader_New\SureTrader.Services.Tests\obj\Debug\SureTrader.Services.Tests.pdb
