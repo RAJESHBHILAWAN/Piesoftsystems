@@ -1,0 +1,295 @@
+@media (min-width:768px) and (max-width:1200px)
+{
+	.logo
+	{
+		padding: 15px;
+	}
+	
+	.top-nav
+	{
+		margin:30px 60px 0 0;
+	}
+	
+	.carousel-caption
+	{
+		width: 94%;
+		margin: 0 2%;
+		left: auto;
+		right: auto;
+	}
+	
+	.carousel-item
+	{
+		height: 430px;
+	}
+	.h-slide1
+	{
+		margin-top: 40px;
+	}
+	.ct-slide1,
+	.ctb-slide1
+	{
+		margin-top: 30px;
+	}
+	.carousel-inner h1
+	{
+		font-size: 40px;
+	}
+	
+	.subheading2
+	{
+		height: 120px;
+		display: block;
+		vertical-align: middle;
+	}
+}
+
+@media	(min-width:940px) and (max-width:1000px)
+{
+	.cls_liveChat
+	{
+		display:block;
+		vertical-align:top;
+		width:auto;
+		text-align:center;
+		float:left;
+		margin-left:10px;	margin-right:10px;
+		border:0px solid yellow;
+	}
+	.cls_common_bottom_panel
+	{
+		height:75px;
+		padding-left:5%;
+	}
+}
+@media (max-width:940px)
+{
+	.cls_liveChat
+	{
+		display:block;
+		vertical-align:top;
+		width:auto;
+		text-align:center;
+		border:0px solid yellow;
+	}
+	.social-links-container
+	{
+		display:inline-block;
+		text-align:center;
+	}
+	.cls_common_bottom_panel
+	{
+		height:200px;
+	}
+}
+
+@media (min-width:940px) and (max-width:1200px)
+{
+	.common-text4
+	{
+		height: 200px;
+	}
+}
+@media (min-width:768px) and (max-width:940px)
+{
+	.common-text4
+	{
+		height: 240px;
+	}
+	
+	.subheading3
+	{
+		height: 120px;
+	}
+	
+	.common-text5
+	{
+		height: 150px;
+	}
+
+	
+	.cls_right_pane_AC
+	{
+		
+	}
+ 	.cls_part1_right_AC
+	{
+		display:inline-block;
+		width:48%;
+		margin-left:1%;
+		background:#fff;
+	} 
+}
+
+
+
+@media (max-width:940px)
+{
+	.text-center-small
+	{
+		text-align: center;
+	}
+	.social-links-container
+	{
+		float: none;
+		clear: both;
+		margin-bottom: 15px;
+	}
+	.bb-social-btn i
+	{
+		padding-left: 0;
+	}
+	.livechat-btn
+	{
+		margin-bottom: 16px;
+	}
+	
+	.swissamericalogo
+	{
+        margin-top: 0;
+    }
+	
+	.cls_common_bottom_panel
+	{
+		height:auto;
+		text-align:left;
+	}
+	.cls_common_bottom_panel_social
+	{
+		float:none;
+	}
+	.cls_common_bottom_panel_liveChat
+	{
+		margin-left:0%;
+	}
+	.cls_common_bottom_panel_buttons, .cls_common_bottom_panel_liveChat, .cls_common_bottom_panel_social
+	{
+		display:block;
+		text-align:center;
+		margin-top:10px;
+	}
+	
+	
+	
+	
+	.cls_signin, .cls_signup
+	{
+		display:block;
+		height:inherit;
+		width:100%;
+	}	
+
+	.cls_left_signup, .cls_right_signup
+	{
+		display:block;
+		width:100%;
+	}
+	
+	.cls_left_pane_AC, .cls_right_pane_AC
+	{
+		display:block;
+		width:99%;
+	}
+	.cls_part1_point_text_AC
+	{
+		width:85%;
+	}
+
+	
+	
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:640px) and (max-width:940px)
+{
+	.cls_left_ac_form1, .cls_right_ac_form1
+	{
+		display: block;
+		vertical-align:top;
+		width:98%;
+	}
+	.cls_ac_form1_part10, .cls_ac_form1_part11
+	{
+		display:inline-block;
+		vertical-align:top;
+		padding:10px;
+	}
+	.cls_ac_form1_part10
+	{
+		text-align:right;
+		font-weight:bold;
+		color:#777;
+		width:35%;
+		padding-top:20px;
+	}
+	
+	.cls_ac_form1_part11
+	{
+		border-left:1px solid #eee;
+		width:64%;
+	}
+}
+		
+
+@media (max-width:640px)
+{
+	.cls_left_ac_form1, .cls_right_ac_form1
+	{
+		display: block;
+		vertical-align:top;
+		width:98%;
+	}
+	.cls_ac_form1_part10, .cls_ac_form1_part11
+	{
+		display:inline-block;
+		vertical-align:top;
+		padding:10px;
+	}
+	.cls_ac_form1_part10
+	{
+		text-align:left;
+		font-weight:bold;
+		color:#777;
+		width:68%;
+		padding-top:0px;
+		border-bottom:1px solid #ddd;
+	}
+	
+	.cls_ac_form1_part1_0
+	{
+		border-bottom:1px solid #aaa;
+		box-shadow:1px 1px 5px #777;
+		padding-left:10px;
+		width:99%;
+	}
+	.cls_ac_form1_part11
+	{
+		border-left:1px solid #eee;
+		width:98%;
+	}
+	
+	
+	
+	
+	
+}

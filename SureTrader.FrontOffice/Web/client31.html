@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Epmloyee PaySlip</title>
+    <script src="scripts/jquery-1.10.2.js"></script>
+    <script>
+        function incometax(myval)
+        {
+            var tempval=0;
+            switch (true)
+            {
+               
+                case (myval >= 0 && myval <= 18200):
+            {
+                        tempval =0;
+                        break;
+                    }
+                case (myval >= 18201 && myval <= 37000):
+                    {
+                        tempval = myval - 18200;
+                        return (tempval) * .19 ;
+                    }
+                    
+                case (myval >= 37001 && myval <= 87000):
+                    {
+                        tempval = myval - 37000;
+                        tempval = tempval * .325;
+                        tempval = tempval + 3572;
+                        break ;
+                    }
+                case (myval >= 87001 && myval <= 180000):
+                    {
+                        tempval = myval - 87000;
+                        tempval = tempval * .37;
+                        tempval = tempval + 19822;
+                        break;
+                    }
+                case (myval >= 180001):
+                    {
+                        tempval = myval - 180000;
+                        tempval = tempval * .45;
+                        tempval = tempval + 54232;
+                       break;
+                    }
+                     
+            }
+            return Math.round(tempval);
+        }
+
+        $(document).ready(function () {
+            var arg = "value1=" + 22 + "&value2=" + 22;
+            var urlString = "/api/Employeee/";
+            urlString = urlString + "GetInfo/?" + arg;
+            var control = event.target || event.srcElement;
+            const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug",
+                "Sep", "Oct", "Nov", "Dec"];
+            $.ajax({
+                url: urlString,
+                type: "GET",
+                dataType: 'json',
+                success: function (result) {
+                    var tr;
+                    var mydate;
+                    var lastday;
+                    var grossincome;
+                    var thincometax;
+                    var netincome;
+                    var annualsal;
+                    for (var i = 0 ; i < result.length; i++)
+                    {
+                        tr = $('<tr/>');
+                        tr.append('<td>' + result[i].FirstName + ' ' + result[i].LastName + '</td>');
+                        mydate = new Date(result[i].PaymentStartDate);
+                        lastday = new Date(mydate.getFullYear(), mydate.getMonth() + 1, 0);
+                        tr.append('<td>' + '01 '.concat(monthNames[mydate.getMonth()]) + '      -    ' + lastday.getDate().toString().concat(monthNames[lastday.getMonth()]) + '</td>')
+                        annualsal = result[i].AnnualSalary;
+                        grossincome = Math.round(result[i].AnnualSalary / 12);
+                        tr.append('<td>' + annualsal + '</td>');
+                        tr.append('<td>' + grossincome + '</td>');
+                        thincometax = incometax(annualsal);
+                        tr.append('<td>' + thincometax + '</td>');
+                        netincome = Math.round(grossincome - thincometax)/12;
+                        tr.append('<td>' + Math.round(netincome) + '</td>');
+                        tr.append('<td>' + grossincome * result[i].SuperRate + '</td>');
+
+                        $('table').append(tr);
+                    }
+                    
+                  //  $("#txtResult").val(result);
+
+                },
+                error: function (xhr, status, error) {
+                    var err = eval("(" + xhr.responseText + ")");
+                    $("#txtResult").val(err.Message)
+                }
+            });
+          
+        });
+
+
+    </script>
+
+
+</head>
+<body>
+    <div style="text-align:center" >
+        <h2>Employee Pay Slip</h2>
+        <div style="text-align:center;display:none">
+            <!-- Number type is not supported in IE9 and prior versions -->
+            Please enter Value1 :   <input type="number" id="txtValue1" min="1" max="100"><br><br>
+            Please enter Value2 :   <input type="number" id="txtValue2" min="1" max="100"><br /><br>
+            Result from Math API Service : <input type="text" id="txtResult" disabled /><br /><br>
+            <input type="button" value="Add" id="btnAdd">
+            <input type="button" value="Substract" id="btnMinus">
+            <input type="button" value="Multiply" id="btnMultiply">
+            <input type="button" value="Divide" id="btnDivide">
+
+        </div>
+
+    </div>
+    <div>
+
+
+        <table style="width:100%" class="table table-bordered table-condensed  table-hover table-striped">
+            <thead style="width:100%"  >
+
+            <tr><td>name</td><td>payperiod</td><td>annual-salary</td><td>grossincome</td>
+                <td>income-tax</td><td>net-income</td><td>super-amount</td></tr>
+            </thead>
+
+            <tbody></tbody>
+        </table>
+    </div>
+    
+
+</body>
+</html>

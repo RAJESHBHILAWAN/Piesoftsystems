@@ -1,0 +1,269 @@
+@media(min-width:580px) and (max-width:768px)
+{
+	.logo
+	{
+		padding: 27px 0 0 15px;
+		width: 160px;
+	}
+	
+	.logo img{ width: 100%}
+	.top-nav
+	{
+		margin:30px 60px 0 0;
+	}
+	
+	.carousel-item
+	{
+		height: 350px;
+	}
+	.carousel-inner h1
+	{
+		font-size: 40px;
+		text-align: center;
+	}
+	.h-slide1
+	{
+		margin-top: 20px;
+	}
+	
+	.cls_part1_right_AC
+	{
+		display:inline-block;
+		width:48%;
+		margin-left:1%;
+		background:#fff;
+	} 
+
+}
+
+
+
+@media (max-width:768px)
+{
+	
+	
+	.carousel-item
+	{
+		height: 350px;
+	}
+	.carousel-caption-left
+	{
+		display: none;
+	}
+	.carousel-caption-right
+	{
+		width: 100%;
+	}
+	.carousel-text
+	{
+		width: 100%;
+		font-size: 14px;
+		text-align: center;
+	}
+	.ctb-slide1
+	{
+		text-align: center;
+	}
+	.container-box
+	{
+		padding-top: 30px;
+		padding-bottom: 40px;
+	}
+	
+	h2.heading2,
+	h2.heading3
+	{
+		font-size: 30px;
+		margin-bottom: 30px;
+		padding-bottom: 10px;
+	}
+	
+	.subheading1,
+	.subheading2,
+	.subheading3
+	{
+		font-size: 24px;
+	}
+	
+	.common-text4,
+	.common-text5
+	{
+		font-size: 14px;
+	}
+	
+	.st-technology-box
+	{
+		padding: 20px;
+		margin-bottom: 2px;
+	}
+
+	.subheading2,
+	.common-text4
+	{
+		height: auto;
+	}
+	
+	.common-text4
+	{
+		padding-bottom: 20px;
+	}
+	
+	.advantage-icon
+	{
+		display: none;
+	}
+	
+	.common-text5,
+	.subheading3
+	{
+		text-align: left;
+		height: auto;
+	}
+	.common-text5
+	{
+		margin-bottom: 20px;
+	}
+	
+	.st-high-offer
+	{
+		background-image: none;
+	}
+	
+	.st-high-bg
+	{
+		background-color: #f6f6f6;
+	}
+	
+	.st-offer-bg
+	{
+		background-color: #e15c27;
+	}
+	
+	.st-offer-container
+	{
+		padding: 0;
+	}
+	
+	h2.heading4,
+	h2.heading5
+	{
+		font-weight: normal;
+		font-size: 30px;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+		padding-top: 30px
+	}
+	
+	ul.st-highlights-list
+	{
+		padding:0;
+		margin-bottom: 30px;
+	}
+	
+	ul.st-highlights-list li
+	{
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAARZJREFUeNpiDA0NZUADFkAcBcSOQCwPFXsIxPuBeBkQn0BWzIKmeRoQZzJgAh0ozgXi6UCcBZNgQlK0B4dmdJAJVYtiAMhUZzSFP/EYAlI7A2aAPhBnYFFkCcQleAxJB2IDZm1t7SYgwxiLAjEgLgBiRiB2wGEIEygQ7XBIBgLxPiB2AmJOIC7DosYOZIAMHmeCovIWEKsB8VcgbkSTl2FioBCADHiCR34/1PYOLLaDwBOQAYdwaF4P9X89EJfjUHOYCZoGsIFmIC4G4gY8LpwGCsQLQDwTGq/I4DgQs+PRDNJzARaIoIS0F00BPs17YYkPORZcYMmTAJgBVYs1N4IyykJodgYFoBxU/BE0US2Heg0OAAIMADd7LKPZz3PRAAAAAElFTkSuQmCC');
+		background-position: left 2px;
+		font-size: 16px;
+		font-weight: 300;
+		padding-left: 22px;
+		padding-bottom: 12px;
+	}
+	
+	form.st-offer-form input[type="password"],
+	form.st-offer-form input[type="tel"],
+	form.st-offer-form input[type="text"],
+	form.st-offer-form input[type="email"]
+	{
+		font-size: 14px;
+		padding: 10px;
+		border: 1px solid #fff;
+		background: none;
+		margin-bottom: 15px;
+	}
+	
+	form.st-offer-form input[type="submit"]
+	{
+		font-size: 14px;
+		padding: 10px 25px;
+	}
+	
+	.common-text6
+	{
+		height: auto;
+		margin-bottom: 15px;
+	}
+	
+	.credentials-awards-image-container img
+	{
+		width: 150px;
+	}
+	
+	.common-text7
+	{
+		margin-bottom: 20px;
+	}
+	
+	.footer-disclaimer,
+    .footer-nav-container
+	{
+        padding: 30px 0;
+    }
+    
+    .footer-nav h3
+	{
+        background: #151515;
+        cursor: pointer;
+        padding: 5px 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+    
+	.footer-nav h3 span
+	{
+        display: inline-block;
+        float: right;
+    }
+    
+	.footer-nav ul
+	{
+        display: none;
+        border-top: 1px solid #1e1e1e;
+        background: #151515;
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-bottom: 0px;
+    }
+    
+	.footer-nav ul li
+	{
+        display: block;
+        padding-bottom: 10px;
+    }
+	
+	.cls_part1_right_AC
+	{
+		display:inline-block;
+		width:98%;
+		margin-left:1%;
+		background:#fff;
+	} 
+	 
+	
+}
+
+
+
+@media (max-width:580px)
+{
+	.cls_part1_right_AC
+	{
+		display:block;
+		width:99%;
+		margin-left:1%;
+		background:#F7F7F7;
+	} 
+}
